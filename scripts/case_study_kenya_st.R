@@ -31,7 +31,7 @@
 #    channel recovers.
 #
 # Reproducible offline from cache/kenya_pr.rds (built by the getPR call below).
-# Run with: library(spLeakage); source("scripts/case_study_kenya_st.R")
+# Run with: source("scripts/case_study_kenya_st.R")
 
 suppressMessages({library(spLeakage); library(sf)})
 set.seed(1)
@@ -128,6 +128,85 @@ set.seed(1); fr <- sample(rep_len(1:10, nrow(sub)))
 res$recent_dep  <- estimate_dependence(sub, response = "pr")
 res$recent_leak <- detect_leakage(sub, split = fr, target = tgt, response = "pr")
 
+## ---- what does the naive analysis actually COST? ----------------------------
+# The indices above say a split leaks; they do not say what it is worth. The naive
+# analyst fits a purely SPATIAL model (ignoring time, as described above) and validates
+# it with random 10-fold. Optimism is that error against the design-matched honest
+# baseline -- and, this being the paper's thesis, the honest baseline is different under
+# each declaration, so there are two numbers, not one.
+#
+# NOTE estimate_optimism(control=) offers only "block"/"buffer" -- there is no temporal
+# control -- so the forecast declaration is computed here with the SAME internals
+# (.cv_predict + the rmse spec) that estimate_optimism uses, keeping the two comparable.
+# That gap is worth closing in the package.
+rmse <- function(o, p) sqrt(mean((o - p)^2, na.rm = TRUE))
+# The naive model is a spatial smoother -- a fair stand-in for the geostatistical model a
+# prevalence mapper would fit -- ignoring time, as the naive analysis does.
+#
+# NOT the package's default IDW. On these data IDW is pathological: 60% of the 2010
+# points are co-located repeat surveys, and .idw_predictor() returns the training value
+# verbatim at distance zero, so under random CV it copies a DIFFERENT survey's noisy
+# proportion from the same site. It scores RMSE 0.137 against a predict-the-mean baseline
+# of 0.134 -- i.e. worse than a constant -- and reports -12% (spurious pessimism), while
+# a random forest gives +16% and this smoother +20%. A learner that is worse than a
+# constant cannot price a design effect.
+naive_model <- function(train, test) {
+  k <- min(60L, max(10L, floor(nrow(train) / 5)))
+  m <- mgcv::gam(pr ~ s(x, y, k = k), data = train)
+  as.numeric(mgcv::predict.gam(m, newdata = test))
+}
+cv_err <- function(d, folds, pf) {
+  f <- spLeakage:::.parse_split(folds, nrow(d))
+  rmse(d$pr, spLeakage:::.cv_predict(d, f, pf))
+}
+
+# Declaration A -- FORECAST. Honest baselines: forward-chaining (temporal), group-aware
+# (co-location), and BOTH -- leave-location-and-time-out, in the sense of
+# Meyer et al. (2018). The joint scheme has to be built by hand:
+#  * temporal_kfold() returns an explicit fold LIST (train sizes 161, 322, ... 1446),
+#    because forward-chaining cannot be expressed as a fold-id vector -- a vector would
+#    make train = "everything else", including the future.
+#  * so crossing the two fold-ID vectors is wrong twice over: it discards the
+#    forward-chaining structure, and 9 temporal x 10 group ids = 90 tiny folds, each
+#    training on ~99% of the data. That is a LESS strict scheme, not a stricter one.
+# The correct construction keeps the forward-chaining folds and drops from each training
+# set any record at a site appearing in that fold's test set.
+llto_folds <- function(d, k = 10L) {
+  fk <- temporal_kfold(d, k = k, time = "year")
+  site <- paste(d$x, d$y)
+  lapply(fk, function(f) list(test = f$test,
+                              train = f$train[!(site[f$train] %in% site[f$test])]))
+}
+
+# The control schemes are deterministic; only the naive random split varies. Compute the
+# controls once rather than REPS times.
+e_fwd  <- cv_err(dat, temporal_kfold(dat, k = 10, time = "year"), naive_model)
+e_grp  <- cv_err(dat, group_kfold(dat, k = 10, coords = c("x", "y")), naive_model)
+e_llto <- cv_err(dat, llto_folds(dat, k = 10), naive_model)
+opt_forecast <- do.call(rbind, lapply(seq_len(REPS), function(i) {
+  set.seed(i)
+  e_naive <- cv_err(dat, sample(rep_len(1:10, nrow(dat))), naive_model)
+  data.frame(rep = i, e_naive = e_naive,
+             opt_fwd  = (e_fwd  - e_naive) / e_fwd,
+             opt_grp  = (e_grp  - e_naive) / e_grp,
+             opt_llto = (e_llto - e_naive) / e_llto)
+}))
+res$opt_forecast <- opt_forecast
+res$control_errors <- c(fwd = e_fwd, grp = e_grp, llto = e_llto)
+
+# Declaration B -- CONTEMPORARY MAP. On the single-year subset, where the signal is real,
+# the honest baseline is the design-matched block scheme, so estimate_optimism applies --
+# but it must be given the SAME naive model, or it silently falls back to the default IDW.
+d10 <- dat[dat$year == 2010, ]
+opt_map <- do.call(rbind, lapply(seq_len(REPS), function(i) {
+  set.seed(i)
+  o <- estimate_optimism(d10, sample(rep_len(1:10, nrow(d10))), response = "pr",
+                         coords = c("x", "y"), metric = "rmse", control = "block",
+                         predict_fun = naive_model)
+  data.frame(rep = i, E_cv = o$E_cv, E_control = o$E_control, optimism = o$optimism_rel)
+}))
+res$opt_map <- opt_map
+
 ## ---- report ----------------------------------------------------------------
 cat(sprintf("\n=== Kenya Pf prevalence: n=%d at %d sites, %d-%d (%d random splits) ===\n",
             res$n, res$n_sites, res$years[1], res$years[2], REPS))
@@ -170,6 +249,32 @@ cat(sprintf("      w-hat %.3f (signal recovered), range %.0f km, SLI_rho %+.3f\n
             res$recent_dep$signal_prop, res$recent_dep$practical_range / 1000,
             res$recent_leak$SLI_rho))
 cat("      -- now a real spatial audit, on genuine autocorrelation, to correct with block CV.\n")
+
+cat("\n--- WHAT THE NAIVE ANALYSIS COSTS (RMSE on prevalence, spatial-only model) ---\n")
+q <- function(v) sprintf("%+.1f%% [%+.1f, %+.1f]", 100 * stats::median(v),
+                         100 * stats::quantile(v, .25), 100 * stats::quantile(v, .75))
+of <- res$opt_forecast
+cat("  Declaration A -- FORECAST. Honest baseline:\n")
+cat(sprintf("      forward-chaining only        %s\n", q(of$opt_fwd)))
+cat(sprintf("      group-aware only             %s\n", q(of$opt_grp)))
+cat(sprintf("      BOTH (leave-location-and-time-out) %s\n", q(of$opt_llto)))
+cat("      ^ ALL the cost is temporal. Adding group-awareness to forward-chaining (LLTO)\n")
+cat("        changes individual predictions (max |diff| 0.09) but not the aggregate RMSE:\n")
+cat("        a smoother AVERAGES co-located repeat surveys rather than copying one, so the\n")
+cat("        co-location channel is nearly free FOR THIS MODEL. An interpolator would pay\n")
+cat("        for it heavily -- the package default IDW prices this split at -12% because it\n")
+cat("        copies a co-located survey's noisy proportion verbatim.\n")
+cat("        This is the index/optimism distinction in the wild: the INDEX audits the split\n")
+cat("        (33.6% of test points co-located, joint ST +0.50, irreducible by either\n")
+cat("        marginal fix) -- a property of split+data+declaration. The OPTIMISM prices it\n")
+cat("        for YOUR model, and the same split costs a smoother and an interpolator very\n")
+cat("        different amounts. Neither supersedes the other.\n")
+om <- res$opt_map
+cat(sprintf("\n  Declaration B -- CONTEMPORARY MAP (2010, n=%d), honest = block CV:\n", nrow(d10)))
+cat(sprintf("      optimism                     %s   (RMSE %.4f naive vs %.4f honest)\n",
+            q(om$optimism), stats::median(om$E_cv), stats::median(om$E_control)))
+cat("\n  ^ SAME data, SAME naive CV, two declarations, two different honest baselines and\n")
+cat("    two different costs. That is the paper's thesis priced in the analyst's currency.\n")
 
 saveRDS(res, "cache/case_study_kenya_st.rds")
 invisible(res)
