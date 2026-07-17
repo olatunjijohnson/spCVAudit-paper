@@ -28,7 +28,7 @@ fpred <- apply(gg, 1, function(p) sqrt(min(colSums((t(pts) - p)^2))))
 
 dir.create("paper-figures", showWarnings = FALSE)
 png("figures/F0_concept.png", 2000, 900, res = 200)
-graphics::par(mfrow = c(1, 2), mar = c(4.2, 4.4, 3, 1))
+graphics::par(mfrow = c(1, 2), mar = c(4.2, 4.4, 3, 1.4), cex.main = 0.95)
 
 ## (a) the map with the two reaches
 plot(gg, pch = 3, col = "grey80", cex = 0.5, xlab = "", ylab = "", axes = FALSE,
@@ -52,7 +52,7 @@ graphics::legend("topleft", c("sample (training)", "deployment grid",
 ## (b) the two ECDFs and the signed gap
 xs <- seq(0, max(fpred) * 1.02, length.out = 400)
 Fo <- ecdf(gobs)(xs); Fp <- ecdf(fpred)(xs)
-graphics::par(mar = c(4.2, 4.4, 3, 1))
+graphics::par(mar = c(4.2, 4.4, 3, 1.4), cex.main = 0.95)
 plot(xs, Fo, type = "n", xlab = "nearest-neighbour distance", ylab = "cumulative fraction",
      main = "(b) Leakage = the signed gap between reaches", ylim = c(0, 1))
 graphics::polygon(c(xs, rev(xs)), c(Fo, rev(Fp)), col = "#edae4933", border = NA)
