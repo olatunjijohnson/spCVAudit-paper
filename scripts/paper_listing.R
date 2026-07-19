@@ -19,7 +19,9 @@ tgt <- prediction_target(grid = as.matrix(bg[, c("x", "y")]), type = "grid")
 
 lk <- detect_leakage(d, split = folds, target = tgt,      # signed leakage index
                      response = "occ", n_boot = 200)
-lk; plot(lk)                                              # score, CI, ECDFs, leak map
+lk                                                       # score, CI, retained corr.
+plot(lk)                                                 # WHY: CV vs deployment ECDFs
+plot(lk, which = "map")                                  # WHERE: per-point leakage map
 
 # a random forest on the predictors -- the ecologist's own model
 rf <- function(train, test) {
