@@ -49,6 +49,7 @@ Every float in the manuscript, and the script that makes it:
 | **Fig. 5** — the SDM case study | `scripts/case_study_sdm.R` → `scripts/make_figure_sdm.R` | `case_study_sdm.rds` | ~5 min |
 | **Table 5**, **Fig. 6** — the malaria case study | `scripts/case_study_kenya_st.R` → `scripts/make_figure_malaria_st.R` | `case_study_kenya_st.rds`, `kenya_pr.rds` | ~10 min |
 | **Table 6** — the two case studies compared | both case-study scripts | both `.rds` | — |
+| **Listing 1** — the paper's worked code, verbatim | `scripts/paper_listing.R` | (uses `disdat`) | seconds |
 | §3.4 — real fields vs independent observations | `scripts/validate_independent.R` | `independent_validation.rds` | ~15 min |
 
 Figure scripts **read the cached `.rds`** rather than recomputing an audit, so a figure
