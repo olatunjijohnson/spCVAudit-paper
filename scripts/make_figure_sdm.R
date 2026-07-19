@@ -50,6 +50,8 @@ draw <- function() {
 
   ## (b) NN-distance ECDFs
   e <- lk$ecdf
+  # CV/Gobs = red (the leaky/optimistic side), deployment/Gpred = teal -- the paper-wide
+  # convention (red = CV/random/optimistic/leaky, teal = deployment/block/honest)
   plot(e$r / 1e3, e$Gobs, type = "s", col = red, lwd = 2.5, ylim = c(0, 1),
        xlab = "nearest-neighbour distance (km)", ylab = "ECDF",
        main = "(b) CV vs deployment reach")
