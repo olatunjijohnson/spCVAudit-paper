@@ -30,6 +30,13 @@ jobs:
         with:
           path: ${{ env.R_LIBS_USER }}
           key: paper-r-${{ runner.os }}-${{ hashFiles('environment/runtime-lock.csv', '.github/workflows/reproduce.yaml') }}
+      - name: Install system libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev \
+            libudunits2-dev libgdal-dev libgeos-dev libproj-dev \
+            libfontconfig1-dev libfreetype6-dev libpng-dev libtiff-dev \
+            libjpeg-dev libharfbuzz-dev libfribidi-dev libcairo2-dev
       - name: Install research dependencies
         shell: Rscript {0}
         run: |
