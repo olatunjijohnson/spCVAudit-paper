@@ -12,6 +12,11 @@ RDS bundles retain their original `sessionInfo()`. `environment/runtime-lock.csv
 records the complete historical R 4.5.0 dependency closure; source hashes and
 non-CRAN provenance accompany it. These records predate the Jura replacement.
 
+The automated retained-result check uses Ubuntu 24.04 and R 4.5.0. This also
+avoids compiling the archived ranger version with newer default C++ toolchains
+that are incompatible with that release. For the original dependency closure,
+use the source-pinned environment builder below.
+
 The pipeline requires R packages `sf`, `CAST`, `ranger`, `gstat`, `pkgload`,
 `jsonlite`, `ggplot2`, `patchwork` and `digest`, including their dependencies.
 The runner checks the CAST and ranger versions and installs the vendored package
