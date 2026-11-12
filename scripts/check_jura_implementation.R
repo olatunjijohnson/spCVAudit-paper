@@ -21,18 +21,26 @@ for(dataset in names(datasets)) {
     stopifnot(error<1e-7*max(1,max(abs(ref))))
     checks[[length(checks)+1]] <- data.frame(check='independent gstat predictions',dataset,model,max_error=error)
   }
+  # Recompute a baseline in this environment before changing target outcomes.
+  # Comparing the perturbation directly with a saved run would also compare
+  # BLAS/compiler environments, rather than isolate target-response use.
+  baseline <- analyse_application(dataset,target,1L,datasets)
+  columns <- c('A','W','J1','J2','U1','U2','cv_mse','target_mse')
+  error <- max(abs(as.matrix(baseline$results[columns])-as.matrix(ans$results[columns])))
+  stopifnot(is.finite(error), error < 1e-7)
+  checks[[length(checks)+1]] <- data.frame(check='profile fitter recomputation',dataset,model='both',max_error=error)
   # Change only target outcomes by a deliberately large amount. Neither model,
   # covariance diagnostics, CV predictions nor target predictions may change.
   perturbed <- datasets
   ix <- ans$geometry$target_rows
   perturbed[[dataset]]$data$response[ix] <- 1000+seq_along(ix)*100
   again <- analyse_application(dataset,target,1L,perturbed)
-  p <- ans$predictions; q <- again$predictions
+  p <- baseline$predictions; q <- again$predictions
   stopifnot(identical(p$predicted,q$predicted),
-    identical(ans$results$cv_mse,again$results$cv_mse),
-    identical(ans$results$J2,again$results$J2),
-    identical(ans$results$W,again$results$W),
-    all(again$results$target_mse>ans$results$target_mse))
+    identical(baseline$results$cv_mse,again$results$cv_mse),
+    identical(baseline$results$J2,again$results$J2),
+    identical(baseline$results$W,again$results$W),
+    all(again$results$target_mse>baseline$results$target_mse))
   checks[[length(checks)+1]] <- data.frame(check='target outcome exclusion',dataset,model='both',max_error=0)
 }
 # Recompute the original package-fitter configuration as a separate sensitivity check.

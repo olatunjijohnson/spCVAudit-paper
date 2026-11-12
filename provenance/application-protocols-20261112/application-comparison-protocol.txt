@@ -1,0 +1,76 @@
+Jura and PM2.5 application comparison
+Declared 12 November 2026, before calculating application CV or target errors.
+
+Purpose
+Compare two continuous-response applications as potential replacements for the
+bird application. Keep both complete analyses, including unfavourable results.
+Choose an application on clarity, relevance, stability and data quality; a
+larger favourable contrast alone is not stronger scientific evidence. This is
+an exploratory comparison of applications, not independent confirmation.
+
+Data and outcomes
+Jura: gstat::jura, natural log of cadmium (mg/kg); the published 259 training
+and 100 validation sites provide the primary comparison. Keep those roles.
+PM2.5: EPA AQS 2023 annual concentration summaries, California, parameter
+88101, annual PM2.5 standard, ambient micrograms/cubic metre. Use complete
+annual records, retaining exceptional-event observations. Resolve duplicate
+summaries and collocated monitors using metadata, never prediction results.
+Use one response per site. Record all filtering and provenance. This regional
+and year choice precedes inspecting analysis outcomes. Original-scale PM2.5
+is the primary response. No modelled pollution grids are evaluation outcomes.
+
+Targets
+Jura primary: the published 100 validation sites, fixed.
+Jura sensitivities: 100 randomly held-out sites and the 100 northernmost sites
+from all 359 measured sites. These reuses of the same survey are sensitivities.
+PM2.5 primary: randomly hold out 25% of eligible sites, rounded up.
+PM2.5 sensitivity: the same number of northernmost sites, fixed.
+Equal target-site weights. Northern ordering uses northing and site ID.
+Forty repetitions per dataset/target combination. Random holdouts change each
+repetition; fixed-target repetitions vary CV partitions only. Target responses
+are excluded from covariance fits, mean fits, folds and diagnostic choices.
+Training and target sites must not coincide.
+
+Prediction models
+Primary: ordinary kriging with an estimated constant mean and isotropic
+exponential covariance plus nugget. Estimate covariance using the existing
+spLeakage variogram routine used in the manuscript, then estimate the mean by
+GLS and predict with all training observations. Re-estimate within every fold.
+Sensitivity: a linear coordinate trend, estimate covariance from training-only
+OLS residuals, and use GLS universal kriging with this covariance. Use the
+same response scale, targets and candidate folds. Record numerical stability,
+covariance parameters, warning messages and fits at/near numerical boundaries.
+
+CV schemes and selection
+Five folds: balanced random, coordinate k-means blocks, buffered versions of
+the same blocks, and CAST kNNDM using measured target locations. Buffer equals
+the median nearest-other-training distance, calculated from locations only.
+Do not tune it against target errors. Reuse the existing distance-summary and
+candidate-fold routines. Calculate A, W, J1, J2, U1 and U2 for every candidate.
+Primary J2 uses the full-training marginal response covariance, shared across
+schemes. Also retain trend-residual J2 as a clearly labelled sensitivity.
+Compare selection by W and absolute J2, fixed random and fixed kNNDM, and a
+descriptive best-of-four using observed target error (evaluation benchmark
+only). Keep the same final fitted model for all candidate CV schemes.
+Treat criterion values within 1e-12 of the minimum as tied. Average the tied
+candidates' absolute evaluation errors, not their scores before taking the
+absolute value, to match the manuscript's random tie-breaking convention.
+
+Evaluation and reporting
+Observed target MSE = mean squared error at reserved measured sites. It is not
+the true expected MSE, exact Gaussian risk, or an estimate of area-wide map
+error. For each candidate report target MSE, CV MSE, target minus CV MSE, and
+absolute difference. For each rule average these absolute differences across
+repetitions, with descriptive spread and paired W-minus-J2 differences.
+Do not compare raw MSE magnitudes between different response units.
+Repetitions reuse one spatial field per application and cannot identify
+repeated-field expected CV bias. Fixed-target repetitions measure partition
+variation. For fixed targets also examine sensitivity to spatial block
+resampling of target squared errors, conditional on fitted predictions and CV
+scores; this is not a population confidence interval or new validation data.
+
+Artifacts
+Keep source downloads, checksums, data-processing audit, configuration seeds,
+fold indices, site-level predictions, covariance-fit records, all results,
+figures, executable scripts and a readable PDF report in this new directory.
+Do not change the manuscript or replace the existing bird analysis yet.

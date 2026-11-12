@@ -1,0 +1,12 @@
+[
+  {
+    "file": "application-comparison-protocol.txt",
+    "original_workspace_path": "revision/application-comparison-20261112/PROTOCOL.txt",
+    "sha256": "939e90618e728a84f0253c7027f7e671ab14fa07380a1e34f6a04cf1f9c25b21"
+  },
+  {
+    "file": "covariance-search-protocol.txt",
+    "original_workspace_path": "revision/application-comparison-20261112/profile_sensitivity/PROTOCOL.txt",
+    "sha256": "2d1e764285356bf075451327119a176d626626a356e2b60daa2ac1f70fc17c35"
+  }
+]

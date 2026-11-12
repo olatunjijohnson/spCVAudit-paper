@@ -1,0 +1,26 @@
+Post-hoc covariance optimiser sensitivity, 12 November 2026
+
+Trigger: the declared primary analysis completed without errors, but full-data
+PM2.5 covariance estimates reached a sub-metre range in 16 of 40 random
+holdouts. All four J2 values then became zero. A numerical convergence status
+does not establish that the weighted variogram fitting objective is minimised.
+
+Retain all original outputs and investigate the same weighted least-squares
+objective before drawing scientific conclusions. Profile over exponential
+range on a log scale; solve the two linear covariance coefficients subject to
+the existing fallback bounds at each range. Search 81 log-spaced values from
+1e-6 to 5 times the maximum variogram-bin distance, refine each local minimum,
+and retain the original fit if its weighted residual sum of squares is lower.
+Thus no fit may have a worse value of the original estimating objective.
+
+Apply the alternative search to ALL 200 declared configurations and both
+prediction models, including every full-data and within-fold fit. Reuse exactly
+the same sites, responses, folds, buffer, seeds, scores and selection rules.
+This check changes numerical covariance estimation only. Do not change package
+source or replace the original analyses. Record original and revised objective
+values, parameter changes, fit counts and selection changes. Label this as a
+post-hoc implementation sensitivity, not a new independent experiment.
+
+The search addresses a demonstrated optimisation issue. It does not establish
+the stationarity, isotropy, exponential covariance or Gaussian assumptions for
+these data. Alternative results must be presented alongside the original run.

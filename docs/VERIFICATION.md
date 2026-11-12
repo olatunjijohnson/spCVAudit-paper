@@ -1,4 +1,7 @@
-# Verification of the assembled repository
+# Initial repository verification
+
+This is the dated assembly record. See [the current validation record](VALIDATION.md)
+for subsequent public-release checks and recomputation.
 
 Checks run locally on 12 November 2026 with R 4.6.1, CAST 1.1.1, ranger 0.16.0
 and the Python versions in `environment/requirements.txt`.
