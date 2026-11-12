@@ -6,6 +6,10 @@ for (trial in seq_len(200)) {
   qxy <- matrix(runif(8), 4, 2)
   signal <- runif(1, .05, .95); nugget <- 1 - signal; range <- runif(1, .03, .5)
   S <- signal * correlation_matrix(xy, range = range) + diag(nugget, n)
+  # The identities below assume marginal variance exactly one. BLAS rounding
+  # in the squared-distance formula can leave tiny positive self-distances;
+  # enforce the stated variance rather than relaxing the identity tolerance.
+  diag(S) <- 1
   B <- signal * correlation_matrix(qxy, xy, range = range)
   full <- variance_reduction(S, B)
   for (i in seq_len(nrow(qxy))) {
