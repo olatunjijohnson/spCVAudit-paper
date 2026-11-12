@@ -1,0 +1,19 @@
+{
+  "scope": "Independent Python calculation from paired field-level differences; fixed-cell Monte Carlo SEs and paired mean changes.",
+  "checks": [
+    {
+      "learner": "estimated",
+      "n": 1920,
+      "cells": 24,
+      "change": 0.0010754689048605105,
+      "mcse": 0.0017997836833767164
+    },
+    {
+      "learner": "known",
+      "n": 1920,
+      "cells": 24,
+      "change": 0.0024852629006869454,
+      "mcse": 0.0014763369142063404
+    }
+  ]
+}

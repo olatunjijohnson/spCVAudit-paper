@@ -1,0 +1,29 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+Rplots.pdf
+/*.tar.gz
+/*.Rcheck/
+
+# LaTeX build artifacts (keep .tex and .pdf)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bcf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# scratch backups (git history is the real backup)
+*.bak

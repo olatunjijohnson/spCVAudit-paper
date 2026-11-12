@@ -1,0 +1,8 @@
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Generated requested Jura figures from saved results.
+Generated supplementary reference, covariance-fit, nested and Jura displays.

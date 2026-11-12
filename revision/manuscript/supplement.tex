@@ -1,0 +1,341 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,longtable}
+\usepackage[round,authoryear]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdftitle={Supplementary material: Nearest-neighbour distances and prediction error in spatial cross-validation},pdfauthor={Olatunji Johnson},pdfsubject={Proofs, experiment details and reproducibility}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\graphicspath{{../figures/}}
+\input{numbers.tex}
+\title{Supplementary material: Nearest-neighbour distances and prediction error in spatial cross-validation}
+\author{Olatunji Johnson\\Department of Mathematics, University of Manchester}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Notation and the three error comparisons}
+\label{sec:notation}
+This supplementary material provides the proofs and implementation details for the main paper. The reference calculations hold the observation locations $S$, target locations and weights $Q$, and candidate folds fixed. They are chosen independently of the responses. Each observation is tested once and receives weight $1/n$ in the CV score. A fold containing $|H_f|$ test observations therefore receives weight $|H_f|/n$. Giving unequal folds equal weight would estimate a different quantity. The experiments and evaluated package implementation use equally weighted target grids or holdouts; the theory also permits specified unequal target weights.
+
+Mean squared error (MSE) is the expected squared difference between a response and its prediction; we also call this risk. Three ways of averaging error appear in the studies. The reference target MSE $R_Q$ averages over repeated training and target responses under the generating model. The refitting study instead fixes the observed training responses and averages over target responses conditional on them, giving the conditional target MSE of that particular fitted prediction model. The comparison of prediction models calculates squared error against the simulated target surface before observation noise and adds the noise variance $0.1$. This last loss averages over future observation noise only; its difference from the CV score is subsequently averaged across independent fields.
+
+Optimism is target MSE minus expected CV MSE, so a positive value means that CV underestimates target MSE on average. It has the opposite sign to conventional estimator bias. Taking the absolute value of expected bias differs from taking the absolute error of an observed CV MSE: the latter also includes score variability. In the Jura application, observed target MSE is the average squared prediction error at reserved sites on the natural-log cadmium scale. It is an empirical comparison for those measured sites, rather than expected MSE over repeated response datasets or a design-based estimate of error throughout the region.
+
+For distinct observations, correlation is $\rho(u)=wr(u)$, where $w=\sigma^2/(\sigma^2+\tau^2)$. An observation covariance matrix has diagonal $V=\sigma^2+\tau^2$. Separate measurements at the same location have covariance $\sigma^2$, because the nugget $\tau^2$ represents independent measurement noise. If the nugget instead represents small-scale variation shared by repeated measurements, the covariance between those measurements must be specified differently.
+
+\section{Proofs of the error identities}
+\label{sec:identities}
+\subsection{Prediction from one observation and from all observations}
+\label{sec:prediction}
+Subtract the known mean from each response. The joint covariance of the target response $Y(t)$ and training responses $Y_T$ is
+\[
+\begin{pmatrix}V&b^\top\\b&\Sigma_T\end{pmatrix}.
+\]
+Here $b$ contains the covariances between the target and training responses, and $\Sigma_T$ is the training covariance matrix. If $\Sigma_T$ is invertible, Gaussian conditioning gives mean $b^\top\Sigma_T^{-1}Y_T$ and variance $V-b^\top\Sigma_T^{-1}b$ \citep{rasmussen2006gpml}. The conditional mean minimises MSE, and its MSE is the conditional variance.
+
+The same MSE expression applies to the best linear prediction with these second moments even without Gaussian responses. Gaussianity ensures that this linear prediction is also the conditional mean. Fitting a variogram does not make the expression valid for an arbitrary nonlinear prediction model.
+
+With one training observation, $b=V\rho(D)$ and $\Sigma_T=V$. The reduction in MSE is therefore $V\rho(D)^2$, and subtraction of expected CV MSE from target MSE gives $O_1=VJ_2$. With all training observations, let $e=b^\top\Sigma_T^{-1}b$ and define $a=e-V\rho(D)^2$. The full set includes the nearest observation, so the optimal prediction using that set cannot have greater MSE than prediction using just the nearest observation. Hence $a\geq0$, and
+\[
+O_{\rm full}-VJ_2=\overline a_C-\E_Qa.
+\]
+The additional reduction in MSE is nonnegative at each location, but its difference between validation and target locations may be positive or negative. These identities assume known mean and covariance and equal independent observation-noise variance across locations. They do not include parameter-estimation error.
+
+\subsection{Ordered and crossing distance distributions}
+\label{sec:order}
+If $F_C\geq F_Q$ at every distance, validation distances are smaller in the sense of stochastic ordering. For any nonincreasing integrable function $g$, this gives $\E g(D_C)\geq\E g(D_Q)$. Taking $g=\rho$ and $g=\rho^2$ proves the one-neighbour sign result when correlation is nonnegative and nonincreasing. If correlation can be negative, its square need not decrease with distance, so that assumption is necessary for this argument.
+
+Let $m_C,m_Q$ be the means of $\rho(D_C),\rho(D_Q)$, and let $v_C,v_Q$ be their variances. The identity between first and second moments gives
+\begin{align*}
+J_2&=m_C^2+v_C-m_Q^2-v_Q\\
+   &=(m_C+m_Q)J_1+v_C-v_Q.
+\end{align*}
+For validation correlation $0.5$ and target correlations $0.8$ and $0.01$ with probabilities $0.6$ and $0.4$, the contrasts are $J_1=0.016$ and $J_2=-0.13404$. Under $\rho(u)=\exp(-u)$, distances are the negative logarithms of these correlations. Their CDFs cross. This constructs possible distance distributions with opposite contrast signs; it does not imply that every empirical fold construction can produce these particular probabilities.
+
+\subsection{Equal nearest distances with nonzero expected bias}
+\label{sec:counterexample}
+Place observations at $S=\{-1,0,1\}$ on a line. Test each observation using leave-one-out CV, and predict a distinct observation at $t=2$ using all three training observations. Set $V=1$, $w=0.8$ and $r(u)=\exp(-u)$. Every nearest distance is one, giving $A=W=J_1=J_2=U_1=U_2=0$. Inverting the covariance matrices gives mean explained variance $0.11018734$ during validation and $0.08713126$ at the target. Their difference is $O=\NeighbourCounterexample$.
+
+The difference comes from the other neighbours. For example, the middle validation observation has training observations one unit away on both sides. The target has training observations at distances one, two and three on the same side. Thus even complete agreement of the nearest-distance distributions leaves relevant information about the training set unspecified. Every observation is tested once, as required by the definition of expected CV MSE in the main paper.
+
+An earlier example tested only the middle observation. It gave explained variance $0.15630617$ and a gap of $0.06917491$ against the same target. That calculation remains in the executable check, but the manuscript uses the complete leave-one-out example in this subsection. The coordinates and separate calculations are supplied in \texttt{check\_theory.R}. The counterexample establishes that nearest-distance matching is insufficient; the simulations assess how large and frequent the errors are for the candidate schemes.
+
+Repeated measurements at one location give another illustration. For $k$ distinct measurements sharing a latent effect, let $\Sigma_k=\sigma^2\mathbf1\mathbf1^\top+\tau^2I$ and $b=\sigma^2\mathbf1$. The explained variance is
+\[
+e_k=\frac{k\sigma^4}{k\sigma^2+\tau^2}.
+\]
+With positive spatial variance and noise, this increases as more measurements become available, although the nearest distance stays zero. The measurements have independent noise and are not duplicate training and test records.
+
+\section{Distance weighting and the contribution of other neighbours}
+\label{sec:weighting}
+\subsection{Signed differences and nonnegative measures}
+\label{sec:transport}
+For a nonnegative distance with finite mean, $\E D=\int_0^\infty\{1-F(u)\}\,du$. Subtracting the two means gives $A=\int(F_C-F_Q)$. The one-dimensional Wasserstein distance is $W=\int|F_C-F_Q|$ \citep{panaretos2019wasserstein}. Therefore $|A|\leq W$, with equality if the CDF difference has the same sign almost everywhere. For example, validation distances of zero and two with equal probabilities and target distance one give $A=0$ but $W=1$.
+
+Suppose $\rho$ is absolutely continuous, nonnegative, decreasing and tends to zero. Integration by parts gives
+\[
+J_p=\int_0^\infty[-(\rho^p)'(u)]\{F_C(u)-F_Q(u)\}\,du,\qquad p=1,2.
+\]
+Any probability mass at zero is included through the CDF. The derivative $-(\rho^p)'$ supplies the weight at each distance. For exponential correlation, it is $(pw^p/\phi)\exp(-pu/\phi)$. The corresponding Wasserstein distance between the transformed correlations is
+\[
+U_p=\int_0^\infty[-(\rho^p)'(u)]|F_C(u)-F_Q(u)|\,du,
+\]
+which implies $|J_p|\leq U_p$. Here the absolute value is taken before integration, so positive and negative differences cannot cancel. A Stieltjes integral gives the same relationship for monotone transformations without a density.
+
+If $\rho^2$ satisfies a Lipschitz bound, its change is at most a constant $L_2$ times the change in distance. Then $|O_1|\leq VL_2W$. For $\rho(u)=w\exp(-u/\phi)$, one can take $L_2=2w^2/\phi$. This gives an upper bound on the one-neighbour error difference from $W$. It can be loose and does not apply to full kriging or an arbitrary prediction model. Replacing $W$ by $|A|$ would invalidate it when signed areas cancel.
+
+\subsection{Proof of the bound for the other neighbours}
+\label{sec:bound}
+\input{bound-proof.tex}
+
+Every evaluated exact MSE difference in the sensitivity study lay within the bound. The interval excluded zero in \CertIso\% of isotropic and \CertAniso\% of anisotropic candidate evaluations. These are proportions for which a deterministic bound determines the sign, not confidence-interval coverage probabilities. Separate numerical checks covered 800 pointwise bound calculations and 200 moment decompositions. The largest identity discrepancy was below $2\times10^{-16}$. These checks verify numerical implementation; the preceding arguments establish the results.
+
+\section{Training size and prediction models beyond the reference case}
+\label{sec:extensions}
+Let $R_Q(T_f)$ be target MSE using the actual training set for fold $f$. Average these MSEs with weights proportional to the numbers of test observations:
+\[
+ R_{Q,\mathrm{fold}}=\sum_f(|H_f|/n)R_Q(T_f).
+\]
+Adding and subtracting this quantity gives
+\[
+O=\{R_{Q,\mathrm{fold}}-C\}+\{R_Q(S)-R_{Q,\mathrm{fold}}\}.
+\]
+The first term compares validation and target prediction using the same training subsets. It still includes differences in location and neighbours, so it does not isolate a causal effect of geometry. The second term measures the effect of replacing those subsets with all training observations. It is nonpositive for optimal prediction with known covariance because $T_f\subseteq S$. For estimated or misspecified prediction models, more training data need not guarantee lower MSE, so the sign result is limited to the reference case.
+
+For another prediction model, define $g_C(d)$ and $g_Q(d)$ as expected validation and target losses conditional on nearest distance $d$. If the same nondecreasing function $g$ applies in both cases and the losses are integrable, stochastic ordering of distance gives the corresponding ordering of expected loss. This is sufficient, although not necessary. More generally, extending the functions over the relevant distances where needed,
+\[
+O=\{\E_Qg_C(D_Q)-\E_Cg_C(D_C)\}+\E_Q\{g_Q(D_Q)-g_C(D_Q)\}.
+\]
+The first term changes the distance distribution while keeping the validation relationship between distance and loss. The second term allows that relationship to change at the target. If target distances extend beyond validation distances, the validation data alone cannot establish the required extension. The one-neighbour Gaussian prediction model has $g(d)=V\{1-\rho(d)^2\}$ in both cases. Prediction using other neighbours or predictors need not share that property.
+
+\section{Experiment implementation and reproducibility}
+\label{sec:implementation}
+\subsection{Simulation settings, seeds and CV candidates}
+\label{sec:settings}
+Training locations lie in the unit square and are sampled uniformly or in clusters. Clustered samples use six random centres, Gaussian offsets with standard deviation $0.04$, and reflection at the boundaries. Targets are equally weighted grid-cell midpoints: a $15\times15$ grid for the first three studies and a $20\times20$ grid for the prediction-model comparison. The target square is either the unit square or shifted horizontally by $0.5$. Total marginal response variance is one. The first three studies use known mean zero. Buffered blocks exclude training observations within $0.05$ of any test location.
+
+Random folds are balanced by shuffling repeated fold labels. Spatial blocks use five-cluster $k$-means with five starts and at most 100 iterations. Buffered blocks keep these test sets unchanged. A candidate fails if fewer than two training observations remain. CAST kNNDM uses five folds, documented defaults and the target locations supplied explicitly. Its reference-study calculations reconstruct each location sample and repeat the preceding random draws used for the other candidates, ensuring comparison on the same geometry. Saved textual fingerprints record the exact fold assignments.
+
+Simulated coordinates are assigned a projected coordinate reference to request Euclidean distances. Their units are those of the unit square; they are not ecological metres. The Jura analysis transforms the supplied geographic coordinates to Swiss LV95 (EPSG:2056), subtracts a common origin and converts metres to kilometres.
+
+\subsubsection{Known-covariance design and additional results}
+\label{sec:known-details}
+Section 3.2 of the main paper gives the parameter values, the calculation of the 128 settings and the definition of a location configuration. The exponential and Mat\'ern-$3/2$ correlation functions are $r(u)=\exp(-u/\phi)$ and $r(u)=(1+\sqrt{3}u/\phi)\exp(-\sqrt{3}u/\phi)$, respectively. The same numerical $\phi$ does not imply the same practical correlation range in the two families. Configuration $i$ uses seed $310000+i$.
+
+All 20,480 evaluations of the four candidates completed. CAST's reported $W$ was checked against a separate calculation. The sign comparison uses prespecified thresholds $|O|>\delta$ for $\delta=0.005$, $0.01$, $0.02$ and $0.05$. The primary threshold $0.01$ is 1\% of total response variance. Larger thresholds improved sign agreement while excluding more evaluations. The nonnegative measures $W$, $U_1$ and $U_2$ have no sign to compare with $O$.
+
+At the primary threshold, sign agreement was \SignA\% for $A$, \SignJOne\% for $J_1$ and \SignJTwo\% for $J_2$, with MCSEs \SignSEA, \SignSEJOne\ and \SignSEJTwo\ percentage points. Agreement varied by scheme, with particularly poor agreement for $A$ under kNNDM. The full numerical comparisons are in \path{reference-sign.csv} in \path{../results/summaries/}.
+
+Mean absolute expected bias was \BiasJTwo\ for selection by $|J_2|$, \BiasW\ for $W$, \BiasJOne\ for $|J_1|$ and \BiasUTwo\ for $U_2$. The two fixed choices gave \BiasKnn\ for kNNDM on every configuration and \BiasRandom\ for random CV on every configuration. A benchmark choosing the smallest true $|O|$ among the four candidates gave \BiasOracle. It shows the best result within this candidate set using information ordinarily unavailable for selection. These are absolute expected biases calculated analytically, not absolute errors of individual observed CV scores. Figure~\ref{fig:reference-all} and \path{reference-selection.csv} report the additional comparisons.
+
+\subsubsection{Prediction-model design and loss calculation}
+\label{sec:learner-details}
+The prediction-model study has eight settings: two correlation scales ($0.05$, $0.2$), two sampling patterns and two targets. Each has 60 independent fields, giving 480 fields, with 200 training and 400 target locations each. Seeds are $610000+i$ for the main study and $510000+i$ for its pilot. The independent predictor and residual fields have the same exponential correlation and unit variance. Their joint simulation covariance has a $10^{-10}$ diagonal stabilisation. Fields, training noise and candidate folds are reused across the four $\alpha$ values in the response construction in Section 3.5 of the main paper.
+
+The five prediction models are the known mean $\sqrt{\alpha}X$, linear regression on $X$, a random forest on $X$, inverse-distance weighting using coordinates, and residual kriging with known mean and residual covariance. Known-mean prediction does not use training responses to estimate the residual. Random forests use \texttt{ranger} \citep{wright2017ranger}, 300 trees, one predictor, minimum node size five and one computational thread. These settings are fixed without target outcomes. Inverse-distance weights are proportional to $d^{-2}$, with numerical protection at zero distance. Residual kriging uses residual variance $0.9-\alpha$ and observation-noise variance $0.1$.
+
+At each target location, squared error is calculated against the simulated response surface before observation noise, then $0.1$ is added. This integrates over future observation noise only. CV uses noisy held-out responses. Target loss minus observed CV MSE is averaged across independent fields; its positive values indicate underestimation of target error on average. Diagnostics are calculated from both marginal response covariance and the true residual covariance. Because the latter is supplied by the generating model, this comparison does not assess residual-covariance estimation.
+
+All 38,400 prediction-model, scheme and $\alpha$ evaluations completed. For clustered sampling, scale $0.2$ and an in-domain target, random-CV mean marginal $J_2$ remained \ConstantMarginal\ across $\alpha$. As $\alpha$ rose from zero to $0.9$, the random forest's average difference between target loss and CV MSE across the 60 simulated fields fell from \ForestZero\ to \ForestNine\ (MCSEs \ForestZeroSE\ and \ForestNineSE), and the residual-kriging difference fell from \KrigingZero\ to \KrigingNine. The inverse-distance difference changed from \IDWZero\ to \IDWNine\ (MCSEs \IDWZeroSE\ and \IDWNineSE). The known-mean model has zero expected MSE difference; individual simulated differences can still vary. At $\alpha=0.9$, residual kriging reduces to that model because no residual spatial signal remains. Figure~\ref{fig:learners-all} and \path{learners-by-cell.csv} give every setting and scheme.
+
+\subsection{Repair of the response simulation seeds}
+\label{sec:seeds}
+The first covariance-estimation and refitting runs generated responses after constructing folds with CAST. An audit found that CAST 1.1.1's kNNDM calls \texttt{CreateSpacetimeFolds}. Its default seed is sampled from 1 to 1,000 and then resets R's random generator. As a result, the response simulations reused random innovation vectors: only 760 distinct vectors occurred in 1,440 estimation configurations, and 860 in 1,920 refitting configurations. Reproducing the numerical outputs alone did not reveal this problem. Those runs are retained as history and do not supply the current fitted-study estimates or their MCSEs.
+
+Before rerunning the affected studies, we fixed a separate response seed equal to each configuration's geometry seed plus $10^7$. We regenerated both complete studies with the suffix \texttt{-rng}. The settings, locations, folds, covariance fitter and scoring rules stayed unchanged, and seeds were not selected according to outcomes. The exact-risk reference study simulates no responses. The comparison of prediction models generates its fields and noise before calling CAST, then seeds each forest explicitly. Those studies were unaffected. The Jura application uses observed responses and therefore simulates no response innovations.
+
+The corrected audit found 3,360 distinct fingerprints for response states and innovation vectors across the two studies. This checks for exact reuse in those runs; it is not a proof of mathematical independence for the pseudorandom generator. Every fold assignment and analytic MSE determined by geometry agrees with the earlier run.
+
+A separate conditional Gaussian check using 20,000 draws agreed with the analytic MSE within 0.78 MCSE. Selection controls using only locations and known covariance agreed with their analytic average MSEs within 1.31 MCSE. The retained records include fingerprints, a minimal demonstration of the seed reset, the protocol amendment and the failed earlier audits.
+
+\subsection{Variogram fitting and implementation repairs}
+\label{sec:variogram}
+A semivariogram describes half the expected squared difference between responses as a function of their separation. For positive separation, the fitted model is
+\[
+ \gamma(u)=\tau^2+\sigma^2\{1-\exp(-u/\phi)\}.
+\]
+The fitted parameters give the response correlation
+\[
+ \rho(u)=\frac{\sigma^2\exp(-u/\phi)}{\sigma^2+\tau^2}.
+\]
+This is the correlation function used to convert distances into fitted diagnostic values.
+
+The estimated covariance comes from an isotropic exponential semivariogram. We divide distances into 15 equal-width bins up to half the maximum pairwise distance and calculate mean pair semivariances and mean distances in each nonempty bin. The least-squares objective weights each bin by its number of pairs. Only responses at the relevant training locations enter the fit. An unconstrained fit that gives invalid variance or scale parameters is rejected before parameter estimates are reported.
+
+If that fit is unusable, a constrained optimiser minimises the objective after scaling distances and semivariances, using an analytic gradient. A second bounded optimiser is tried if necessary. Let $g_{\max}$ be the largest bin semivariance and $u_{\max}$ the largest bin mean distance. The fallback bounds are $[0,g_{\max}]$ for the nugget, $[10^{-8}g_{\max},2g_{\max}]$ for the partial sill, and $[10^{-6}u_{\max},5u_{\max}]$ for the scale. These bounds apply to the fallback, not to an unconstrained fit that converges to valid parameters. Constant responses give zero spatial signal. Parameter intervals are omitted when a valid covariance estimate for the fitted parameters is unavailable.
+
+Several implementation repairs preceded the retained results. The initial code clipped invalid unconstrained parameters after fitting; the audit replaced this with rejection and refitting, followed by regeneration of the affected fitted-covariance studies. Scaling the constrained objective and checking its gradient resolved convergence failures that depended on coordinate units. The refitting pilot then produced a nugget near $-10^{-18}$ from a bounded optimiser. The final code rejects material bound violations and restores feasibility only for deviations within 64 machine epsilons in scaled units.
+
+Package 0.1.0.9003 produced the retained fitted studies. The simulated-response studies use suffix \texttt{-rng} after the seed repair in Section~\ref{sec:seeds}. The later Jura application uses an additional profile search, described in Section~\ref{sec:jura-fitting}. Earlier outputs and failed checks remain available. The final roundoff repair changed fitted ranges by less than $5\times10^{-15}$ and left other retained scientific values unchanged. The known-covariance reference and comparison of prediction models do not call this variogram fitter. Fitted-study outputs record package versions, the executed fitter body and source checksums.
+
+Among the 720 retained isotropic fits, \BoundaryIsoLow\ had signal fractions below $10^{-7}$ and \BoundaryIsoHigh\ had fractions above $1-10^{-7}$. The anisotropic counts were \BoundaryAnisoLow\ and \BoundaryAnisoHigh, respectively. These thresholds describe estimates near boundaries; they do not test whether spatial signal or observation noise is absent. Some large scale and sill estimates also indicate that the data constrain those parameters poorly. Convergence alone is therefore insufficient evidence that the estimated covariance is reliable.
+
+\subsubsection{Covariance-estimation design and diagnostic results}
+\label{sec:covariance-diagnostics}
+The covariance-estimation study uses 160 observations and 225 target locations in each of $2\times3\times2\times2\times2=48$ settings, with 30 repetitions each. The factors are scale ($0.05$, $0.2$), nonzero signal fraction ($0.3$, $0.7$, $0.95$), sampling pattern, target and isotropic or anisotropic dependence. Anisotropy has axis ratio $0.25$ and rotation angle $\pi/6$. Seeds are $810000+i$ for the main study and $710000+i$ for the pilot, with the response-seed correction in Section~\ref{sec:seeds}.
+
+We compare the true covariance, an isotropic description retaining the specified parameters but ignoring direction, and an estimated isotropic exponential covariance. Expected CV and target MSEs for prediction continue to use the generating covariance, so this study isolates diagnostic reliability from covariance estimation for prediction. We obtained covariance estimates for all 1,440 datasets. Parameter-boundary estimates and fitting warnings remain in the retained records; Section~\ref{sec:variogram} gives boundary counts and Figure~\ref{fig:covariance-fits} shows the fitted parameters.
+
+For $|O|>0.01$, $J_2$ sign agreement under isotropic dependence was \SensIsoTrue\% using true covariance and \SensIsoEst\% using fitted covariance. Under anisotropy it was \SensAnisoTrue\% using true covariance, \SensAnisoNominal\% when direction was ignored, and \SensAnisoEst\% using estimated isotropic covariance. For $J_2$ calculated using estimated covariance, \SmallGapIso\% of the \SmallCountIso\ isotropic candidate evaluations with $|J_2|\leq0.005$ had $|O|>0.05$. The corresponding proportion among \SmallCountAniso\ anisotropic evaluations was \SmallGapAniso\%.
+
+Complete results are in \path{../results/summaries/}: \path{sensitivity-headlines.csv} reports sign agreement and bounds; \path{sensitivity-near-zero.csv} reports small-contrast checks; and \path{covariance-fits.csv} records individual estimates.
+
+\subsubsection{Training-size contribution and bound results}
+\label{sec:training-bound-results}
+For each fold, we calculate target MSE using that fold's training set. We then average these MSEs with weights proportional to the numbers of test observations. Comparing target MSE using all observations with this average gives the training-size term defined in Section~\ref{sec:extensions}. It is nonpositive for optimal prediction with known covariance. Its mean absolute magnitude was \SizeIso\ under isotropic dependence and \SizeAniso\ under anisotropy, at unit response variance. Thus the validation--target difference includes a contribution from smaller CV training sets as well as differences in neighbour arrangements.
+
+The bound uses true covariance and contained the exact MSE difference in every evaluated configuration. It excluded zero, and therefore determined the sign, in \CertIso\% of isotropic and \CertAniso\% of anisotropic candidate evaluations. These are deterministic bounds, not confidence intervals. Their limited ability to determine the sign, together with the need for covariances involving all observations, restricts practical use. Section~\ref{sec:bound} gives the proof and numerical checks; \path{sensitivity-headlines.csv} and \path{sensitivity-by-cell.csv} give the numerical comparisons.
+
+\subsection{Refitting covariance within folds and evaluating selection}
+\label{sec:refitting}
+The refitting study contains 24 settings: two exponential scales ($0.05$, $0.2$), three nonzero signal fractions ($0.3$, $0.7$, $0.95$), two sampling patterns and two targets. Each setting has 80 independent location and response datasets, with 160 training and 225 target locations. Main seeds are $1210000+i$. The pilot uses one configuration per setting, 80 training and 64 target locations, and seeds $1200000+i$. Settings, repetition counts, prediction models and primary outcomes were fixed before this pilot. The study was motivated by the earlier findings, so its design was not independent of the entire project.
+
+Each configuration requires one full-data covariance fit and 20 fold-specific fits: five training subsets for each of four CV schemes. All 1,920 datasets and 40,320 fits completed. The mean is known to be zero. A held-out response enters neither its fold's covariance estimate nor its prediction, and candidate folds use locations alone. All training responses can enter the full-data covariance fit used for scheme selection. The evaluation therefore includes the consequences of using responses to choose a scheme. Prediction with known covariance and selection with known correlation weights are assessed separately as controls.
+
+Selection rules minimise $|A|$, $W$, or the values of $|J_1|$, $|J_2|$, $U_1$ and $U_2$ calculated using estimated or known covariance. The fixed choices use random CV for every dataset or kNNDM for every dataset. An ideal benchmark, called the oracle in the output files, chooses the smallest absolute score error using true conditional target MSE. Diagnostic selection does not receive that MSE. For candidates tied within $10^{-12}$, each candidate's absolute score error is calculated separately before averaging the errors with equal weights.
+
+\subsubsection{Ten-fold sensitivity check}
+\label{sec:tenfold}
+A post-hoc check repeats the same 1,920 fields with ten folds per candidate. Its protocol was recorded before generating its results. Fitting, seeds, scoring and tie tolerance remain unchanged. All 78,720 main covariance fits completed, and full-data fits and conditional target MSEs are unchanged. For prediction with estimated covariance, the paired MAE difference is $-0.00241$ (MCSE $0.00135$), compared with $-0.00349$ (MCSE $0.00152$) for five folds. The ten-fold result is a 1.7\% MAE reduction, with a Monte Carlo interval that includes zero. The paired change in the $|J_2|$-versus-$W$ MAE difference from five to ten folds is $0.00108$ (MCSE $0.00180$). Its Monte Carlo interval includes zero, so this check does not establish whether fold count changes the relative benefit of the two selection rules. These fields are reused, not new independent repetitions. The accompanying \textit{Ten-fold sensitivity check} report (\texttt{fold-count-report.pdf}) gives the aggregate comparison. The two-page \texttt{fold-count-comparison.pdf} shows every setting for both covariance choices. Both files are in \path{../exploratory/}. The delivery includes the protocol, raw results and source hashes.
+
+\subsubsection{Conditional target MSE and aggregate score errors}
+\label{sec:refitting-scores}
+For observed training vector $y$, generating covariance $\Sigma$, and target cross-covariance $B$, the true conditional target mean is $m_Q=B\Sigma^{-1}y$. The conditional variance vector $v_Q$ is the diagonal of $\Sigma_{QQ}-B\Sigma^{-1}B^\top$, with target marginal variances one. For a final prediction $p(t)$, conditional target MSE is
+\[
+ \E_Q\{[p(t)-m_Q(t)]^2+v_Q(t)\}.
+\]
+The squared term measures departure from the true conditional mean. The variance term includes independent target observation noise. This calculation averages over possible target responses without simulating them. It is withheld from construction and diagnostic selection of candidates. Prediction with known covariance equals $m_Q$ and has the smaller conditional MSE in every configuration, as checked in the code.
+
+Score error is conditional target MSE minus observed CV MSE. Positive values indicate underestimation of the fitted model's conditional target MSE. Mean absolute error (MAE) averages absolute score errors across datasets. In the known-covariance study, responses are averaged before taking an absolute value; here each observed score error is made absolute before averaging. Thus MAE includes score variability as well as systematic error. Reported signed error and root mean squared error (RMSE) give complementary summaries. All evaluate the complete selection procedure, including its use of observed responses.
+
+When both prediction and the calculation of $J_2$ used estimated covariance, selection by $|J_2|$ gave MAE \NestedMAEJTwo\ compared with \NestedMAEW\ for $W$, a \NestedReduction\% reduction. The paired difference was \NestedDelta\ (MCSE \NestedSE; Monte Carlo interval \NestedLower\ to \NestedUpper). The fixed choices gave MAE \NestedMAEKnn\ for kNNDM and \NestedMAERandom\ for random CV. Mean signed score error was \NestedBiasJTwo\ under $|J_2|$ selection and \NestedBiasW\ under $W$. Signed averages allow overestimation and underestimation to cancel, which motivates the primary MAE comparison. Both selection rules evaluate the same final prediction model; the percentage reduction concerns estimation of its MSE, not improvement in its predictions.
+
+As a separate check, prediction with known covariance and selection using only locations are compared with their analytic average errors. The known-covariance prediction and known-correlation selection controls are recorded separately. The files \path{nested-selection.csv} and \path{nested-paired-comparisons.csv} in \path{../results/summaries/} give all aggregate comparisons.
+
+\subsubsection{Variation across settings and post-hoc checks}
+\label{sec:refitting-variation}
+Most of the benefit occurred with uniform sampling and a shifted target, where the paired MAE difference was \NestedShiftDelta\ (MCSE \NestedShiftSE). Intervals included zero for the other three sampling-pattern/target groups. One setting within that group, scale $0.05$ and signal fraction $0.95$, accounted for almost all of the overall gain, with a paired difference of \NestedStrongCellDelta. Figure~\ref{fig:nested-all} shows all settings, and \path{nested-paired-comparisons.csv} gives the pooled group comparisons.
+
+After seeing this concentration, we repeated the summary while omitting each of the 24 settings in turn. Omitting the short-scale, high-signal setting left a mean difference of \NestedOtherCellsDelta\ across the other 23. Every omission is reported in \path{nested-cell-influence.csv}. These post-hoc analyses do not replace the primary comparison, which retains all settings, and their intervals do not account for choosing exclusions after seeing the results. Both the generating and fitted covariance models are exponential and the mean is known. The experiment does not establish performance under directional or spatially varying dependence, an unknown mean, or binary responses.
+
+The post-hoc choice analysis records every setting for both covariance choices for prediction in \path{nested-choice-frequencies.csv}. When prediction and the calculation of $J_2$ use estimated covariance, selection by $|J_2|$ and by $W$ gives the same candidate set in \NestedSameChoices\ of 1,920 datasets. The former gives smaller absolute error, averaged over ties, in \NestedWins\ datasets and larger error in \NestedLosses. Omitting each individual repetition while maintaining equal setting weights gives differences from \NestedOmissionMin\ to \NestedOmissionMax. Thus no single dataset accounts for the overall sign, although the benefit remains concentrated in one setting.
+
+In the strongest setting, selection by $|J_2|$ calculated using estimated covariance chose random folds without a tie in \NestedStrongRandomChoices\ of 80 datasets; $W$ did so in \NestedStrongWRandomChoices. Mean conditional target MSE was \NestedStrongTargetRisk; mean CV scores were \NestedStrongCVRandom\ for random folds and \NestedStrongCVKnn\ for kNNDM. These comparisons describe the rules' behaviour without isolating a causal explanation or justifying a change of primary target. All candidate scores and paired comparisons are retained. The CSV files are in \path{../results/summaries/}, with associated tables listed in Section~\ref{sec:result-tables}.
+
+\subsection{Ties and Monte Carlo uncertainty}
+\label{sec:uncertainty}
+Within each configuration, diagnostic selection minimises the stated criterion. Losses are averaged for ties within $10^{-12}$. When all candidates share $w>0$, $|J_p|$ and $U_p$ equal $w^p$ times their versions based on latent-process correlation. The signal fraction alone therefore does not change their mathematical rankings. At zero signal, all candidates tie. Very small positive signal can also produce numerical ties under an absolute tolerance.
+
+A post-hoc audit in \path{selection-tolerance.csv} reports six tolerances, from exact equality to $10^{-8}$, for prediction with both known and estimated covariance. For estimated-covariance prediction, the primary paired difference is identical at tolerances $10^{-14}$, $10^{-12}$ and $10^{-10}$. We retained the original tolerance.
+
+For a fixed collection of settings, let $n_g$ be the number of independent repetitions in setting $g$, and $s_g^2$ the sample variance of the quantity being averaged. The MCSE of the overall mean is
+\[
+\operatorname{MCSE}(\overline x)=\frac{\sqrt{\sum_g n_g s_g^2}}{\sum_g n_g}.
+\]
+For comparisons, we calculate a paired difference within each repetition before applying this formula. For sign agreement, the correct and eligible candidate counts within configuration $i$ are $N_i$ and $D_i$. With $p=\sum N_i/\sum D_i$, the delta-method standard error is
+\[\frac{\sqrt{\sum_g n_gs_g^2(N_i-pD_i)}}{\sum_i D_i}.\]
+Here $s_g^2(N_i-pD_i)$ is the sample variance of $N_i-pD_i$ within setting $g$. A configuration with no eligible evaluation contributes zero to both counts. Schemes and folds are not treated as independent repetitions. Output tables report eligibility counts, results for each threshold and results for each setting.
+
+The reference-study files also report descriptive Spearman correlations. They use average ranks for numerical ties within $10^{-12}$, for both diagnostic values and absolute expected errors. Each sorted tie group spans at most that tolerance. These rank summaries do not enter scheme selection or the primary comparisons.
+
+In the comparison of prediction models, each setting has 60 independent fields, and comparisons across $\alpha$ use the same fields. The mean absolute observed score difference includes score variability because absolute values are taken before averaging. It is reported separately from absolute expected bias. The CSV tables in this supplementary material (Section~\ref{sec:result-tables}) use this descriptive outcome for diagnostic selection as well; it does not estimate exact bias. The Jura application reports mean scores and mean absolute discrepancies across repetitions within one survey, with medians and quartiles showing their descriptive spread. These repetitions are not independent spatial fields.
+
+\subsection{Jura soil-cadmium application}
+\label{sec:jura}
+\subsubsection{Data, targets and folds}
+\label{sec:jura-design}
+The application uses the \texttt{jura.pred} and \texttt{jura.val} objects from the \texttt{jura} dataset in \texttt{gstat} 2.1-1 \citep{pebesma2004gstat}. These contain the 259-site training and 100-site validation sets documented by \citet{goovaerts1997geostatistics}. The original survey investigated trace metals in topsoil over 14.5 km$^2$ in the Swiss Jura \citep{atteia1994jura}. The data provide cadmium, cobalt, chromium, copper, nickel, lead and zinc concentrations, spatial coordinates, land use and geology. The current analysis uses cadmium and coordinates. All 359 cadmium measurements are available and positive. The response is their natural logarithm; reported errors remain on this scale.
+
+The 100 validation sites in the dataset's original split form the primary target. Two sensitivity analyses instead reserve 100 uniformly sampled sites or the 100 northernmost sites from all 359 observations. Northern ordering uses projected northing, with site identifier breaking ties. Each analysis has 259 training and 100 target sites. The target observations receive equal weights and enter neither fold construction, covariance estimation nor diagnostic selection.
+
+For each target, 40 repetitions use split seeds $1210000+1000c+i$ and fold seeds $1310000+1000c+i$, where $c=1,2,3$ denotes the original, random and northern target sets and $i=1,\ldots,40$. kNNDM has a separate seed equal to the fold seed plus 100,000. The original and northern splits remain fixed; random splits change with $i$. Coordinate blocks use five $k$-means groups with five starts and at most 100 iterations. Buffered blocks remove training sites within the median nearest-other-training distance of any test site. For the original split this buffer removes no additional sites, so the block candidates coincide. kNNDM uses CAST 1.1.1 with five folds and its default hierarchical clustering. Fixed inputs can therefore give identical partitions in different repetitions. All fold lists and target assignments are retained.
+
+\subsubsection{Prediction, covariance fitting and verification}
+\label{sec:jura-fitting}
+Ordinary kriging uses all observations available to each fitted model. With covariance matrix $\Sigma$, response vector $y$ and a mean-design matrix $F$, the generalised least-squares estimate is
+\[
+ \widehat\beta=(F^\top\Sigma^{-1}F)^{-1}F^\top\Sigma^{-1}y,
+ \qquad
+ \widehat y(t)=f(t)^\top\widehat\beta+b(t)^\top\Sigma^{-1}(y-F\widehat\beta).
+\]
+For ordinary kriging, $F$ is a column of ones. The trend sensitivity adds centred, scaled easting and northing. Its initial ordinary-least-squares residuals supply the variogram; the final mean coefficients use generalised least squares. Each fold estimates its own mean and covariance using only its training responses. A full-training fit supplies the final target predictions. No numerical covariance stabilisation was needed in the Jura fits.
+
+The covariance model and binned, pair-count-weighted semivariogram objective are those in Section~\ref{sec:variogram}. The application adds a post-hoc numerical check of that objective: at each of 81 log-spaced scale values between $10^{-6}u_{\max}$ and $5u_{\max}$, nugget and partial sill are obtained by constrained linear least squares. Candidate local minima are refined in the log scale. The coefficient bounds are those of the existing fallback, and the original fit is retained if it has a lower objective. This search is repeated for every full-data and fold fit, using only the responses available for that fit. The candidate folds remain unchanged.
+
+The additional search was introduced after an exploratory application comparison revealed that numerical convergence could occur at a short-range fit with a worse objective than another admissible fit. Both the initial Jura results and the results with this additional search are retained; the latter supply the manuscript. The conclusion for the original split is unchanged, and the mean absolute selection discrepancies across all Jura target/model combinations change by less than $4\times10^{-5}$. The earlier covariance-estimation and refitting simulations have not been rerun with this search. Their results describe the original fitting procedure; its sensitivity to the additional search remains unassessed.
+
+Across three targets, 40 repetitions and two mean models, the application gives 960 candidate evaluations and 5,040 covariance fits. Every configuration completed. Independent calculations reproduced distances, $W$, $J_2$ and the scores from saved site-level predictions. Checks confirmed complete fold coverage, separation of training and target sites, and buffering. Kriging predictions agreed with \texttt{gstat} to numerical precision. Altering target responses left fitted predictions, CV scores and diagnostic choices unchanged. The subsequent transfer to the manuscript's reproduction scripts was checked against all retained Jura configurations.
+
+\subsubsection{Selection, sensitivity results and interpretation}
+\label{sec:jura-sensitivity}
+For each repetition, observed target MSE is the average squared error of the full-training model at its 100 target sites. The CV score averages squared errors at the 259 training sites, each predicted without its test fold. Selection uses the smallest $W$ or absolute $J_2$, with the same full-training marginal response covariance shared by all candidates. A separate sensitivity uses the estimated trend-residual covariance. Ties within $10^{-12}$ receive equal probabilities; the absolute CV--target differences are calculated for individual tied candidates and then averaged.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Jura: mean absolute difference between observed target MSE and the selected CV score across 40 repetitions. All values use squared natural-log cadmium units. ``Original split'' uses the dataset's original 100 validation sites. ``Random'' and ``kNNDM'' always use that scheme; $W$ and $|J_2|$ select among the four candidates. ``Best of four'' is the smallest observed absolute difference among those candidates within each repetition, using target responses only as an evaluation benchmark. Constant mean denotes ordinary kriging; the linear trend adds projected coordinates.}
+\label{tab:jura-selection}
+\input{table-jura.tex}
+\end{table}
+
+For the original 100 validation sites, both diagnostics select kNNDM throughout, while random CV is closer to observed target MSE. Adding a coordinate trend leaves that result unchanged. For random targets, $|J_2|$ reduces mean absolute discrepancy relative to $W$ by about 0.3\% with a constant mean and 0.5\% with a trend. For the northern target, both rules select the coincident block candidates; their observed errors are closer to target MSE than those of random CV. Table~\ref{tab:jura-selection} and Figure~\ref{fig:jura-targets} show all six target/model combinations. The machine-readable files also retain selection by $A$, $J_1$, $U_1$, $U_2$ and residual-covariance $J_2$.
+
+A conditional sensitivity analysis reweights the errors at each fixed target using 2,000 resamples of ten coordinate-based target clusters, while keeping predictions and CV scores fixed. For the original 100 validation sites under ordinary kriging, the central 95\% range of reweighted MSE is 0.241--0.395; random CV is closer than selection by $|J_2|$ in approximately 84\% of these resamples. These are sensitivity summaries for one realised field, not population confidence intervals. Repeated partitions and overlapping random holdouts do not supply independent spatial datasets, and measured-site error is not a design-based estimate of error throughout the region.
+
+\section{Software checks and retained files}
+\label{sec:reproduction}
+The corrected package passed its local test suite, including tests using locally available optional forest and emulator dependencies. It also passed a CSF source build and \texttt{R CMD check --no-manual}, including examples and rebuilt vignettes. Tests requiring optional dependencies absent from CSF were explicitly skipped. Regression checks cover independent-noise measurements at the same location, covariance constraints, coordinate-unit changes, invalid fold overlap, response seed handling, geographic nearest neighbours and incompatible coordinate reference systems.
+
+Shared pilot calculations agreed between local R 4.6.1 and CSF R 4.5.0 to a maximum difference of approximately $4\times10^{-14}$, with identical fold fingerprints. Complete reruns in fresh directories then reproduced the six studies in the original research archive under both the preserved package 0.1.0.9003 and final source 0.1.0.9004. Each compared 174 scientific columns or records, including all 40,320 refitting-study fit records and every saved split fingerprint. The original local Gaussian calculation differed by at most $1.7\times10^{-13}$; the other studies matched exactly. Both reruns passed the corrected response-seed and numerical-geometry checks. They reproduced the corrected \texttt{-rng} studies, not the superseded runs.
+
+A further rerun used a separately built library of 129 non-base R packages with fixed versions and source hashes. All 174 scientific comparisons passed. Regenerating plots and summaries then exposed two additional issues: a PNG device that implicitly required X11, and rank correlations sensitive to last-bit differences at exact ties. Explicit Cairo export and the stated rank tolerance resolved them. For the archived reproduction, all 30 derived summary, provenance and manuscript outputs subsequently agreed within $1.6\times10^{-13}$, with identical formatted manuscript numbers. All non-rank summary values were unchanged.
+
+A second library rebuilt from the saved source cache also passed the package check and vignettes. A fresh run from the corrected archive then completed all 23 stages without intervention, including the scientific comparisons, derived-output comparisons and source-package check. Both library builds used the CSF R module and native libraries, so they are not independent operating-system installations. Source archives, build scripts, installation logs and failed attempts are retained with the reproduction instructions.
+
+Version 0.1.0.9004 also repaired metre--degree consistency in geographic buffer limits and default inverse-distance prediction. Coordinate $k$-means remains planar and requires an appropriate projection for metric blocks. Variogram subsampling now selects pair ranks before allocating indices, avoiding allocation of all pairs for a small subsample. Tests cover date-line and high-latitude distances and selection of 500 pairs from more than five billion possibilities. These changes did not alter the executed variogram-fitting objective or the retained scientific results.
+
+The checked source archive, test logs, rerun records and SHA-256 inventory identify the verified files. Those archived checks precede the Jura replacement. The current scientific inputs are:
+\begin{itemize}
+\item \texttt{gp-reference.rds} and \texttt{gp-knndm.rds}: exact Gaussian risks;
+\item \texttt{learners.rds}: prediction models with fixed marginal response covariance;
+\item \texttt{sensitivity-rng.rds}: estimated covariance and directional dependence;
+\item \texttt{application-jura.rds}: the Jura application, including fold indices, predictions and covariance-fit records;
+\item \texttt{nested-estimation-rng.rds}: covariance refitted within each training fold.
+\end{itemize}
+These files supply the generated summaries and the table linking manuscript numbers to their sources. Plotting and editorial outputs are kept separately from the saved scientific results.
+
+\subsection{Additional figures}
+\label{sec:additional-figures}
+The following five figures accompany this supplementary material as separate PDF files in \path{../figures/}:
+\begin{itemize}
+\item \refstepcounter{figure}\label{fig:reference-all}\textbf{Figure~\thefigure.} \texttt{S1-reference-all.pdf}: all 128 reference settings, with paired differences in mean absolute expected bias for $|J_2|$ versus $W$ and Monte Carlo intervals;
+\item \refstepcounter{figure}\label{fig:learners-all}\textbf{Figure~\thefigure.} \texttt{S2-learners-all.pdf}: every prediction model, CV scheme and combination of scale, sampling pattern and target. Points average 60 independent fields; bars show $\pm1.96$ MCSE. The same fields are used across $\alpha$;
+\item \refstepcounter{figure}\label{fig:covariance-fits}\textbf{Figure~\thefigure.} \texttt{S3-covariance-fits.pdf}: fitted signal fractions and scale ratios, including boundary and extreme estimates;
+\item \refstepcounter{figure}\label{fig:nested-all}\textbf{Figure~\thefigure.} \texttt{S4-nested-all.pdf}: all 24 refitting settings for prediction with estimated and known covariance;
+\item \refstepcounter{figure}\label{fig:jura-targets}\textbf{Figure~\thefigure.} \texttt{S5-jura-targets.pdf}: all three Jura targets and both mean models; absolute discrepancies across 40 repetitions, with means, medians and interquartile ranges.
+\end{itemize}
+Figure captions state what is averaged and what the intervals describe. Machine-readable summaries also give the training-size contribution and comparisons with the mathematical bounds. Earlier manuscripts and submission archives remain as historical records. Current numerical claims use the regenerated results listed above.
+\subsection{Machine-readable result tables}
+\label{sec:result-tables}
+The following CSV tables accompany this supplementary material in \path{../results/summaries/}. Rows identify the simulation setting, prediction model or selection rule needed to locate the supporting result.
+\begin{itemize}
+\item \path{nested-choice-frequencies.csv}: selection frequencies for each of the 24 refitting settings and for all settings combined, under both covariance choices for prediction;
+\item \path{nested-cell-influence.csv}: the 24 post-hoc analyses omitting one setting at a time;
+\item \path{nested-paired-comparisons.csv}: paired MAE differences and Monte Carlo intervals, overall and by sampling-pattern/target group;
+\item \path{nested-by-cell.csv} and \path{nested-candidate-scores.csv}: refitting-study comparisons and candidate CV scores;
+\item \path{learners-by-cell.csv} and \path{learners-selection.csv}: all prediction-model settings and descriptive selection comparisons;
+\item \path{application-jura-candidates.csv}: CV scores, target errors and diagnostics for all Jura candidates;
+\item \path{application-jura-selection.csv} and \path{application-jura-selection-repetitions.csv}: Jura selection summaries and individual repetition results;
+\item \path{sensitivity-by-cell.csv}: covariance-estimation comparisons by setting;
+\item \path{sensitivity-near-zero.csv}: the behaviour of near-zero contrasts.
+\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

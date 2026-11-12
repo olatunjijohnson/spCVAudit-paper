@@ -1,0 +1,128 @@
+---
+title: "Auditing validation against a prediction target"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Auditing validation against a prediction target}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.width = 6, fig.height = 4)
+library(spLeakage)
+```
+
+## Specify the prediction task
+
+A validation split can place test observations close to training data while the
+locations where predictions will be used are farther away. The reverse is also
+possible. Whether either difference matters for predictive error depends on the
+learner, the response process, covariates and the loss being assessed.
+
+`spLeakage` describes this validation–target mismatch. Existing methods including
+NNDM and kNNDM also use prediction-target distances and support inspection of their
+distributions. The diagnostic is an aid to interpreting a supplied split, not a
+certificate that a validation scheme is unbiased.
+
+This example simulates noisy observations of a Gaussian process at clustered
+locations. Its covariance is known because we specify it ourselves.
+
+```{r data}
+set.seed(3)
+n <- 160
+centres <- matrix(runif(12, 0.1, 0.9), 6, 2)
+xy <- centres[sample.int(6, n, replace = TRUE), ] +
+  matrix(rnorm(2 * n, sd = 0.04), n, 2)
+xy <- xy %% 2
+xy[xy > 1] <- 2 - xy[xy > 1]
+d <- data.frame(x = xy[, 1], y = xy[, 2])
+D <- as.matrix(dist(xy))
+Sigma <- 0.7 * exp(-D / 0.15) + diag(0.3, n)
+d$z <- as.numeric(t(chol(Sigma)) %*% rnorm(n))
+dep <- list(rho = function(h) 0.7 * exp(-h / 0.15),
+            range = 0.15, practical_range = 0.45, signal_prop = 0.7)
+```
+
+Our finite prediction target is an equally weighted grid over the unit square.
+These locations define the task; they are not additional response observations.
+For a real survey, document coordinate units, CRS and any unequal target weights.
+
+```{r target}
+g <- seq(0.025, 0.975, length.out = 15)
+target <- prediction_target(grid = as.matrix(expand.grid(x = g, y = g)))
+folds <- sample(rep_len(1:5, n))
+audit <- detect_leakage(d, folds, target, response = "z", dependence = dep,
+                        coords = c("x", "y"))
+audit
+```
+
+## Interpret the quantities
+
+`SLI_rho` is the mean specified correlation for validation nearest neighbours
+minus that for target nearest neighbours. A positive value means the former is
+larger; a negative value means it is smaller. A near-zero value means the averages
+are close, which does not establish equality of distributions or unbiased error.
+
+`SLI_rho2` compares squared correlations. Multiplying it by the marginal response
+variance gives the target-minus-validation expected squared-error gap for the
+known-mean predictor using one nearest observation under the specified covariance
+model. This is not a general identity for full kriging, a random forest or an
+arbitrary fitted model.
+
+`A` is the mean target distance minus the mean validation distance. `W` is the
+unsigned Wasserstein distance between the two distance distributions. The
+inequality `abs(A) <= W` allows opposite differences at different distance scales
+to cancel in the signed area. The `crosses` field identifies such crossings
+without relying on a small signed score.
+
+```{r ecdf, fig.alt="Validation and target nearest-neighbour distance distributions"}
+plot(audit)
+```
+
+The local map shows each validation observation's correlation relative to the
+average target correlation. It is not a map of target prediction bias.
+
+```{r contributions, fig.alt="Contributions to the signed correlation contrast"}
+summary(audit)
+plot(audit, which = "map")
+```
+
+For observed data, omit `dependence` to estimate an exponential variogram from the
+specified response, or supply a scientifically justified model. A nugget is
+interpreted as independent observation noise: distinct co-located measurements
+have correlation equal to the signal fraction, not one. Marginal response and
+model-residual dependence answer different questions. Estimated residuals do not
+automatically remove bias from validation.
+
+When a parameter covariance matrix is available, `n_boot` requests approximate
+parameter propagation under the fitted family and fixed geometry. Missing
+parameter covariance returns no interval. These intervals do not cover predictive
+bias, model misspecification or arbitrary uncertainty in the sampling design.
+
+## Compare candidate assessments
+
+A prediction target and a sampling-design label alone do not establish the best
+CV scheme. Probability sampling can be clustered, and CV uses smaller training
+sets than the deployed model. Recommendations therefore identify assessments to
+compare and explain their assumptions.
+
+```{r recommend}
+recommend_validation(estimand = "prediction", design = "clustered", target = "grid")
+recommend_validation(estimand = "population", design = "probability", target = "grid")
+```
+
+The second call concerns assessment of a fixed map using a separate probability
+validation sample and a suitable survey estimator. It does not assert that random
+K-fold CV is design-unbiased.
+
+```{r rank}
+rank_cv_schemes(d, target, response = "z", coords = c("x", "y"))
+```
+
+Ranking defaults to unsigned distance mismatch. Selecting a small mismatch is a
+comparison rule, not a guarantee that the selected CV error equals deployment
+error. Inspect the full distributions and the prediction model before using the
+ranking to guide an analysis.
+
+The additional tutorials discuss score comparisons (`vignette("quantify-correct")`)
+and descriptive checks beyond spatial distance (`vignette("channels")`).

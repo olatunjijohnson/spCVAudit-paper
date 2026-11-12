@@ -1,0 +1,6 @@
+# Versions used for the local Jura analysis and current manuscript figures.
+numpy==1.26.4
+pandas==3.0.3
+scipy==1.11.4
+matplotlib==3.6.3
+scikit-learn==1.8.0

@@ -1,0 +1,115 @@
+{
+  "verified_utc": "2026-10-29T06:22:32.183041+00:00",
+  "status": "complete",
+  "csf_job": "23933572",
+  "runtime": "revision/csf/cached-runtime-23933018",
+  "paired_fields": 1920,
+  "factor_cells": 24,
+  "replicates_per_cell": 80,
+  "main_covariance_fits": 78720,
+  "failed_main_configurations": 0,
+  "pilot_configurations": 24,
+  "pilot_covariance_fits": 984,
+  "failed_pilot_configurations": 0,
+  "full_data_fit_and_target_risk_checks": [
+    {
+      "quantity": "conditional_target_risk",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "fitted_range",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "fitted_signal",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "fitted_variance",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "full_fit_range",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "full_fit_nugget",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "full_fit_psill",
+      "maximum_absolute_difference": "0"
+    },
+    {
+      "quantity": "full_fit_signal",
+      "maximum_absolute_difference": "0"
+    }
+  ],
+  "outputs_verified_locally": 24,
+  "duplicate_dense_tables_retained_only_on_csf": [
+    "work/revision/results/nested-estimation-k10.csv",
+    "work/revision/results/nested-k10-pilot.csv"
+  ],
+  "scope": "Post-hoc ten-fold sensitivity declared before outputs; the same 1920 response fields are reused, not new independent replication. All cells and both predictors are reported. The primary six-study inputs and headline values are unchanged.",
+  "evidence": {
+    "revision/audit/fold-count-independent-summary-check.json": "59ffef372a92426a03867c832b70d877c01f45b5b1287b684018660a4f79b278",
+    "revision/audit/fold-count-sensitivity-protocol.json": "3ae12cc364f20768f40cfa0f450f6c27cdb5a1cadf4c8c21d14ab8a3badecdd9",
+    "revision/audit/fold-count-source-changes.patch": "35961889feefb3ba71a21a6f0992689e052e260750f58ad8ef20f969234cba7f",
+    "revision/csf/fold-count-23933572/COMPLETION.json": "7b7f13d1b1b88e3b98438f9103ff91a7ca69e39f1fff0b173abb70a57469471e",
+    "revision/csf/fold-count-23933572/executed-job.slurm": "7bb18d8ed169dd97a91ba746e2a577e4e6b794fcea8dbcafc7128c56ac72ab39",
+    "revision/csf/fold-count-23933572/input-sha256.txt": "8418d42e53fc5ba115446974323bf7f16b41bc54f1730f647552616dd40ea550",
+    "revision/csf/fold-count-23933572/resolved-packages.csv": "060d57b85855002449755a57e08f558c199455dd1c67088dec7b562f5de846f8",
+    "revision/csf/fold-count-23933572/runtime-session.txt": "4a249c3527bf5e4b7922ad215b6ff0fef16f75786f700ffb531a186442e3ef3a",
+    "revision/csf/fold-count-23933572/slurm-accounting.psv": "7e1d9c879a14a5d660c892b829bf529c6569144a32e63d7ee209432108e04d6b",
+    "revision/csf/fold-count-23933572/spleakage-delivery-candidate-v6-20261029/MANIFEST.json": "6ae2639f9fef0e538c88e2e572cc64be9902fe51ff59ac1215cf30983e88ab7c",
+    "revision/csf/fold-count-23933572/work/revision/R/analyse_nested_estimation.R": "6e9cee7388560d925aec1aa937926d7c5c11c057e1cab7eaa5bfdec752b945c8",
+    "revision/csf/fold-count-23933572/work/revision/R/common.R": "99d744095739ec6889785a32c9e1e48f26a3db8295220f554408499e5f27de92",
+    "revision/csf/fold-count-23933572/work/revision/R/local_libraries.R": "760c2cf02a1230b1782418cae2cd3fb029726d39c782e0076c536617f3bd7d75",
+    "revision/csf/fold-count-23933572/work/revision/audit/fold-count-sensitivity-protocol.json": "3ae12cc364f20768f40cfa0f450f6c27cdb5a1cadf4c8c21d14ab8a3badecdd9",
+    "revision/csf/fold-count-23933572/work/revision/exploratory/compare_fold_counts.R": "52c835871fce761e4ef0732ee9b4f2f5c13437271a9e0553b2ce3059a1134d4c",
+    "revision/csf/fold-count-23933572/work/revision/exploratory/run_nested_k10.R": "10eb0284fd33f15b5878e2cda4b0ad4ff528b5fc01028f28729c1dbc20354baf",
+    "revision/csf/fold-count-23933572/work/revision/figures/fold-count-comparison.pdf": "6eed3b00c2d3b0889072038eb7ded904631717011cff6e248444b3868ca870f3",
+    "revision/csf/fold-count-23933572/work/revision/logs/analysis.log": "c5f2f8f38b5edb53e6d07ecbb26ceb8ca2a0c09727831d50ad6300617df10019",
+    "revision/csf/fold-count-23933572/work/revision/logs/install.log": "dbd088977ac1ea4255eedf57fc311e03696e79fe9de19e6ca5e624f750683f41",
+    "revision/csf/fold-count-23933572/work/revision/logs/main.log": "63ce49b9ed93e31b2e181999f1870ba0bce672729a7b191372b185a647edfd60",
+    "revision/csf/fold-count-23933572/work/revision/logs/paired-comparison.log": "3627a9cf4b482db7eb9b938af56afd61a4f6d4b714a5f4134b1c7c6018a9612c",
+    "revision/csf/fold-count-23933572/work/revision/logs/pilot.log": "95a80062284cdbee7fdd79c7d86dbd23c3bd69b4e6556ea49e3e1984a0bb214a",
+    "revision/csf/fold-count-23933572/work/revision/results/fold-count-change-by-field.csv": "564b005a4227e7303fe695dc73eb57eb3da5c9d117833bf4b52265545bc921ac",
+    "revision/csf/fold-count-23933572/work/revision/results/fold-count-change-summary.csv": "686d2f548120154861a4cdd448e60aa642d271ff2cf5a3775415a63156b255e9",
+    "revision/csf/fold-count-23933572/work/revision/results/fold-count-comparisons.csv": "11b64ff0fcd594d694ce10fe88536b179dec608a67b35dc035502b631ba464f7",
+    "revision/csf/fold-count-23933572/work/revision/results/fold-count-verification.csv": "d60898881df00dc4aba1def759f051006f294bf63e2c4f0ca18199929e84b87b",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-analysis.rds": "9de512f53909247efa3651e2375ab04d682c59c301e29f93d01d2f77b811c2bd",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-estimation-k10-configuration.csv": "48594ee6a16563ecc460b13bf8d2f9cf2680fa2c2bde72e7508685e4c9180595",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-estimation-k10-errors.rds": "45aea70ea4427ccc4184b1763dd04a8b52b9d1034158416102460b402f1b0c34",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-estimation-k10.rds": "9182d71808c1ec6757ea7398d72a872b4e7df6aaf29cc7e288e385f832f4ed23",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-k10-pilot-configuration.csv": "f823c8f7d5306618a4276782a8783f768ab45002bf03dbb513e6f4ca6d6bf908",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-k10-pilot-errors.rds": "45aea70ea4427ccc4184b1763dd04a8b52b9d1034158416102460b402f1b0c34",
+    "revision/csf/fold-count-23933572/work/revision/results/nested-k10-pilot.rds": "a7778c4a3bdbc2b1589e1a8af1a808fe3da8b12c6c0b557bd0fece5b0578af9a",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-by-cell.csv": "a3d4704012c182943e35e611b9c717f43545521200f81ac18f79b299a1b16795",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-cell-influence.csv": "3b0995c2f8067808698eac073f61561ac92f9e0dcb7de635b7801160e31e17e2",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-completion.csv": "820b24a337d1d74e3904ebf0baaa42b8841c09ea8999c4bf6547014f731daab6",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-known-risk-calibration.csv": "1199bbed7fa296a6d39e3daa6c10e3594fa82961517f7ff8ea01f91cfa7a2ab6",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-paired-comparisons.csv": "77d16e231d33aaac2723ca8e5bea37d8283e8f524dc5f659e85da0adc9f90014",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-selection-by-field.csv": "fccd036d15aafeff07cc1c91048a6c1846a23654cc2906a076ed4d01b62ec8f6",
+    "revision/csf/fold-count-23933572/work/revision/results/summaries/nested-selection.csv": "a9d80227efd84f6280fdf96a30d8413358a42e45fc0533e6aa5f421a150db86e",
+    "revision/csf/fold-count-sensitivity.slurm": "7bb18d8ed169dd97a91ba746e2a577e4e6b794fcea8dbcafc7128c56ac72ab39",
+    "revision/exploratory/compare_fold_counts.R": "c8957864db45df2acb605080ef14682a29230d8b2258e4dd4f007aa7da24428a",
+    "revision/exploratory/run_nested_k10.R": "10eb0284fd33f15b5878e2cda4b0ad4ff528b5fc01028f28729c1dbc20354baf",
+    "revision/logs/csf-fold-count-23933572.log": "e94c1bd44a267d3d3a1f522cad85bfd4238d8e537e2617cb999a87e8038d0bf9",
+    "revision/exploratory/plot_fold_counts.R": "264179309aa26202df0899dbb83c8ca4737cd8451cf87bcd22cc36a8af0f76f8",
+    "revision/exploratory/fold-count-comparison.pdf": "518ff498fba9c82b0d1370a3789ef3997039422d9a334fff3323ca129bdd2a0c",
+    "revision/audit/fold-count-figure-layout.patch": "4870f680ce52c24d43bec674f2bf26418419a264002d09645695e3802e81a1db",
+    "revision/logs/fold-count-figure-layout-20261029.log": "a29e99726a9da90ede4a7c3903de06f88be0852599c94bdfec5322a186074266",
+    "revision/exploratory/make_fold_count_report.py": "464dabf0c4f05c9024aa8dfdfbb5f858f5175caaa6e04f1f30e7467f9995ed4d",
+    "revision/exploratory/fold-count-report.tex": "6e5836b83d4b25f38dc03810905a7aaba6362cc3461b77552c494624d04c9cb1",
+    "revision/exploratory/fold-count-report.pdf": "79439ad44b511b35feab997f113b6cf8bfaa5ea8643b26e03874b7cd294c62ae",
+    "revision/exploratory/fold-count-report.json": "3016b68707cbda96747690f596ef5bab4ce39fe2f1dea63bc48f8838a9d19427",
+    "revision/logs/latex-fold-count-report-20261029.log": "60cec7435001eee8cc396f058ec753d0c10460f595bcce08fb867a1af2e35fff"
+  },
+  "figure_layout_repair": "The original completed comparison figure had overlapping bottom labels. Only margins and annotation positions were changed in the current comparison script; a separate figure-only entry point regenerated the PDF from the unchanged comparison CSV. Original executed source, PDF and completion manifest remain intact.",
+  "report_and_figure_visual_review": {
+    "report_pages": 2,
+    "figure_pages": 2,
+    "scope": "All four pages inspected for readable tables, labels, captions and page boundaries; no clipping or overlapping text found."
+  }
+}

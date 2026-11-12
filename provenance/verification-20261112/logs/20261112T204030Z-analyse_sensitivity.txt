@@ -1,0 +1,26 @@
+Validated 1440 sensitivity configurations.
+                         axis_ratio    diagnostic_model    n eligible
+0.25.estimated_isotropic       0.25 estimated_isotropic 2880     2306
+0.25.known_isotropic           0.25     known_isotropic 2880     2306
+1.estimated_isotropic          1.00 estimated_isotropic 2880     2580
+1.known_isotropic              1.00     known_isotropic 2880     2580
+                         sign_accuracy   sign_mcse true_J2_sign_accuracy
+0.25.estimated_isotropic     0.9058977 0.008578279             0.9986990
+0.25.known_isotropic         0.9687771 0.004523870             0.9986990
+1.estimated_isotropic        0.9298450 0.006944243             0.9926357
+1.known_isotropic            0.9926357 0.002013405             0.9926357
+                         true_J2_sign_mcse mean_abs_proxy_error
+0.25.estimated_isotropic      0.0009700613           0.05750842
+0.25.known_isotropic          0.0009700613           0.02753623
+1.estimated_isotropic         0.0020134051           0.08011087
+1.known_isotropic             0.0020134051           0.02694035
+                         certificate_coverage mean_abs_training_effect
+0.25.estimated_isotropic            0.4520833               0.01629448
+0.25.known_isotropic                0.4520833               0.01629448
+1.estimated_isotropic               0.2975694               0.02235131
+1.known_isotropic                   0.2975694               0.02235131
+                         certificate_mcse fit_success_fraction
+0.25.estimated_isotropic      0.005906650                    1
+0.25.known_isotropic          0.005906650                    1
+1.estimated_isotropic         0.005172289                    1
+1.known_isotropic             0.005172289                    1

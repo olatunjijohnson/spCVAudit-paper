@@ -1,0 +1,22 @@
+Failed to connect to bus: Operation not permitted
+Warning message:
+In system("timedatectl", intern = TRUE) :
+  running command 'timedatectl' had status 1
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Gij <= Gj; a random CV assignment is returned
+Completed batch 1 of 1 at 2026-11-12 20:42:07 
+Completed 64 evaluations with 0 failures in 40.617 seconds.

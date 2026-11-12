@@ -1,0 +1,233 @@
+Validated 38400 evaluations from 480 independent fields.
+Marginal geometry diagnostics are invariant across alpha and learners.
+                                                range    design target alpha
+0.2.clustered.domain.0.forest_X.random            0.2 clustered domain   0.0
+0.2.clustered.domain.0.idw_coordinates.random     0.2 clustered domain   0.0
+0.2.clustered.domain.0.known_mean.random          0.2 clustered domain   0.0
+0.2.clustered.domain.0.linear_X.random            0.2 clustered domain   0.0
+0.2.clustered.domain.0.oracle_kriging.random      0.2 clustered domain   0.0
+0.2.clustered.domain.0.3.forest_X.random          0.2 clustered domain   0.3
+0.2.clustered.domain.0.3.idw_coordinates.random   0.2 clustered domain   0.3
+0.2.clustered.domain.0.3.known_mean.random        0.2 clustered domain   0.3
+0.2.clustered.domain.0.3.linear_X.random          0.2 clustered domain   0.3
+0.2.clustered.domain.0.3.oracle_kriging.random    0.2 clustered domain   0.3
+0.2.clustered.domain.0.6.forest_X.random          0.2 clustered domain   0.6
+0.2.clustered.domain.0.6.idw_coordinates.random   0.2 clustered domain   0.6
+0.2.clustered.domain.0.6.known_mean.random        0.2 clustered domain   0.6
+0.2.clustered.domain.0.6.linear_X.random          0.2 clustered domain   0.6
+0.2.clustered.domain.0.6.oracle_kriging.random    0.2 clustered domain   0.6
+0.2.clustered.domain.0.9.forest_X.random          0.2 clustered domain   0.9
+0.2.clustered.domain.0.9.idw_coordinates.random   0.2 clustered domain   0.9
+0.2.clustered.domain.0.9.known_mean.random        0.2 clustered domain   0.9
+0.2.clustered.domain.0.9.linear_X.random          0.2 clustered domain   0.9
+0.2.clustered.domain.0.9.oracle_kriging.random    0.2 clustered domain   0.9
+                                                        learner scheme  n
+0.2.clustered.domain.0.forest_X.random                 forest_X random 60
+0.2.clustered.domain.0.idw_coordinates.random   idw_coordinates random 60
+0.2.clustered.domain.0.known_mean.random             known_mean random 60
+0.2.clustered.domain.0.linear_X.random                 linear_X random 60
+0.2.clustered.domain.0.oracle_kriging.random     oracle_kriging random 60
+0.2.clustered.domain.0.3.forest_X.random               forest_X random 60
+0.2.clustered.domain.0.3.idw_coordinates.random idw_coordinates random 60
+0.2.clustered.domain.0.3.known_mean.random           known_mean random 60
+0.2.clustered.domain.0.3.linear_X.random               linear_X random 60
+0.2.clustered.domain.0.3.oracle_kriging.random   oracle_kriging random 60
+0.2.clustered.domain.0.6.forest_X.random               forest_X random 60
+0.2.clustered.domain.0.6.idw_coordinates.random idw_coordinates random 60
+0.2.clustered.domain.0.6.known_mean.random           known_mean random 60
+0.2.clustered.domain.0.6.linear_X.random               linear_X random 60
+0.2.clustered.domain.0.6.oracle_kriging.random   oracle_kriging random 60
+0.2.clustered.domain.0.9.forest_X.random               forest_X random 60
+0.2.clustered.domain.0.9.idw_coordinates.random idw_coordinates random 60
+0.2.clustered.domain.0.9.known_mean.random           known_mean random 60
+0.2.clustered.domain.0.9.linear_X.random               linear_X random 60
+0.2.clustered.domain.0.9.oracle_kriging.random   oracle_kriging random 60
+                                                     mean_gap    mcse_gap
+0.2.clustered.domain.0.forest_X.random           0.3017172495 0.058072048
+0.2.clustered.domain.0.idw_coordinates.random    0.4996021706 0.028389344
+0.2.clustered.domain.0.known_mean.random        -0.0069237553 0.047300332
+0.2.clustered.domain.0.linear_X.random           0.2652433559 0.053081336
+0.2.clustered.domain.0.oracle_kriging.random     0.4268787692 0.019849409
+0.2.clustered.domain.0.3.forest_X.random         0.2094100521 0.039732241
+0.2.clustered.domain.0.3.idw_coordinates.random  0.4937695301 0.032446915
+0.2.clustered.domain.0.3.known_mean.random      -0.0048103668 0.031484567
+0.2.clustered.domain.0.3.linear_X.random         0.1777465027 0.035447148
+0.2.clustered.domain.0.3.oracle_kriging.random   0.2821905516 0.013455704
+0.2.clustered.domain.0.6.forest_X.random         0.1147452161 0.021054967
+0.2.clustered.domain.0.6.idw_coordinates.random  0.4887886805 0.028595637
+0.2.clustered.domain.0.6.known_mean.random      -0.0025228633 0.015760225
+0.2.clustered.domain.0.6.linear_X.random         0.0900204552 0.017875671
+0.2.clustered.domain.0.6.oracle_kriging.random   0.1383552356 0.007042395
+0.2.clustered.domain.0.9.forest_X.random         0.0130157298 0.003141061
+0.2.clustered.domain.0.9.idw_coordinates.random  0.4859355706 0.021593169
+0.2.clustered.domain.0.9.known_mean.random       0.0008229319 0.001249391
+0.2.clustered.domain.0.9.linear_X.random         0.0009013386 0.001349261
+0.2.clustered.domain.0.9.oracle_kriging.random   0.0008229319 0.001249391
+                                                       lower       upper
+0.2.clustered.domain.0.forest_X.random           0.187896035 0.415538464
+0.2.clustered.domain.0.idw_coordinates.random    0.443959057 0.555245285
+0.2.clustered.domain.0.known_mean.random        -0.099632405 0.085784895
+0.2.clustered.domain.0.linear_X.random           0.161203938 0.369282774
+0.2.clustered.domain.0.oracle_kriging.random     0.387973929 0.465783610
+0.2.clustered.domain.0.3.forest_X.random         0.131534860 0.287285244
+0.2.clustered.domain.0.3.idw_coordinates.random  0.430173576 0.557365484
+0.2.clustered.domain.0.3.known_mean.random      -0.066520117 0.056899384
+0.2.clustered.domain.0.3.linear_X.random         0.108270093 0.247222913
+0.2.clustered.domain.0.3.oracle_kriging.random   0.255817372 0.308563731
+0.2.clustered.domain.0.6.forest_X.random         0.073477480 0.156012952
+0.2.clustered.domain.0.6.idw_coordinates.random  0.432741233 0.544836128
+0.2.clustered.domain.0.6.known_mean.random      -0.033412904 0.028367177
+0.2.clustered.domain.0.6.linear_X.random         0.054984139 0.125056771
+0.2.clustered.domain.0.6.oracle_kriging.random   0.124552141 0.152158330
+0.2.clustered.domain.0.9.forest_X.random         0.006859249 0.019172210
+0.2.clustered.domain.0.9.idw_coordinates.random  0.443612960 0.528258181
+0.2.clustered.domain.0.9.known_mean.random      -0.001625874 0.003271738
+0.2.clustered.domain.0.9.linear_X.random        -0.001743213 0.003545890
+0.2.clustered.domain.0.9.oracle_kriging.random  -0.001625874 0.003271738
+                                                   mean_cv mean_target
+0.2.clustered.domain.0.forest_X.random          0.94669932   1.2484166
+0.2.clustered.domain.0.idw_coordinates.random   0.24527931   0.7448815
+0.2.clustered.domain.0.known_mean.random        1.01471354   1.0077898
+0.2.clustered.domain.0.linear_X.random          0.75073100   1.0159744
+0.2.clustered.domain.0.oracle_kriging.random    0.21132350   0.6382023
+0.2.clustered.domain.0.3.forest_X.random        0.67581008   0.8852201
+0.2.clustered.domain.0.3.idw_coordinates.random 0.24099573   0.7347653
+0.2.clustered.domain.0.3.known_mean.random      0.71000356   0.7051932
+0.2.clustered.domain.0.3.linear_X.random        0.53395656   0.7117031
+0.2.clustered.domain.0.3.oracle_kriging.random  0.18018765   0.4623782
+0.2.clustered.domain.0.6.forest_X.random        0.40462484   0.5193701
+0.2.clustered.domain.0.6.idw_coordinates.random 0.23926667   0.7280554
+0.2.clustered.domain.0.6.known_mean.random      0.40511946   0.4025966
+0.2.clustered.domain.0.6.linear_X.random        0.31717834   0.4071988
+0.2.clustered.domain.0.6.oracle_kriging.random  0.14685072   0.2852060
+0.2.clustered.domain.0.9.forest_X.random        0.13512486   0.1481406
+0.2.clustered.domain.0.9.idw_coordinates.random 0.23881538   0.7247509
+0.2.clustered.domain.0.9.known_mean.random      0.09917707   0.1000000
+0.2.clustered.domain.0.9.linear_X.random        0.10037715   0.1012785
+0.2.clustered.domain.0.9.oracle_kriging.random  0.09917707   0.1000000
+                                                mean_J1_marginal
+0.2.clustered.domain.0.forest_X.random                 0.3266702
+0.2.clustered.domain.0.idw_coordinates.random          0.3266702
+0.2.clustered.domain.0.known_mean.random               0.3266702
+0.2.clustered.domain.0.linear_X.random                 0.3266702
+0.2.clustered.domain.0.oracle_kriging.random           0.3266702
+0.2.clustered.domain.0.3.forest_X.random               0.3266702
+0.2.clustered.domain.0.3.idw_coordinates.random        0.3266702
+0.2.clustered.domain.0.3.known_mean.random             0.3266702
+0.2.clustered.domain.0.3.linear_X.random               0.3266702
+0.2.clustered.domain.0.3.oracle_kriging.random         0.3266702
+0.2.clustered.domain.0.6.forest_X.random               0.3266702
+0.2.clustered.domain.0.6.idw_coordinates.random        0.3266702
+0.2.clustered.domain.0.6.known_mean.random             0.3266702
+0.2.clustered.domain.0.6.linear_X.random               0.3266702
+0.2.clustered.domain.0.6.oracle_kriging.random         0.3266702
+0.2.clustered.domain.0.9.forest_X.random               0.3266702
+0.2.clustered.domain.0.9.idw_coordinates.random        0.3266702
+0.2.clustered.domain.0.9.known_mean.random             0.3266702
+0.2.clustered.domain.0.9.linear_X.random               0.3266702
+0.2.clustered.domain.0.9.oracle_kriging.random         0.3266702
+                                                mean_J2_marginal
+0.2.clustered.domain.0.forest_X.random                 0.3879508
+0.2.clustered.domain.0.idw_coordinates.random          0.3879508
+0.2.clustered.domain.0.known_mean.random               0.3879508
+0.2.clustered.domain.0.linear_X.random                 0.3879508
+0.2.clustered.domain.0.oracle_kriging.random           0.3879508
+0.2.clustered.domain.0.3.forest_X.random               0.3879508
+0.2.clustered.domain.0.3.idw_coordinates.random        0.3879508
+0.2.clustered.domain.0.3.known_mean.random             0.3879508
+0.2.clustered.domain.0.3.linear_X.random               0.3879508
+0.2.clustered.domain.0.3.oracle_kriging.random         0.3879508
+0.2.clustered.domain.0.6.forest_X.random               0.3879508
+0.2.clustered.domain.0.6.idw_coordinates.random        0.3879508
+0.2.clustered.domain.0.6.known_mean.random             0.3879508
+0.2.clustered.domain.0.6.linear_X.random               0.3879508
+0.2.clustered.domain.0.6.oracle_kriging.random         0.3879508
+0.2.clustered.domain.0.9.forest_X.random               0.3879508
+0.2.clustered.domain.0.9.idw_coordinates.random        0.3879508
+0.2.clustered.domain.0.9.known_mean.random             0.3879508
+0.2.clustered.domain.0.9.linear_X.random               0.3879508
+0.2.clustered.domain.0.9.oracle_kriging.random         0.3879508
+                                                mean_J1_conditional
+0.2.clustered.domain.0.forest_X.random                    0.3266702
+0.2.clustered.domain.0.idw_coordinates.random             0.3266702
+0.2.clustered.domain.0.known_mean.random                  0.3266702
+0.2.clustered.domain.0.linear_X.random                    0.3266702
+0.2.clustered.domain.0.oracle_kriging.random              0.3266702
+0.2.clustered.domain.0.3.forest_X.random                  0.3111145
+0.2.clustered.domain.0.3.idw_coordinates.random           0.3111145
+0.2.clustered.domain.0.3.known_mean.random                0.3111145
+0.2.clustered.domain.0.3.linear_X.random                  0.3111145
+0.2.clustered.domain.0.3.oracle_kriging.random            0.3111145
+0.2.clustered.domain.0.6.forest_X.random                  0.2722252
+0.2.clustered.domain.0.6.idw_coordinates.random           0.2722252
+0.2.clustered.domain.0.6.known_mean.random                0.2722252
+0.2.clustered.domain.0.6.linear_X.random                  0.2722252
+0.2.clustered.domain.0.6.oracle_kriging.random            0.2722252
+0.2.clustered.domain.0.9.forest_X.random                  0.0000000
+0.2.clustered.domain.0.9.idw_coordinates.random           0.0000000
+0.2.clustered.domain.0.9.known_mean.random                0.0000000
+0.2.clustered.domain.0.9.linear_X.random                  0.0000000
+0.2.clustered.domain.0.9.oracle_kriging.random            0.0000000
+                                                mean_J2_conditional
+0.2.clustered.domain.0.forest_X.random                    0.3879508
+0.2.clustered.domain.0.idw_coordinates.random             0.3879508
+0.2.clustered.domain.0.known_mean.random                  0.3879508
+0.2.clustered.domain.0.linear_X.random                    0.3879508
+0.2.clustered.domain.0.oracle_kriging.random              0.3879508
+0.2.clustered.domain.0.3.forest_X.random                  0.3518828
+0.2.clustered.domain.0.3.idw_coordinates.random           0.3518828
+0.2.clustered.domain.0.3.known_mean.random                0.3518828
+0.2.clustered.domain.0.3.linear_X.random                  0.3518828
+0.2.clustered.domain.0.3.oracle_kriging.random            0.3518828
+0.2.clustered.domain.0.6.forest_X.random                  0.2694103
+0.2.clustered.domain.0.6.idw_coordinates.random           0.2694103
+0.2.clustered.domain.0.6.known_mean.random                0.2694103
+0.2.clustered.domain.0.6.linear_X.random                  0.2694103
+0.2.clustered.domain.0.6.oracle_kriging.random            0.2694103
+0.2.clustered.domain.0.9.forest_X.random                  0.0000000
+0.2.clustered.domain.0.9.idw_coordinates.random           0.0000000
+0.2.clustered.domain.0.9.known_mean.random                0.0000000
+0.2.clustered.domain.0.9.linear_X.random                  0.0000000
+0.2.clustered.domain.0.9.oracle_kriging.random            0.0000000
+                                                mean_abs_realized_gap
+0.2.clustered.domain.0.forest_X.random                    0.415805991
+0.2.clustered.domain.0.idw_coordinates.random             0.499602171
+0.2.clustered.domain.0.known_mean.random                  0.262822748
+0.2.clustered.domain.0.linear_X.random                    0.373771793
+0.2.clustered.domain.0.oracle_kriging.random              0.426878769
+0.2.clustered.domain.0.3.forest_X.random                  0.286516282
+0.2.clustered.domain.0.3.idw_coordinates.random           0.493769530
+0.2.clustered.domain.0.3.known_mean.random                0.175258902
+0.2.clustered.domain.0.3.linear_X.random                  0.249280557
+0.2.clustered.domain.0.3.oracle_kriging.random            0.282190552
+0.2.clustered.domain.0.6.forest_X.random                  0.153618816
+0.2.clustered.domain.0.6.idw_coordinates.random           0.488788680
+0.2.clustered.domain.0.6.known_mean.random                0.088411014
+0.2.clustered.domain.0.6.linear_X.random                  0.125058012
+0.2.clustered.domain.0.6.oracle_kriging.random            0.138355236
+0.2.clustered.domain.0.9.forest_X.random                  0.020238857
+0.2.clustered.domain.0.9.idw_coordinates.random           0.485935571
+0.2.clustered.domain.0.9.known_mean.random                0.007860295
+0.2.clustered.domain.0.9.linear_X.random                  0.008532096
+0.2.clustered.domain.0.9.oracle_kriging.random            0.007860295
+                                                mean_conditional_proxy
+0.2.clustered.domain.0.forest_X.random                       0.3879508
+0.2.clustered.domain.0.idw_coordinates.random                0.3879508
+0.2.clustered.domain.0.known_mean.random                     0.3879508
+0.2.clustered.domain.0.linear_X.random                       0.3879508
+0.2.clustered.domain.0.oracle_kriging.random                 0.3879508
+0.2.clustered.domain.0.3.forest_X.random                     0.2463180
+0.2.clustered.domain.0.3.idw_coordinates.random              0.2463180
+0.2.clustered.domain.0.3.known_mean.random                   0.2463180
+0.2.clustered.domain.0.3.linear_X.random                     0.2463180
+0.2.clustered.domain.0.3.oracle_kriging.random               0.2463180
+0.2.clustered.domain.0.6.forest_X.random                     0.1077641
+0.2.clustered.domain.0.6.idw_coordinates.random              0.1077641
+0.2.clustered.domain.0.6.known_mean.random                   0.1077641
+0.2.clustered.domain.0.6.linear_X.random                     0.1077641
+0.2.clustered.domain.0.6.oracle_kriging.random               0.1077641
+0.2.clustered.domain.0.9.forest_X.random                     0.0000000
+0.2.clustered.domain.0.9.idw_coordinates.random              0.0000000
+0.2.clustered.domain.0.9.known_mean.random                   0.0000000
+0.2.clustered.domain.0.9.linear_X.random                     0.0000000
+0.2.clustered.domain.0.9.oracle_kriging.random               0.0000000

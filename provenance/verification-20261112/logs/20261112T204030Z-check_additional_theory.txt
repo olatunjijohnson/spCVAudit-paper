@@ -1,0 +1,2 @@
+Verified 800 Schur-complement remainders/bounds and 200 moment decompositions.
+Maximum numerical identity error: 1.838807e-16 

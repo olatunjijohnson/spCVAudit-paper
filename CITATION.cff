@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this research code; this is a research draft."
+title: "Nearest-neighbour distances and prediction error in spatial cross-validation"
+type: software
+authors:
+  - family-names: Johnson
+    given-names: Olatunji
+version: "2026-11-12-draft"
+date-released: "2026-11-12"
+repository-code: "https://github.com/olatunjijohnson/spLeakage-paper"
+license: MIT

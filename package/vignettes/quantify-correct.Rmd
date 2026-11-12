@@ -1,0 +1,87 @@
+---
+title: "Comparing CV scores and interpreting legacy APIs"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Comparing CV scores and interpreting legacy APIs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(spLeakage)
+```
+
+## A comparison score is a comparison score
+
+`estimate_optimism()` retains its historical name for compatibility. It fits a
+learner under the supplied split and a comparison scheme, then reports the
+difference between their scores. This difference is evidence of sensitivity to
+the validation scheme. It does not establish which score is the error for the
+intended deployment target.
+
+Use the same learner, response and loss for both schemes. The package's default
+learner is a coordinate-based interpolator; it is not a replacement for an
+analyst's ecological prediction model. Here we explicitly supply linear regression
+to make the model being compared visible.
+
+```{r example}
+set.seed(18)
+d <- data.frame(x = runif(120), y = runif(120))
+d$z <- 2 * d$x - d$y + rnorm(120, sd = 0.4)
+folds <- sample(rep_len(1:5, nrow(d)))
+predict_linear <- function(train, test) {
+  as.numeric(predict(lm(z ~ x + y, data = train), newdata = test))
+}
+comparison <- estimate_optimism(d, folds, response = "z", coords = c("x", "y"),
+  control = "block", predict_fun = predict_linear)
+comparison
+```
+
+The historical `optimism` field is the comparison score minus the user-split
+score. A blocked or target-matched score has not been declared true deployment
+error. Training sizes, covariate support and the learner's dependence on nearby
+responses can all affect the difference.
+
+For binary probabilities, Brier loss is squared probability error and log loss is
+another appropriate choice. Squared error is also a valid loss for a binary
+response; its interpretation depends on the prediction being a probability.
+Changing the scoring rule does not establish the validity of the comparison
+scheme as a reference.
+
+## Legacy rescaling and simulation emulation
+
+`deleak_estimate()` returns a legacy score comparison with descriptive resampling
+intervals. Resampling losses from spatially dependent observations does not by
+itself provide a calibrated interval for target risk. Its `reported` argument
+rescales a supplied score using the comparison; that calculation must not be
+presented as corrected accuracy for a published model.
+
+`predict_optimism()` is a simulation-calibrated emulator retained for research.
+Its training learners, data-generating settings, feature construction and
+calibration procedure restrict its interpretation. An internal applicability
+check does not prove transport to a new ecological model or establish interval
+coverage there. It is outside the focused methodological paper and is not used
+to support general accuracy correction.
+
+## Ranking and independent validation
+
+`rank_cv_schemes()` defaults to the unsigned Wasserstein distance between
+validation and target nearest-neighbour distributions. Alternative signed
+criteria are available for explicit comparisons, but a small signed contrast
+can result from cancellation. Report the criterion and candidate schemes.
+
+A separate target evaluation can provide evidence that a CV scheme estimates the
+relevant error. Its interpretation still depends on how validation locations
+were selected and whether their responses were excluded from model fitting and
+selection. Repeated partitions of a single survey are not independent datasets.
+
+`design_validation()` is an experimental location-placement heuristic. Its
+spatially spread selections do not have known inclusion probabilities, and the
+returned stratum weights do not turn it into a probability survey. Its theoretical
+allocation comparison omits correlation between prediction errors. Design-based
+accuracy assessment requires a separately justified sampling design and estimator.
+
+Report the prediction target, learner, loss, sampling assumptions, training sizes,
+observed score comparisons and the limits of any independent evaluation. None of
+these legacy function names changes what the underlying computation establishes.

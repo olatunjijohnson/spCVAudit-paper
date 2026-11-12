@@ -1,0 +1,7 @@
+{
+  "covariance_fits": 5040,
+  "all_profile_objectives_no_worse": true,
+  "improved_fits": 359,
+  "independent_checks": 2,
+  "largest_absolute_mae_change": 3.0190479928998704e-05
+}

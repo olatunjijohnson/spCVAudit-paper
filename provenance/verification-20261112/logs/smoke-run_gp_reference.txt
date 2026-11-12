@@ -1,0 +1,18 @@
+Failed to connect to bus: Operation not permitted
+Warning message:
+In system("timedatectl", intern = TRUE) :
+  running command 'timedatectl' had status 1
+Configurations: 64 ; successful scheme evaluations: 192 ; failures: 0 ; elapsed seconds: 3.491 
+    design  target   scheme       exact          J1          J2           W
+ clustered  domain    block -0.01852665 -0.02033587 -0.01785261 0.052431780
+    random  domain    block -0.21626757 -0.24787878 -0.17602053 0.148853425
+ clustered shifted    block  0.03686018  0.06779789  0.02836955 0.177178047
+    random shifted    block -0.09554124 -0.10836912 -0.08154972 0.075989824
+ clustered  domain buffered -0.03897166 -0.04383763 -0.03553723 0.056591959
+    random  domain buffered -0.21981179 -0.25291973 -0.17909966 0.152878074
+ clustered shifted buffered  0.02178362  0.04635904  0.01463997 0.174241237
+    random shifted buffered -0.09821502 -0.11241728 -0.08399400 0.077561477
+ clustered  domain   random  0.27783943  0.27500420  0.21939418 0.139838003
+    random  domain   random -0.01673609 -0.01598712 -0.01199551 0.007071137
+ clustered shifted   random  0.34711546  0.37132030  0.27328174 0.302956727
+    random shifted   random  0.10215769  0.12538795  0.07985940 0.115618155

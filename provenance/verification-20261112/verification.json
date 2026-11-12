@@ -1,0 +1,12 @@
+{
+  "configuration_count": 120,
+  "candidate_evaluations": 960,
+  "covariance_fits": 5040,
+  "max_score_reconstruction_error": 1.0547118733938987e-15,
+  "max_distance_reconstruction_error_km": 2.2691570844557418e-13,
+  "max_W_reconstruction_error_km": 6.286637876939949e-15,
+  "max_J2_reconstruction_error": 1.7229273563401648e-14,
+  "max_fixed_target_prediction_change": 0.0,
+  "fold_coverage_and_target_separation": "passed",
+  "finite_predictions_and_scores": "passed"
+}
