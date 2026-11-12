@@ -1,20 +1,23 @@
 # Nearest-neighbour distances and prediction error in spatial cross-validation
 
-Research code and manuscript for Olatunji Johnson's paper, current draft dated
-12 November 2026. This draft has not been submitted or independently reviewed.
+Public research code and manuscript for Olatunji Johnson's paper. This research
+draft has not been submitted or independently reviewed.
 
 - [Paper](revision/manuscript/main.pdf) and [supplementary material](revision/manuscript/supplement.pdf).
 - [Reproduction instructions](REPRODUCING.md), including dependencies and full recomputation.
-- [Which paper methods are in the spLeakage package?](docs/PACKAGE-COVERAGE.md).
-- [Submission audit and outstanding items](docs/submission-audit.pdf).
+- [spCVAudit R package](https://github.com/olatunjijohnson/spCVAudit) and
+  [website with tutorials](https://olatunjijohnson.github.io/spCVAudit/).
+- [Relationship between the packages and the paper](docs/PACKAGE-COVERAGE.md).
 - [Jura data and attribution](revision/data/JURA-SOURCE.txt).
+- [Verification of the public repository](docs/VALIDATION.md).
 
 The repository contains the analysis code, seeds, retained results, figure scripts,
 LaTeX source and the exact `spLeakage` working-tree snapshot used for this paper.
-The package source is included because the development version installed from
-[the package repository](https://github.com/olatunjijohnson/spLeakage) can change.
-The package and paper repository serve different purposes: several theoretical
-calculations and study-specific selection rules are implemented in the research code.
+The package source is included because development versions can change.
+The new **spCVAudit** package provides a focused public interface for the paper's
+diagnostics and Gaussian calculations. The fixed source under `package/` remains
+**spLeakage 0.1.0.9004**, which was used to generate the retained results. Use this
+snapshot to reproduce the paper; use spCVAudit for a new analysis.
 
 After installing the dependencies described in [REPRODUCING.md](REPRODUCING.md), run:
 
@@ -53,12 +56,10 @@ Use `--no-pdf` if LaTeX is unavailable; figures and numerical checks still run.
 | `environment/` | R version lock, source hashes, builder and Python dependencies |
 | `scripts/` | Supplementary reproduction and verification |
 | `provenance/` | Import checksums and independent retained output references |
-| `legacy/2026-submission/` | Earlier repository contents, preserved for history |
 
-The legacy directory is excluded from every current reproduction command. Its
-earlier application, title and submission notes do not describe the current paper.
-Current analyses use Jura; the earlier bird analysis and the exploratory PM2.5
-comparison are not inputs to the current paper.
+Current analyses use Jura. Superseded applications have been removed from the
+current checkout; the `before-public-cleanup-20261112` tag preserves the earlier
+repository state for historical reference. They are not inputs to reproduction.
 
 The imported-file manifest records the original workspace bytes. Subsequent
 integration edits are identified by Git history. RDS metadata also records the
@@ -66,5 +67,5 @@ original executed source checksums, package version, seeds and session informati
 
 Project code follows the MIT licence used by `spLeakage`; third-party dependencies
 and the Jura data retain their upstream terms and attribution. See
-[DATA-SOURCES.md](DATA-SOURCES.md). The repository is private during preparation;
-a permanent public archive and DOI have not yet been assigned.
+[DATA-SOURCES.md](DATA-SOURCES.md). This repository is public. Cite a release or
+commit when reproducing the draft; a publication DOI has not yet been assigned.

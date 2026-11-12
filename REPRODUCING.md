@@ -153,6 +153,7 @@ The new repository's actual checks are reported in `docs/VERIFICATION.md`.
 Selected historical validation receipts are retained under
 `provenance/historical-checks`; their original paths refer to the research archive.
 
-Old analyses under `legacy/` are not dependencies. `revision/EXPERIMENTS.md`
+Old analyses are preserved only in Git history and the
+`before-public-cleanup-20261112` tag; they are not dependencies. `revision/EXPERIMENTS.md`
 preserves the historical study protocol, including superseded plans; the current
 paper and the table above define the active analyses.

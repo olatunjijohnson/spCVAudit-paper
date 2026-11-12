@@ -1,4 +1,30 @@
-# Relationship between the paper and spLeakage
+# Relationship between the paper, spCVAudit and spLeakage
+
+## spCVAudit: the public companion package
+
+[spCVAudit](https://github.com/olatunjijohnson/spCVAudit) provides a focused API
+for new analyses. [Its website](https://olatunjijohnson.github.io/spCVAudit/)
+contains the function reference and four worked tutorials.
+
+| Paper method | spCVAudit interface |
+| --- | --- |
+| Target locations and arbitrary nonnegative target weights | `prediction_target()` |
+| Explicit fold training/test sets; random, block, buffered and optional CAST kNNDM constructors | `cv_folds()`, `spatial_folds()` |
+| A, W, J1, J2, U1, U2 and distribution crossings | `distance_contrasts()`, `audit_cv()` |
+| Selection by absolute J2 or another common diagnostic; equal probabilities for tied candidates | `compare_cv_schemes()` |
+| Specified exponential and Matern-3/2 covariance | `spatial_covariance()` |
+| Estimated exponential covariance with constrained profile search | `estimate_covariance()` |
+| Exact known-covariance MSE, full-neighbour decomposition and positive-noise bound | `gaussian_cv()` |
+| Conditional target MSE under a specified Gaussian generating distribution | `gaussian_target_mse()` |
+
+The new estimator profiles an explicit bounded weighted variogram objective.
+It is not substituted into the retained paper computations: its bin-edge
+handling and allowance for exactly zero spatial signal differ from the frozen
+implementation. Estimated parameters do not make a reference calculation an
+exact estimate of real-world bias. The package deliberately excludes the old
+experimental leakage and error-correction interfaces.
+
+## spLeakage: the fixed reproduction snapshot
 
 Audit of the included source snapshot, version **0.1.0.9004**, on 12 November 2026.
 The package implements the central nearest-neighbour diagnostics, but not every
@@ -27,8 +53,6 @@ checks the theoretical identities and compares application predictions with
 `gstat`. Legacy `estimate_optimism()` and `deleak_estimate()` are not implementations
 of the paper's exact full-neighbour MSE decomposition or a general bias correction.
 
-No missing package features were added as part of preparing this repository.
-Priorities for a later package update would be a four-scheme selection API with
-absolute-J2 ranking and explicit tie handling, followed by U2 and an explicit
-choice of covariance fitter. Any such update should be validated separately
-against this fixed reproduction snapshot.
+The snapshot is preserved byte-for-byte in its scientific source. New features
+are implemented and tested separately in spCVAudit. Reproduction does not install
+or depend on the latest development version of either package.
