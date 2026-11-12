@@ -1,0 +1,199 @@
+[
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/",
+    "width": 1365,
+    "title": "Spatial cross-validation for your prediction target \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/getting-started.html",
+    "width": 1365,
+    "title": "Start with a spatial CV audit \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/choosing-cv.html",
+    "width": 1365,
+    "title": "Compare schemes, weights and ties \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/theory-and-limits.html",
+    "width": 1365,
+    "title": "The Gaussian identity and what other neighbours change \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/jura.html",
+    "width": 1365,
+    "title": "Audit log-cadmium predictions in the Swiss Jura \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/reference/audit_cv.html",
+    "width": 1365,
+    "title": "Audit a CV partition against a prediction target \u2014 audit_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/reference/gaussian_cv.html",
+    "width": 1365,
+    "title": "Calculate Gaussian reference MSE, its decomposition, and a bound \u2014 gaussian_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/",
+    "width": 390,
+    "title": "Spatial cross-validation for your prediction target \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/getting-started.html",
+    "width": 390,
+    "title": "Start with a spatial CV audit \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/choosing-cv.html",
+    "width": 390,
+    "title": "Compare schemes, weights and ties \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/theory-and-limits.html",
+    "width": 390,
+    "title": "The Gaussian identity and what other neighbours change \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/articles/jura.html",
+    "width": 390,
+    "title": "Audit log-cadmium predictions in the Swiss Jura \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/reference/audit_cv.html",
+    "width": 390,
+    "title": "Audit a CV partition against a prediction target \u2014 audit_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://olatunjijohnson.github.io/spCVAudit/reference/gaussian_cv.html",
+    "width": 390,
+    "title": "Calculate Gaussian reference MSE, its decomposition, and a bound \u2014 gaussian_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/",
+    "width": 1365,
+    "title": "Spatial cross-validation for your prediction target \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/getting-started.html",
+    "width": 1365,
+    "title": "Start with a spatial CV audit \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/choosing-cv.html",
+    "width": 1365,
+    "title": "Compare schemes, weights and ties \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/theory-and-limits.html",
+    "width": 1365,
+    "title": "The Gaussian identity and what other neighbours change \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/jura.html",
+    "width": 1365,
+    "title": "Audit log-cadmium predictions in the Swiss Jura \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/reference/audit_cv.html",
+    "width": 1365,
+    "title": "Audit a CV partition against a prediction target \u2014 audit_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/reference/gaussian_cv.html",
+    "width": 1365,
+    "title": "Calculate Gaussian reference MSE, its decomposition, and a bound \u2014 gaussian_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/getting-started.html",
+    "width": 390,
+    "title": "Start with a spatial CV audit \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/choosing-cv.html",
+    "width": 390,
+    "title": "Compare schemes, weights and ties \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/theory-and-limits.html",
+    "width": 390,
+    "title": "The Gaussian identity and what other neighbours change \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/jura.html",
+    "width": 390,
+    "title": "Audit log-cadmium predictions in the Swiss Jura \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/reference/audit_cv.html",
+    "width": 390,
+    "title": "Audit a CV partition against a prediction target \u2014 audit_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/reference/gaussian_cv.html",
+    "width": 390,
+    "title": "Calculate Gaussian reference MSE, its decomposition, and a bound \u2014 gaussian_cv \u2022 spCVAudit",
+    "overflow": false,
+    "passed": true
+  },
+  {
+    "url": "https://spcvaudit.steelyorbit.chatgpt.site/",
+    "width": 390,
+    "title": "Spatial cross-validation for your prediction target \u2022 spCVAudit",
+    "overflow": false,
+    "mobile_navigation_url": "https://spcvaudit.steelyorbit.chatgpt.site/articles/getting-started",
+    "passed": true
+  }
+]

@@ -1,0 +1,135 @@
+We prove both the pointwise bound and the resulting interval for $O_{\mathrm{full}}$ under the model of the main paper. Locations, folds and target weights are fixed independently of the responses. The mean and covariance are known, responses are jointly Gaussian, and each measurement has independent observation noise of variance $\tau^2>0$. Write $V=\sigma^2+\tau^2$. The target has fresh, independent observation noise even if its location coincides with a training location.
+
+\subsubsection{Conditional covariance and the exact additional reduction}
+\label{sec:bound-residuals}
+Fix a prediction location $t$ and a nonempty training set $T$. Subtract the known means. Choose a nearest training response $Y_1$, resolving a distance tie in any fixed way, and collect the other responses in $Y_R$. Define
+\[
+ b_1=\Cov(Y_1,Y(t)),\qquad b_R=\Cov(Y_R,Y(t)),\qquad
+ \Sigma_{R1}=\Cov(Y_R,Y_1),
+\]
+and let $\Sigma_{RR}=\Cov(Y_R)$. Thus
+\[
+ \Sigma_T=\begin{pmatrix}V&\Sigma_{R1}^{\top}\\
+ \Sigma_{R1}&\Sigma_{RR}\end{pmatrix},\qquad
+ b=\begin{pmatrix}b_1\\b_R\end{pmatrix}.
+\]
+The residuals after predicting from $Y_1$ alone are
+\[
+ \widetilde Y_R=Y_R-\frac{\Sigma_{R1}}VY_1,
+ \qquad \widetilde Y(t)=Y(t)-\frac{b_1}VY_1.
+\]
+Expanding the covariances and using $\Var(Y_1)=V$ gives
+\begin{align*}
+ \Cov(\widetilde Y_R)
+ &=\Sigma_{RR}-\frac{\Sigma_{R1}\Sigma_{R1}^{\top}}V
+   -\frac{\Sigma_{R1}\Sigma_{R1}^{\top}}V
+   +\frac{\Sigma_{R1}\Sigma_{R1}^{\top}}V
+ =\Sigma_{RR\mid1},\\
+ \Cov(\widetilde Y_R,\widetilde Y(t))
+ &=b_R-\frac{\Sigma_{R1}b_1}V-\frac{\Sigma_{R1}b_1}V
+   +\frac{\Sigma_{R1}b_1}V=\widetilde b_R,
+\end{align*}
+where
+\begin{equation}
+ \Sigma_{RR\mid1}=\Sigma_{RR}-\frac{\Sigma_{R1}\Sigma_{R1}^{\top}}V,
+ \qquad \widetilde b_R=b_R-\frac{\Sigma_{R1}b_1}V.
+ \label{eq:conditional-covariances}
+\end{equation}
+Both residuals have zero covariance with $Y_1$. Joint Gaussianity makes the residual pair independent of $Y_1$, so $\Sigma_{RR\mid1}=\Cov(Y_R\mid Y_1)$ and $\widetilde b_R=\Cov(Y_R,Y(t)\mid Y_1)$. The nearest-only MSE is $v_1=V-b_1^2/V$.
+
+For coefficients $c$, predicting the target residual from $\widetilde Y_R$ gives MSE
+\begin{align*}
+ L(c)&=v_1-2c^\top\widetilde b_R+c^\top\Sigma_{RR\mid1}c\\
+ &=v_1-\widetilde b_R^{\top}\Sigma_{RR\mid1}^{-1}\widetilde b_R
+ +(c-\Sigma_{RR\mid1}^{-1}\widetilde b_R)^\top
+   \Sigma_{RR\mid1}(c-\Sigma_{RR\mid1}^{-1}\widetilde b_R).
+\end{align*}
+The matrix $\Sigma_{RR\mid1}$ is positive definite by the noise argument in Section~\ref{sec:bound-noise}. The final quadratic form is nonnegative and vanishes at $c=\Sigma_{RR\mid1}^{-1}\widetilde b_R$. For jointly Gaussian residuals, this linear minimiser gives the conditional-mean prediction. Because $(Y_1,\widetilde Y_R)$ contains exactly the same information as $(Y_1,Y_R)$, this gives the optimal prediction using all training observations. Hence
+\begin{equation}
+ a(t,T)=\widetilde b_R^{\top}\Sigma_{RR\mid1}^{-1}\widetilde b_R\geq0,
+ \qquad e(t,T)=\frac{b_1^2}{V}+a(t,T).
+ \label{eq:additional-reduction}
+\end{equation}
+Since $b_1=V\rho[D(t,T)]$, the first term is $V\rho[D(t,T)]^2$, agreeing with the definition of $a(t,T)$ in the main paper.
+
+\subsubsection{Upper bound from independent observation noise}
+\label{sec:bound-noise}
+Write $Y_R=Z_R+\epsilon_R$ after centring. The noise vector $\epsilon_R$ is independent of $(Z_R,Y_1)$ and has covariance $\tau^2I$. Therefore
+\[
+ \Sigma_{RR\mid1}=\Cov(Z_R\mid Y_1)+\tau^2I\succeq\tau^2I.
+\]
+Indeed, for every vector $x$,
+\[
+ x^\top\Sigma_{RR\mid1}x
+ =x^\top\Cov(Z_R\mid Y_1)x+\tau^2\|x\|^2
+ \geq\tau^2\|x\|^2.
+\]
+Thus every eigenvalue $\omega_j$ of $\Sigma_{RR\mid1}$ is at least $\tau^2>0$. In an orthonormal eigenbasis, let $z_j$ be the coordinates of $\widetilde b_R$. Equation~\eqref{eq:additional-reduction} then gives
+\begin{equation}
+ a(t,T)=\sum_j\frac{z_j^2}{\omega_j}
+ \leq\frac{\sum_jz_j^2}{\tau^2}
+ =\frac{\|\widetilde b_R\|^2}{\tau^2}.
+ \label{eq:noise-bound}
+\end{equation}
+The last equality follows because an orthonormal change of coordinates preserves squared length.
+
+\subsubsection{Upper bound from the unexplained spatial variance}
+\label{sec:bound-signal}
+Independent target noise cannot be predicted from the training responses. Consequently,
+\[
+ V-e(t,T)=\Var(Y(t)\mid Y_T)
+ =\Var(Z(t)\mid Y_T)+\tau^2\geq\tau^2.
+\]
+It follows that $e(t,T)\leq V-\tau^2=\sigma^2$. Subtracting the nearest-neighbour reduction yields
+\begin{equation}
+ a(t,T)=e(t,T)-\frac{b_1^2}{V}
+ \leq\sigma^2-\frac{b_1^2}{V}.
+ \label{eq:signal-bound}
+\end{equation}
+This upper limit is nonnegative: $b_1=\Cov(Y_1,Z(t))$ and the covariance inequality gives $b_1^2\leq V\sigma^2$. Combining Equations~\eqref{eq:additional-reduction}, \eqref{eq:noise-bound} and~\eqref{eq:signal-bound} proves Equation (9) of the main paper:
+\begin{equation}
+ 0\leq a(t,T)\leq B(t,T)
+ =\min\left\{\frac{\|\widetilde b_R\|^2}{\tau^2},
+               \sigma^2-\frac{b_1^2}{V}\right\}.
+ \label{eq:pointwise-bound}
+\end{equation}
+
+\subsubsection{Averaging and the interval for the MSE difference}
+\label{sec:bound-averaging}
+For the validation folds, define
+\[
+ \overline a_C=\frac1n\sum_f\sum_{i\in H_f}a(s_i,T_f),
+ \qquad
+ \overline B_C=\frac1n\sum_f\sum_{i\in H_f}B(s_i,T_f).
+\]
+For a finite target grid with nonnegative weights $q_j$ summing to one, define
+\[
+ \E_Qa(t,S)=\sum_jq_j a(t_j,S),\qquad
+ \E_QB(t,S)=\sum_jq_j B(t_j,S).
+\]
+Multiplying the pointwise inequalities by these nonnegative weights and summing gives
+\[
+ 0\leq\overline a_C\leq\overline B_C,
+ \qquad 0\leq\E_Qa(t,S)\leq\E_QB(t,S).
+\]
+The target inequality also holds for a continuous $Q$ by integration. Starting from Equation (8) of the main paper, the lower and upper chains are
+\begin{align*}
+ O_{\mathrm{full}}
+ &=VJ_2+\overline a_C-\E_Qa(t,S)\\
+ &\geq VJ_2-\E_Qa(t,S)\geq VJ_2-\E_QB(t,S),\\[3pt]
+ O_{\mathrm{full}}
+ &\leq VJ_2+\overline a_C\leq VJ_2+\overline B_C.
+\end{align*}
+This proves Equation (10) of the main paper:
+\begin{equation}
+ VJ_2-\E_QB(t,S)\leq O_{\mathrm{full}}
+ \leq VJ_2+\overline B_C.
+ \label{eq:optimism-bound}
+\end{equation}
+A positive lower endpoint guarantees positive optimism; a negative upper endpoint guarantees negative optimism. An interval containing zero does not establish a nonzero bias. These deterministic bounds need not be attained and do not account for covariance-estimation uncertainty.
+
+\subsubsection{Boundary cases and computation}
+\label{sec:bound-cases}
+If there is only one training observation, the remaining vectors are empty and $a=B=0$. If $\widetilde b_R=0$, the remaining observations give no additional MSE reduction. With zero spatial signal, all cross-covariances and both bounds vanish. If $\tau^2=0$, the noise-based bound is unavailable, but the spatial-variance cap remains valid; formulas involving an inverse require the corresponding covariance matrix to be nonsingular.
+
+Computing $B$ requires the covariances of the target with every training response and those of the nearest response with the others. Once these entries are available, evaluating $B$ takes work proportional to the training-set size and avoids a full covariance solve. The bound can be conservative, particularly when the observation-noise variance is small.

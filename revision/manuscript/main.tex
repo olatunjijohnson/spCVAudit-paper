@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,caption,array}
+\usepackage[round,authoryear]{natbib}
+\usepackage{xr}
+\externaldocument[supp-][nocite]{supplement}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdftitle={Nearest-neighbour distances and prediction error in spatial cross-validation},pdfauthor={Olatunji Johnson},pdfsubject={Research draft}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\CV}{\operatorname{CV}}
+\newcommand{\R}{\mathbb{R}}
+\graphicspath{{../figures/}}
+\input{numbers.tex}
+\title{Nearest-neighbour distances and prediction error in spatial cross-validation}
+\author{Olatunji Johnson\\Department of Mathematics, University of Manchester}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+\noindent\textbf{Keywords:} cross-validation; spatial prediction; prediction target; Gaussian process; nearest-neighbour distance; map validation.
+\input{introduction.tex}
+\input{methods.tex}
+\input{simulation.tex}
+\clearpage
+\input{application.tex}
+\clearpage
+\input{discussion.tex}
+\section*{Code, data and reproducibility}
+\begingroup\urlstyle{same}\emergencystretch=2em
+The public reproduction repository, \url{https://github.com/olatunjijohnson/spLeakage-paper}, provides the experiment designs, random seeds, analysis code, saved results, figure scripts and the fixed \texttt{spLeakage} source snapshot used for the computations. Manuscript numbers and tables are generated from those results. The Jura data are distributed with \texttt{gstat} and documented by \citet{goovaerts1997geostatistics}; the saved export retains all 359 site measurements and their original training--validation assignments. The application code includes the projection, log transformation, fold assignments, predictions and covariance-fitting checks.
+
+The companion R package \texttt{spCVAudit}, available at \url{https://github.com/olatunjijohnson/spCVAudit}, implements the distance and correlation diagnostics, weighted targets, scheme comparisons and Gaussian reference calculations. Documentation and worked tutorials are at \url{https://olatunjijohnson.github.io/spCVAudit/}. The reproduction repository retains the original computational implementation so that subsequent package changes do not alter the reported results.
+
+The simulation calculations ran on the University of Manchester's Computational Shared Facility (CSF), using R 4.5.0, CAST 1.1.1 and ranger 0.16.0. The supplementary material (Section~\ref*{supp-sec:reproduction}) describes the local environment, checks between environments and reproduction of the simulation studies and Jura application. Source checksums identify the versions used.
+\endgroup
+\section*{Draft status and assistance}
+This draft has not been submitted or independently reviewed. OpenAI Codex assisted with computation and editing under the author's direction. Before submission, the author must review the scientific interpretation and confirm the authorship, data availability and disclosures required by the journal.
+\begingroup
+\small
+\setlength{\bibsep}{3pt}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+\end{document}

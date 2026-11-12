@@ -1,0 +1,58 @@
+{
+  "declared_utc": "2026-10-29T06:03:28.589105+00:00",
+  "status": "Protocol fixed before pilot or main outputs; exploratory post-hoc sensitivity",
+  "motivation": "Linnenbrink et al. (2024), Discussion, reports fold-count dependence and better performance with sufficiently large k for random/regular samples. The primary study fixed all candidates at five folds.",
+  "primary_source": "https://gmd.copernicus.org/articles/17/5897/2024/index.html",
+  "question": "Does the fitted-|J2| versus W selection comparison change when all four declared candidates use ten folds?",
+  "comparison": "Ten-fold random, k-means block, buffered block and official CAST kNNDM, paired with the retained five-fold nested-estimation-rng study. Both known and estimated covariance predictors are retained.",
+  "grid": {
+    "range": [
+      0.05,
+      0.2
+    ],
+    "signal": [
+      0.3,
+      0.7,
+      0.95
+    ],
+    "design": [
+      "random",
+      "clustered"
+    ],
+    "target": [
+      "domain",
+      "shifted"
+    ],
+    "replicates_per_cell": 80,
+    "cells": 24,
+    "configurations": 1920,
+    "training_n": 160,
+    "target_grid": 225
+  },
+  "randomness": "The same geometry and response seeds as the retained five-fold configurations; response seed remains geometry seed + 10000000. These are paired reuses of 1920 fields, not 1920 additional independent fields.",
+  "fixed_implementation": "Same package 0.1.0.9004, covariance fitter, candidate algorithms, k-means starts, 0.05 buffer, target grids and conditional-risk formulas. Only the declared fold count changes from five to ten. No tuning based on outcomes.",
+  "fits_expected": 78720,
+  "pilot": "One separate configuration per cell, n=80 and target grid=64, using the existing pilot seed rule. Used only to check execution; no changes to main grid or scoring based on pilot results.",
+  "selection_rules": [
+    "A",
+    "W",
+    "J1_known",
+    "J2_known",
+    "U1_known",
+    "U2_known",
+    "J1_fitted",
+    "J2_fitted",
+    "U1_fitted",
+    "U2_fitted",
+    "fixed_random",
+    "fixed_knndm",
+    "oracle"
+  ],
+  "tie_rule": "Unchanged absolute 1e-12 tolerance; average losses across tied candidates without using target errors to resolve diagnostic ties.",
+  "reported_metrics": "Mean signed error, MAE and RMSE for every rule and both predictors, overall and all 24 cells. Paired MAE differences relative to W and the paired change in fitted-J2-minus-W between ten and five folds. Fixed-cell Monte Carlo SEs use within-cell field replication. No confirmatory hypothesis tests or significance-driven choice of fold count.",
+  "reporting": "Retain every cell and configuration, fits and errors. Zero failed main configurations required for complete summaries. If execution fails, preserve and report the failure; do not silently exclude it. Primary six-study inputs and manuscript headline values remain unchanged.",
+  "source_sha256": "3268074aee8d3affba0127237d52a794e6324089e5fb6d389e44a8a8ced245d1",
+  "derivative_sha256": "10eb0284fd33f15b5878e2cda4b0ad4ff528b5fc01028f28729c1dbc20354baf",
+  "baseline_rds_sha256": "2b497c96afddd9cf3078aad048669ef7f5aab7d1c4f1f9dfdc72b96b7a9f3b3e",
+  "release_source_sha256": "b5bd30897e3aa96140f35a20f0b31ff5df4c8ace2b3c891db0bba09aa8d5f510"
+}

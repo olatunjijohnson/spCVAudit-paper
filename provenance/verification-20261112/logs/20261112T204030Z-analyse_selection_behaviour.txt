@@ -1,0 +1,14 @@
+   learner stratum    n mean_difference        mcse J2_lower_loss equal_loss
+ estimated     all 1920    -0.003489798 0.001518300           394       1141
+     known     all 1920    -0.002833776 0.001306665           389       1141
+ W_lower_loss same_selected_set J2_random_only W_random_only    minimum
+          385              1141            426           238 -1.0424644
+          390              1141            426           238 -0.5816969
+         q05 q25 median q75        q95   maximum single_replicate_omission_min
+ -0.09399499   0      0   0 0.07092097 0.7896028                  -0.003901895
+ -0.08818586   0      0   0 0.06825455 0.3228202                  -0.002997113
+ single_replicate_omission_max
+                  -0.002935748
+                  -0.002562433
+Post-hoc descriptions retain all 24 factor cells and all 1,920 configurations per predictor.
+Losses and choice probabilities average uniformly over numerical diagnostic ties.

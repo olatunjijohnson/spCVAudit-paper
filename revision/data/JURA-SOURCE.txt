@@ -1,0 +1,9 @@
+Jura topsoil data: cadmium concentration and coordinates.
+Source: gstat::jura, jura.pred (259 sites) and jura.val (100 sites).
+Exported with gstat 2.1.1
+Documentation: https://r-spatial.github.io/gstat/reference/jura.html
+Atteia, Dubois and Webster (1994), Environmental Pollution 86:315-327.
+Goovaerts (1997), Geostatistics for Natural Resources Evaluation, Appendix C.
+Geographic coordinates transformed from WGS84 to EPSG:2056.
+response is natural-log Cd; Cd is recorded in mg/kg of topsoil.
+Original training/validation roles and all original data columns are retained.

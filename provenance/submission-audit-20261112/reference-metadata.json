@@ -1,0 +1,1374 @@
+[
+  {
+    "key": "brenning2023profiles",
+    "source": "https://api.crossref.org/works/10.1080%2F13658816.2022.2131789",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1080/13658816.2022.2131789",
+      "title": [
+        "Spatial machine-learning model diagnostics: a model-agnostic distance-based approach"
+      ],
+      "author": [
+        {
+          "given": "Alexander",
+          "family": "Brenning",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Geography, Michael Stifel Center Jena for Data-Driven and Simulation Science (MSCJ), Friedrich Schiller University Jena, Jena, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Geographical Information Science"
+      ],
+      "volume": "37",
+      "issue": "3",
+      "page": "584-606",
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            10,
+            26
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            3,
+            4
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            10,
+            26
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "panaretos2019wasserstein",
+    "source": "https://api.crossref.org/works/10.1146%2Fannurev-statistics-030718-104938",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1146/annurev-statistics-030718-104938",
+      "title": [
+        "Statistical Aspects of Wasserstein Distances"
+      ],
+      "author": [
+        {
+          "given": "Victor M.",
+          "family": "Panaretos",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Institute of Mathematics, \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne, 1015 Lausanne, Switzerland;"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yoav",
+          "family": "Zemel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institut f\u00fcr Mathematische Stochastik, Georg\u2013August\u2013Universit\u00e4t, 37077 G\u00f6ttingen, Germany;"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Annual Review of Statistics and Its Application"
+      ],
+      "volume": "6",
+      "issue": "1",
+      "page": "405-431",
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            3,
+            7
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2019,
+            3,
+            7
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "atteia1994jura",
+    "source": "https://api.crossref.org/works/10.1016%2F0269-7491%2894%2990172-4",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "pebesma2004gstat",
+    "source": "https://api.crossref.org/works/10.1016%2Fj.cageo.2004.03.012",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "wright2017ranger",
+    "source": "https://api.crossref.org/works/10.18637%2Fjss.v077.i01",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.18637/jss.v077.i01",
+      "title": [
+        "<b>ranger</b>\n                    : A Fast Implementation of Random Forests for High Dimensional Data in\n                    <i>C++</i>\n                    and\n                    <i>R</i>"
+      ],
+      "author": [
+        {
+          "given": "Marvin N.",
+          "family": "Wright",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andreas",
+          "family": "Ziegler",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Statistical Software"
+      ],
+      "volume": "77",
+      "issue": "1",
+      "published": {
+        "date-parts": [
+          [
+            2017
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2017
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "mila2022nndm",
+    "source": "https://api.crossref.org/works/10.1111%2F2041-210X.13851",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1111/2041-210x.13851",
+      "title": [
+        "Nearest neighbour distance matching\n                    <scp>Leave\u2010One\u2010Out Cross\u2010Validation</scp>\n                    for map validation"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-0470-0760",
+          "authenticated-orcid": false,
+          "given": "Carles",
+          "family": "Mil\u00e0",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Barcelona Institute for Global Health (ISGlobal) Universitat Pompeu Fabra, CIBER Epidemiolog\u00eda y Salud P\u00fablica  Barcelona Spain"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-2868-7604",
+          "authenticated-orcid": false,
+          "given": "Jorge",
+          "family": "Mateu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Universitat Jaume I  Castell\u00f3n Spain"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8049-7069",
+          "authenticated-orcid": false,
+          "given": "Edzer",
+          "family": "Pebesma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Geoinformatics, Westf\u00e4lische Wilhelms\u2010Universit\u00e4t M\u00fcnster  M\u00fcnster Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0556-0210",
+          "authenticated-orcid": false,
+          "given": "Hanna",
+          "family": "Meyer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Landscape Ecology, Westf\u00e4lische Wilhelms\u2010Universit\u00e4t M\u00fcnster  M\u00fcnster Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Methods in Ecology and Evolution"
+      ],
+      "volume": "13",
+      "issue": "6",
+      "page": "1304-1316",
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            4,
+            7
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            6
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            4,
+            7
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "linnenbrink2024knndm",
+    "source": "https://api.crossref.org/works/10.5194%2Fgmd-17-5897-2024",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.5194/gmd-17-5897-2024",
+      "title": [
+        "kNNDM CV:\n                    <i>k</i>\n                    -fold nearest-neighbour distance matching cross-validation for map accuracy estimation"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-0991-8646",
+          "authenticated-orcid": false,
+          "given": "Jan",
+          "family": "Linnenbrink",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "id": [
+                {
+                  "id": "https://ror.org/00pd74e08",
+                  "id-type": "ROR",
+                  "asserted-by": "publisher"
+                }
+              ],
+              "name": "University of M\u00fcnster (M\u00fcnster, Germany)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            },
+            {
+              "role": "corresponding-author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0470-0760",
+          "authenticated-orcid": false,
+          "given": "Carles",
+          "family": "Mil\u00e0",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3010-018X",
+          "authenticated-orcid": false,
+          "given": "Marvin",
+          "family": "Ludwig",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0556-0210",
+          "authenticated-orcid": false,
+          "given": "Hanna",
+          "family": "Meyer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Geoscientific Model Development"
+      ],
+      "volume": "17",
+      "issue": "15",
+      "page": "5897-5912",
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            7
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            7
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "wadoux2021spatial",
+    "source": "https://api.crossref.org/works/10.1016%2Fj.ecolmodel.2021.109692",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1016/j.ecolmodel.2021.109692",
+      "title": [
+        "Spatial cross-validation is not the right way to evaluate map accuracy"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-7325-9716",
+          "authenticated-orcid": false,
+          "given": "Alexandre M.J.-C.",
+          "family": "Wadoux",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gerard B.M.",
+          "family": "Heuvelink",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-6884-2832",
+          "authenticated-orcid": false,
+          "given": "Sytze",
+          "family": "de Bruin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dick J.",
+          "family": "Brus",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Ecological Modelling"
+      ],
+      "volume": "457",
+      "page": "109692",
+      "article-number": "109692",
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            10
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            10
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "meyer2021aoa",
+    "source": "https://api.crossref.org/works/10.1111%2F2041-210X.13650",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "rabinowicz2022correlated",
+    "source": "https://api.crossref.org/works/10.1080%2F01621459.2020.1801451",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1080/01621459.2020.1801451",
+      "title": [
+        "Cross-Validation for Correlated Data"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-6735-4215",
+          "authenticated-orcid": false,
+          "given": "Assaf",
+          "family": "Rabinowicz",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Statistics and Operations Research, Tel-Aviv University, Tel-Aviv, Israel"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4458-9545",
+          "authenticated-orcid": false,
+          "given": "Saharon",
+          "family": "Rosset",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Statistics and Operations Research, Tel-Aviv University, Tel-Aviv, Israel"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of the American Statistical Association"
+      ],
+      "volume": "117",
+      "issue": "538",
+      "page": "718-731",
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            14
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            4,
+            3
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            14
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "debruin2022clustered",
+    "source": "https://api.crossref.org/works/10.1016%2Fj.ecoinf.2022.101665",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1016/j.ecoinf.2022.101665",
+      "title": [
+        "Dealing with clustered samples for assessing map accuracy by cross-validation"
+      ],
+      "author": [
+        {
+          "given": "Sytze",
+          "family": "de Bruin",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dick J.",
+          "family": "Brus",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gerard B.M.",
+          "family": "Heuvelink",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tom",
+          "family": "van Ebbenhorst Tengbergen",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alexandre M.J-C.",
+          "family": "Wadoux",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Ecological Informatics"
+      ],
+      "volume": "69",
+      "page": "101665",
+      "article-number": "101665",
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            7
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            7
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "bates2024crossvalidation",
+    "source": "https://api.crossref.org/works/10.1080%2F01621459.2023.2197686",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1080/01621459.2023.2197686",
+      "title": [
+        "Cross-Validation: What Does It Estimate and How Well Does It Do It?"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-3273-8179",
+          "authenticated-orcid": false,
+          "given": "Stephen",
+          "family": "Bates",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Statistics and EECS, University of California",
+              "place": [
+                "Berkeley"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0164-3142",
+          "authenticated-orcid": false,
+          "given": "Trevor",
+          "family": "Hastie",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Statistics and Biomedical Data Science, Stanford University",
+              "place": [
+                "Stanford"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Robert",
+          "family": "Tibshirani",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Data Science and Statistics, Stanford University",
+              "place": [
+                "Stanford"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of the American Statistical Association"
+      ],
+      "volume": "119",
+      "issue": "546",
+      "page": "1434-1445",
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            15
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            4,
+            2
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            15
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "wang2025dissimilarity",
+    "source": "https://api.crossref.org/works/10.1016%2Fj.ecoinf.2025.103287",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1016/j.ecoinf.2025.103287",
+      "title": [
+        "A dissimilarity-adaptive cross-validation method for evaluating geospatial machine learning predictions with clustered samples"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-8070-2122",
+          "authenticated-orcid": false,
+          "given": "Yanwen",
+          "family": "Wang",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mahdi",
+          "family": "Khodadadzadeh",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ra\u00fal",
+          "family": "Zurita-Milla",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Ecological Informatics"
+      ],
+      "volume": "90",
+      "page": "103287",
+      "article-number": "103287",
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            12
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            12
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "arlot2010survey",
+    "source": "https://api.crossref.org/works/10.1214%2F09-SS054",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1214/09-ss054",
+      "title": [
+        "A survey of cross-validation procedures for model selection"
+      ],
+      "author": [
+        {
+          "given": "Sylvain",
+          "family": "Arlot",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alain",
+          "family": "Celisse",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Statistics Surveys"
+      ],
+      "volume": "4",
+      "issue": "none",
+      "page": "40-79",
+      "published": {
+        "date-parts": [
+          [
+            2010,
+            1,
+            1
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2010,
+            1,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "hartigan1979kmeans",
+    "source": "https://api.crossref.org/works/10.2307%2F2346830",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.2307/2346830",
+      "title": [
+        "Algorithm AS 136: A K-Means Clustering Algorithm"
+      ],
+      "author": [
+        {
+          "given": "J. A.",
+          "family": "Hartigan",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M. A.",
+          "family": "Wong",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Applied Statistics"
+      ],
+      "volume": "28",
+      "issue": "1",
+      "page": "100",
+      "published": {
+        "date-parts": [
+          [
+            1979
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            1979
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "roberts2017cross",
+    "source": "https://api.crossref.org/works/10.1111%2Fecog.02881",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1111/ecog.02881",
+      "title": [
+        "Cross\u2010validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure"
+      ],
+      "author": [
+        {
+          "given": "David R.",
+          "family": "Roberts",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Volker",
+          "family": "Bahn",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biological Sciences Wright State Univ. Dayton OH USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Simone",
+          "family": "Ciuti",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mark S.",
+          "family": "Boyce",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biological Sciences Univ. of Alberta Edmonton AB Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jane",
+          "family": "Elith",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of BioSciences, Univ. of Melbourne Melbourne Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gurutzeta",
+          "family": "Guillera\u2010Arroita",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of BioSciences, Univ. of Melbourne Melbourne Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Severin",
+          "family": "Hauenstein",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jos\u00e9 J.",
+          "family": "Lahoz\u2010Monfort",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of BioSciences, Univ. of Melbourne Melbourne Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Boris",
+          "family": "Schr\u00f6der",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Inst. of Geoecology, Div. of Landscape Ecology and Environmental Systems Analysis, Technische Univ. Braunschweig, Braunschweig, Germany, and: Berlin\u2010Brandenburg Inst. of Advanced Biodiversity Research (BBIB) Berlin Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wilfried",
+          "family": "Thuiller",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lab. d\u2019\u00c9cologie Alpine, Univ. Joseph Fourier Grenoble France"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "David I.",
+          "family": "Warton",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Mathematics and Statistics and Evolution and Ecology Research Centre, The Univ. of New South Wales Sydney Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Brendan A.",
+          "family": "Wintle",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of BioSciences, Univ. of Melbourne Melbourne Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Florian",
+          "family": "Hartig",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+            },
+            {
+              "name": "Theoretical Ecology, Univ. of Regensburg Regensburg Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carsten F.",
+          "family": "Dormann",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Ecography"
+      ],
+      "volume": "40",
+      "issue": "8",
+      "page": "913-929",
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            3,
+            3
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2017,
+            8
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2017,
+            3,
+            3
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "key": "kaufman2012leakage",
+    "source": "https://api.crossref.org/works/10.1145%2F2382577.2382579",
+    "status": "resolved",
+    "metadata": {
+      "DOI": "10.1145/2382577.2382579",
+      "title": [
+        "Leakage in data mining"
+      ],
+      "author": [
+        {
+          "given": "Shachar",
+          "family": "Kaufman",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Tel Aviv University, Israel"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Saharon",
+          "family": "Rosset",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tel Aviv University, Israel"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Claudia",
+          "family": "Perlich",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "m6d"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ori",
+          "family": "Stitelman",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "m6d"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "ACM Transactions on Knowledge Discovery from Data"
+      ],
+      "volume": "6",
+      "issue": "4",
+      "page": "1-21",
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            12
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2012,
+            12
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2012,
+            12,
+            18
+          ]
+        ]
+      }
+    }
+  }
+]

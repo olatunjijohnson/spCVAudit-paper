@@ -1,0 +1,64 @@
+Failed to connect to bus: Operation not permitted
+Warning message:
+In system("timedatectl", intern = TRUE) :
+  running command 'timedatectl' had status 1
+                                               check     observed     expected
+                    one-neighbour explained variance   0.16132145   0.16132145
+                             co-located replicates 1   0.49000000   0.49000000
+                             co-located replicates 2   0.57647059   0.57647059
+                             co-located replicates 5   0.64473684   0.64473684
+                            co-located replicates 10   0.67123288   0.67123288
+                               crossing first moment   0.01600000   0.01600000
+                              crossing second moment  -0.13404000  -0.13404000
+                                       crossing flag   1.00000000   1.00000000
+                            signed area cancellation   0.00000000   0.00000000
+             unsigned transport despite cancellation   1.00000000   1.00000000
+            identical nearest distances first moment   0.00000000   0.00000000
+           identical nearest distances second moment   0.00000000   0.00000000
+                           full LOO equal-distance A   0.00000000   0.00000000
+                           full LOO equal-distance W   0.00000000   0.00000000
+                          full LOO equal-distance J1   0.00000000   0.00000000
+                          full LOO equal-distance J2   0.00000000   0.00000000
+                          full LOO equal-distance U1   0.00000000   0.00000000
+                          full LOO equal-distance U2   0.00000000   0.00000000
+ ordered and crossing-distribution inequality trials 200.00000000 200.00000000
+                                 package/reference A  -0.02672147  -0.02672147
+                                 package/reference W   0.02678998   0.02678998
+                           package/reference SLI_rho  -0.05005487  -0.05005487
+                          package/reference SLI_rho2  -0.04051985  -0.04051985
+                             package/reference W_rho   0.05015933   0.05015933
+ tolerance
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-10
+     1e-07
+     1e-07
+     1e-07
+     1e-07
+     1e-07
+All algebraic checks passed. Original single-holdout counterexample:
+ J1 J2 full_optimism     cv_ev  target_ev
+  0  0    0.06917491 0.1563062 0.08713126
+Exhaustive leave-one-out counterexample:
+          A           W          J1          J2          U1          U2 
+ 0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 
+      Aplus      Aminus     crosses       exact risk_target     risk_cv 
+ 0.00000000  0.00000000  0.00000000  0.02305608  0.91286874  0.88981266 
+  remainder   min_train  mean_train 
+ 0.02305608  2.00000000  2.00000000 

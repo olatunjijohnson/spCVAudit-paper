@@ -1,0 +1,630 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-14>
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/size11.clo)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/array.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/xr.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/url/url.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (./numbers.tex) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (./abstract.tex) (./introduction.tex
+
+Package natbib Warning: Citation `mila2022nndm' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `panaretos2019wasserstein' on page 1 undefined on input line 4.
+
+[1{/home/olatunji-johnson/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+Package natbib Warning: Citation `brenning2023profiles' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `meyer2021aoa' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `rabinowicz2022correlated' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `yuval2025classification' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `debruin2022clustered' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `wang2023geospatial' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `wang2025dissimilarity' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `brenning2026targetweighted' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 2 undefined on input line 12.
+
+
+LaTeX Warning: Reference `sec:methods' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Reference `sec:simulation' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Reference `sec:application' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Reference `sec:discussion' on page 2 undefined on input line 18.
+
+) (./methods.tex [2]
+
+Package natbib Warning: Citation `arlot2010survey' on page 3 undefined on input line 8.
+
+
+Package natbib Warning: Citation `bates2024crossvalidation' on page 3 undefined on input line 23.
+
+[3{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+
+Package natbib Warning: Citation `mila2022nndm' on page 4 undefined on input line 33.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 4 undefined on input line 33.
+
+
+LaTeX Warning: Reference `fig:diagnostic' on page 4 undefined on input line 47.
+
+
+LaTeX Warning: Reference `fig:diagnostic' on page 4 undefined on input line 47.
+
+
+Package natbib Warning: Citation `panaretos2019wasserstein' on page 4 undefined on input line 54.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 4 undefined on input line 60.
+
+[4]
+
+LaTeX Warning: Reference `sec:distances' on page 5 undefined on input line 77.
+
+
+LaTeX Warning: Reference `sec:one-neighbour' on page 5 undefined on input line 93.
+
+[5]
+
+LaTeX Warning: Reference `fig:diagnostic' on page 6 undefined on input line 105.
+
+[6] [7 <../figures/F1-diagnostic.pdf>]
+
+LaTeX Warning: Reference `sec:correlation-model' on page 8 undefined on input line 126.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 8 undefined on input line 126.
+
+
+LaTeX Warning: Reference `eq:risk' on page 8 undefined on input line 136.
+
+
+LaTeX Warning: Reference `fig:diagnostic' on page 8 undefined on input line 140.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 8 undefined on input line 153.
+
+[8]
+
+LaTeX Warning: Reference `eq:remainder' on page 9 undefined on input line 173.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 9 undefined on input line 178.
+
+
+LaTeX Warning: Reference `eq:remainder' on page 9 undefined on input line 185.
+
+[9]
+
+LaTeX Warning: Reference `sec:sim-covariance' on page 10 undefined on input line 192.
+
+
+LaTeX Warning: Reference `sec:sim-learners' on page 10 undefined on input line 192.
+
+
+LaTeX Warning: Reference `sec:sim-refitting' on page 10 undefined on input line 192.
+
+
+Package natbib Warning: Citation `arlot2010survey' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `hartigan1979kmeans' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `roberts2017cross' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 10 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sec:sim-refitting' on page 10 undefined on input line 198.
+
+
+LaTeX Warning: Reference `sec:sim-known' on page 10 undefined on input line 200.
+
+
+LaTeX Warning: Reference `sec:sim-refitting' on page 10 undefined on input line 200.
+
+) (./simulation.tex
+
+LaTeX Warning: Reference `tab:studies' on page 10 undefined on input line 5.
+
+
+LaTeX Warning: Reference `sec:cv-selection' on page 10 undefined on input line 7.
+
+[10]
+
+LaTeX Warning: Reference `tab:selection' on page 11 undefined on input line 36.
+
+
+LaTeX Warning: Reference `fig:reference' on page 11 undefined on input line 36.
+
+
+LaTeX Warning: Reference `fig:reference' on page 11 undefined on input line 41.
+
+
+LaTeX Warning: Reference `tab:selection' on page 11 undefined on input line 41.
+
+
+LaTeX Warning: Reference `fig:reference' on page 11 undefined on input line 43.
+
+(./table-reference.tex) [11]
+
+LaTeX Warning: Reference `sec:sim-refitting' on page 12 undefined on input line 57.
+
+
+LaTeX Warning: Reference `fig:reference' on page 12 undefined on input line 60.
+
+
+LaTeX Warning: Reference `eq:certificate' on page 12 undefined on input line 66.
+
+[12]
+
+LaTeX Warning: Reference `fig:reference' on page 13 undefined on input line 78.
+
+
+LaTeX Warning: Reference `sec:correlation-model' on page 13 undefined on input line 93.
+
+
+Package natbib Warning: Citation `wright2017ranger' on page 13 undefined on input line 100.
+
+
+LaTeX Warning: Reference `fig:learners' on page 13 undefined on input line 106.
+
+[13] [14 <../figures/F2-reference.pdf>]) [15 <../figures/F3-learners.pdf>] (./application.tex
+
+Package natbib Warning: Citation `atteia1994jura' on page 16 undefined on input line 4.
+
+
+Package natbib Warning: Citation `goovaerts1997geostatistics' on page 16 undefined on input line 4.
+
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+Package natbib Warning: Citation `pebesma2004gstat' on page 16 undefined on input line 4.
+
+
+LaTeX Warning: Reference `fig:application' on page 16 undefined on input line 4.
+
+
+LaTeX Warning: Reference `sec:cv-selection' on page 16 undefined on input line 9.
+
+
+LaTeX Warning: Reference `fig:application' on page 16 undefined on input line 14.
+
+
+LaTeX Warning: Reference `fig:application' on page 16 undefined on input line 16.
+
+
+LaTeX Warning: Reference `fig:application' on page 16 undefined on input line 16.
+
+) [16] [17 <../figures/F4-application.pdf>] (./discussion.tex
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 18 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:remainder' on page 18 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:certificate' on page 18 undefined on input line 8.
+
+
+Package natbib Warning: Citation `mila2022nndm' on page 18 undefined on input line 10.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 18 undefined on input line 10.
+
+
+Package natbib Warning: Citation `bates2024crossvalidation' on page 18 undefined on input line 13.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 18 undefined on input line 15.
+
+[18]
+
+LaTeX Warning: Reference `sec:sim-learners' on page 19 undefined on input line 22.
+
+
+Package natbib Warning: Citation `brenning2023profiles' on page 19 undefined on input line 22.
+
+
+Package natbib Warning: Citation `meyer2021aoa' on page 19 undefined on input line 22.
+
+
+Package natbib Warning: Citation `kaufman2012leakage' on page 19 undefined on input line 24.
+
+
+Package natbib Warning: Citation `wadoux2021spatial' on page 19 undefined on input line 24.
+
+
+Package natbib Warning: Citation `rabinowicz2022correlated' on page 19 undefined on input line 31.
+
+
+Package natbib Warning: Citation `debruin2022clustered' on page 19 undefined on input line 31.
+
+)
+
+Package natbib Warning: Citation `goovaerts1997geostatistics' on page 19 undefined on input line 34.
+
+[19]
+No file main.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[20] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )</home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (20 pages, 451939 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Missing bbl file 'main.bbl' in following:
+ No file main.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Create bibtex main
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99d (TeX Live 2025)
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.bbl
+  main.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-14>
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/size11.clo)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/array.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/xr.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/url/url.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (./numbers.tex) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./main.out) (./main.out) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (./abstract.tex) (./introduction.tex
+
+Package natbib Warning: Citation `mila2022nndm' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `panaretos2019wasserstein' on page 1 undefined on input line 4.
+
+[1{/home/olatunji-johnson/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+Package natbib Warning: Citation `brenning2023profiles' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `meyer2021aoa' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `rabinowicz2022correlated' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `yuval2025classification' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `debruin2022clustered' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `wang2023geospatial' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `wang2025dissimilarity' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `brenning2026targetweighted' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 2 undefined on input line 12.
+
+) (./methods.tex [2]
+
+Package natbib Warning: Citation `arlot2010survey' on page 3 undefined on input line 8.
+
+
+Package natbib Warning: Citation `bates2024crossvalidation' on page 3 undefined on input line 23.
+
+[3{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+
+Package natbib Warning: Citation `mila2022nndm' on page 4 undefined on input line 33.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 4 undefined on input line 33.
+
+
+Package natbib Warning: Citation `panaretos2019wasserstein' on page 4 undefined on input line 54.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 4 undefined on input line 60.
+
+[4] [5] [6] [7 <../figures/F1-diagnostic.pdf>]
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 8 undefined on input line 126.
+
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 8 undefined on input line 153.
+
+[8]
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 9 undefined on input line 178.
+
+[9]
+
+Package natbib Warning: Citation `arlot2010survey' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `hartigan1979kmeans' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `roberts2017cross' on page 10 undefined on input line 196.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 10 undefined on input line 196.
+
+) (./simulation.tex [10] (./table-reference.tex) [11] [12]
+
+Package natbib Warning: Citation `wright2017ranger' on page 13 undefined on input line 100.
+
+[13] [14 <../figures/F2-reference.pdf>]) [15 <../figures/F3-learners.pdf>] (./application.tex
+
+Package natbib Warning: Citation `atteia1994jura' on page 16 undefined on input line 4.
+
+
+Package natbib Warning: Citation `goovaerts1997geostatistics' on page 16 undefined on input line 4.
+
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+Package natbib Warning: Citation `pebesma2004gstat' on page 16 undefined on input line 4.
+
+) [16] [17 <../figures/F4-application.pdf>] (./discussion.tex
+
+Package natbib Warning: Citation `rasmussen2006gpml' on page 18 undefined on input line 6.
+
+
+Package natbib Warning: Citation `mila2022nndm' on page 18 undefined on input line 10.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 18 undefined on input line 10.
+
+
+Package natbib Warning: Citation `bates2024crossvalidation' on page 18 undefined on input line 13.
+
+
+Package natbib Warning: Citation `linnenbrink2024knndm' on page 18 undefined on input line 15.
+
+[18]
+
+Package natbib Warning: Citation `brenning2023profiles' on page 19 undefined on input line 22.
+
+
+Package natbib Warning: Citation `meyer2021aoa' on page 19 undefined on input line 22.
+
+
+Package natbib Warning: Citation `kaufman2012leakage' on page 19 undefined on input line 24.
+
+
+Package natbib Warning: Citation `wadoux2021spatial' on page 19 undefined on input line 24.
+
+
+Package natbib Warning: Citation `rabinowicz2022correlated' on page 19 undefined on input line 31.
+
+
+Package natbib Warning: Citation `debruin2022clustered' on page 19 undefined on input line 31.
+
+)
+
+Package natbib Warning: Citation `goovaerts1997geostatistics' on page 19 undefined on input line 34.
+
+[19] (./main.bbl [20])
+
+Package natbib Warning: There were undefined citations.
+
+[21] (./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) )</home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (21 pages, 475635 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 2 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99d (TeX Live 2025)
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-14>
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/size11.clo)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/array.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/xr.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/url/url.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (./numbers.tex) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./main.out) (./main.out) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (./abstract.tex) (./introduction.tex [1{/home/olatunji-johnson/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2]) (./methods.tex [3{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [4] [5] [6] [7 <../figures/F1-diagnostic.pdf>] [8] [9]) (./simulation.tex [10] (./table-reference.tex) [11] [12] [13] [14 <../figures/F2-reference.pdf>]) [15 <../figures/F3-learners.pdf>] (./application.tex (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd)) [16] [17 <../figures/F4-application.pdf>] (./discussion.tex [18]) [19] (./main.bbl [20]) [21] (./main.aux) )</home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (21 pages, 479714 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 3 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99d (TeX Live 2025)
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 4 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-14>
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/size11.clo)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/array.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/tools/xr.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/url/url.sty) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (./numbers.tex) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./main.out) (./main.out) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (./abstract.tex) (./introduction.tex [1{/home/olatunji-johnson/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2]) (./methods.tex [3{/home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [4] [5] [6] [7 <../figures/F1-diagnostic.pdf>] [8] [9]) (./simulation.tex [10] (./table-reference.tex) [11] [12] [13] [14 <../figures/F2-reference.pdf>]) [15 <../figures/F3-learners.pdf>] (./application.tex (/home/olatunji-johnson/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd)) [16] [17 <../figures/F4-application.pdf>] (./discussion.tex [18]) [19] (./main.bbl [20]) [21] (./main.aux) )</home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></home/olatunji-johnson/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (21 pages, 479714 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: All targets (main.pdf) are up-to-date
+

@@ -1,0 +1,9 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^\.github$
+^cran-comments\.md$
+^_pkgdown\.yml$
+^pkgdown$
+^\.gitignore$
+^\.git$

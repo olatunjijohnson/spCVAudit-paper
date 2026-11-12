@@ -1,0 +1,52 @@
+name: Reproduce retained paper results
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reproduction-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  render-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Etc/UTC
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: environment/requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: paper-r-${{ runner.os }}-${{ hashFiles('environment/runtime-lock.csv', '.github/workflows/reproduce.yaml') }}
+      - name: Install research dependencies
+        shell: Rscript {0}
+        run: |
+          install.packages("pak", repos = "https://cloud.r-project.org")
+          pak::pkg_install(c("sf", "gstat", "CAST@1.1.1", "ranger@0.16.0",
+                             "pkgload", "jsonlite", "ggplot2", "patchwork", "digest"))
+      - name: Install plotting dependencies
+        run: python -m pip install -r environment/requirements.txt
+      - name: Regenerate figures, tables and supplementary checks
+        run: python reproduce.py render --no-pdf
+      - name: Retain verification records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reproduction-records
+          path: |
+            revision/audit/
+            revision/logs/
+            revision/results/supplementary/
+            revision/results/summaries/

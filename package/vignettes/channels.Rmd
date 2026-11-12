@@ -1,0 +1,122 @@
+---
+title: "Additional checks for a validation workflow"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Additional checks for a validation workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(spLeakage)
+```
+
+## Interpret each check in relation to the task
+
+Spatial distance is one description of a prediction task. Shared groups,
+covariate support, time ordering and overlapping predictor-extraction windows
+can also matter. The functions below report those features. Their historical
+names contain "leakage", but a flagged feature does not automatically establish
+predictive bias or a violation of the intended task.
+
+These extensions are outside the focused spatial methodological paper. They are
+not a validated system for combining separate flags into a corrected accuracy.
+
+```{r data}
+set.seed(21)
+d <- data.frame(x = runif(120), y = runif(120))
+d$z <- sin(3 * d$x) + rnorm(120, sd = 0.3)
+folds <- sample(rep_len(1:5, nrow(d)))
+g <- as.matrix(expand.grid(x = seq(0, 1, length.out = 10),
+                          y = seq(0, 1, length.out = 10)))
+target <- prediction_target(grid = g)
+```
+
+## Spatial mismatch
+
+```{r spatial}
+detect_leakage(d, folds, target, response = "z", coords = c("x", "y"))
+```
+
+Positive `SLI_rho` means greater average specified nearest-neighbour correlation
+in validation. It does not establish the sign of error bias for every learner.
+Inspect unsigned mismatch and distribution crossings as well.
+
+## Shared groups and co-located observations
+
+Copying the same response into training and test sets is a direct reuse problem.
+Distinct measurements at a shared site are different: they may have independent
+observation noise, and their suitability depends on whether the prediction task
+concerns new sites or further measurements at observed sites.
+
+```{r groups}
+dd <- rbind(d, d[1:10, ])  # deliberately copy complete observations
+split <- sample(rep_len(1:5, nrow(dd)))
+detect_group_leakage(dd, split, coords = c("x", "y"))
+grouped <- group_kfold(dd, k = 5, coords = c("x", "y"))
+detect_group_leakage(dd, grouped, coords = c("x", "y"))$frac_leaked
+```
+
+`frac_leaked` is a historical field name for the fraction of test observations
+sharing a group with training observations. Keeping groups together addresses a
+new-group prediction task; it does not establish accurate validation for every
+possible target.
+
+## Covariate support
+
+```{r features}
+d$covariate <- d$x + d$y + rnorm(nrow(d), sd = 0.1)
+newdata <- data.frame(covariate = seq(1, 3, length.out = 100))
+detect_feature_leakage(d, folds, covariates = "covariate", newdata = newdata)
+```
+
+Differences between training, test and target covariates can reveal extrapolation
+that geographic distances miss. Inspect the particular predictor and its response
+relationship. A feature-distance score is not a general loss estimate.
+
+## Overlapping extraction windows
+
+```{r windows}
+detect_extraction_leakage(d, folds, radius = 0.08, coords = c("x", "y"))
+```
+
+The output counts overlapping predictor windows. Shared pixels are not necessarily
+inappropriate when those same predictors are available at deployment. Check
+whether feature construction used unavailable outcomes or information, and whether
+validation reproduces the intended prediction setting.
+
+## Time ordering and joint space–time distance
+
+```{r temporal}
+st <- d[rep(1:20, each = 6), ]; st$time <- rep(1:6, 20)
+st_folds <- sample(rep_len(1:5, nrow(st)))
+detect_temporal_leakage(st, st_folds, time = "time")
+forward <- temporal_kfold(st, k = 4, time = "time")
+detect_temporal_leakage(st, forward, time = "time")$lookahead_frac
+```
+
+Training on future records can violate a prospective forecasting task. It need
+not violate a retrospective reconstruction task. The nearest-record lookahead
+fraction is a descriptive check, not a complete audit of all information used by
+a forecasting pipeline.
+
+```{r spacetime}
+detect_st_leakage(st, st_folds, time = "time", coords = c("x", "y"))
+```
+
+The joint distance depends on how space and time are scaled. A larger joint
+contrast does not establish a correspondingly larger predictive bias.
+
+## Trend and combined reporting
+
+```{r trend}
+trend_strength(d, "z", coords = c("x", "y"))
+audit_workflow(dd, split, target, response = "z", coords = c("x", "y"))
+```
+
+Trend strength describes the response variation explained by a fitted coordinate
+surface. It does not measure extrapolation error. The combined report brings
+these checks together without using an arbitrary letter grade to certify the
+workflow. See `vignette("quantify-correct")` for the limits of score-comparison
+and experimental accuracy-rescaling functions.

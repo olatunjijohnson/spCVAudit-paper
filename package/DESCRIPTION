@@ -1,0 +1,46 @@
+Package: spLeakage
+Title: Audit Spatial Validation Against Prediction Targets
+Version: 0.1.0.9004
+Authors@R:
+    person("Olatunji", "Johnson", email = "olatunjijohnson21111@gmail.com",
+           role = c("aut", "cre"))
+Description: Tools for auditing differences between spatial validation and a
+    declared prediction target. Compares nearest-neighbour distance distributions
+    and dependence-weighted contrasts, reports distribution crossings, and
+    compares candidate validation schemes. These diagnostics describe mismatch
+    in spatial prediction conditions; their relationship to predictive error
+    depends on the prediction model. Legacy score-comparison and experimental
+    simulation-calibrated functions are also provided with restricted scope.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 4.1)
+Imports:
+    sf,
+    stats,
+    graphics,
+    grDevices,
+    utils
+Suggests:
+    terra,
+    gstat,
+    FNN,
+    xgboost,
+    ranger,
+    mgcv,
+    fields,
+    blockCV,
+    disdat,
+    malariaAtlas,
+    rsample,
+    spatialsample,
+    caret,
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://github.com/olatunjijohnson/spLeakage
+BugReports: https://github.com/olatunjijohnson/spLeakage/issues
+Config/roxygen2/version: 8.1.1

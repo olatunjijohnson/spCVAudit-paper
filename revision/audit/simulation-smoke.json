@@ -1,0 +1,39 @@
+{
+  "started_utc": "2026-11-12T20:41:20.094487+00:00",
+  "stages": [
+    {
+      "script": "R/run_gp_reference.R",
+      "exit_code": 0
+    },
+    {
+      "script": "R/run_gp_knndm.R",
+      "exit_code": 0
+    },
+    {
+      "script": "R/run_learner_experiment.R",
+      "exit_code": 0
+    },
+    {
+      "script": "R/run_sensitivity.R",
+      "exit_code": 0
+    },
+    {
+      "script": "R/run_nested_estimation.R",
+      "exit_code": 0
+    },
+    {
+      "script": "exploratory/run_nested_k10.R",
+      "exit_code": 0
+    }
+  ],
+  "status": "complete",
+  "evaluation_counts": {
+    "gp-pilot": 192,
+    "gp-knndm-pilot": 64,
+    "learners-pilot": 640,
+    "sensitivity-pilot": 384,
+    "nested-estimation-pilot": 192,
+    "nested-k10-pilot": 192
+  },
+  "finished_utc": "2026-11-12T20:44:01.953591+00:00"
+}

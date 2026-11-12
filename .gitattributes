@@ -1,0 +1,12 @@
+# Preserve bytes of the package snapshot, scientific inputs and provenance.
+package/** -text linguist-vendored=true
+provenance/** -text linguist-generated=true
+revision/results/** -text linguist-generated=true
+revision/data/** -text
+environment/runtime-*.csv -text linguist-generated=true
+revision/figures/** -text linguist-generated=true
+revision/manuscript/*.pdf -text linguist-generated=true
+*.rds binary
+*.rda binary
+*.pdf binary
+*.png binary

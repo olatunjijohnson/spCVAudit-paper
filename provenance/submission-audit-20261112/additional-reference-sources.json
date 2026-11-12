@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-12",
+  "note": "Publisher/author/data-documentation checks complement Crossref metadata; the three Crossref HTTP 429 responses are retrieval limits, not invalid references.",
+  "sources": {
+    "atteia1994jura": "https://www.sciencedirect.com/science/article/pii/0269749194901724",
+    "pebesma2004gstat": "https://www.sciencedirect.com/science/article/pii/S0098300404000676/",
+    "meyer2021aoa": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13650",
+    "brenning2026targetweighted": "https://arxiv.org/abs/2603.29981v3",
+    "yuval2025classification": "https://proceedings.mlr.press/v258/yuval25a.html",
+    "wang2023geospatial": "https://openreview.net/forum?id=VgJhYu7FmQ",
+    "goovaerts1997geostatistics": "https://r-spatial.github.io/gstat/reference/jura.html",
+    "rasmussen2006gpml": "https://gaussianprocess.org/gpml/"
+  }
+}

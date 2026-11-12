@@ -1,0 +1,25 @@
+"check","observed","expected","tolerance"
+"one-neighbour explained variance",0.161321448526825,0.161321448526825,1e-10
+"co-located replicates 1",0.49,0.49,1e-10
+"co-located replicates 2",0.576470588235294,0.576470588235294,1e-10
+"co-located replicates 5",0.644736842105263,0.644736842105263,1e-10
+"co-located replicates 10",0.671232876712329,0.671232876712329,1e-10
+"crossing first moment",0.016,0.016,1e-10
+"crossing second moment",-0.13404,-0.13404,1e-10
+"crossing flag",1,1,1e-10
+"signed area cancellation",0,0,1e-10
+"unsigned transport despite cancellation",1,1,1e-10
+"identical nearest distances first moment",0,0,1e-10
+"identical nearest distances second moment",0,0,1e-10
+"full LOO equal-distance A",0,0,1e-10
+"full LOO equal-distance W",0,0,1e-10
+"full LOO equal-distance J1",0,0,1e-10
+"full LOO equal-distance J2",0,0,1e-10
+"full LOO equal-distance U1",0,0,1e-10
+"full LOO equal-distance U2",0,0,1e-10
+"ordered and crossing-distribution inequality trials",200,200,1e-10
+"package/reference A",-0.0267214706586388,-0.0267214706586393,1e-07
+"package/reference W",0.0267899767481361,0.0267899767481365,1e-07
+"package/reference SLI_rho",-0.0500548664846944,-0.0500548664846955,1e-07
+"package/reference SLI_rho2",-0.040519854642619,-0.0405198546426201,1e-07
+"package/reference W_rho",0.0501593327320943,0.0501593327320954,1e-07
