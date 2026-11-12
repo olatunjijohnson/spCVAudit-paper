@@ -247,6 +247,13 @@
       "rows": 4,
       "maximum_absolute_difference": 0.0,
       "first_discrepancies": []
+    },
+    {
+      "file": "selection-tolerance.csv",
+      "equal": true,
+      "rows": 12,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
     }
   ]
 }

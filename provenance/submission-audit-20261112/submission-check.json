@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-12",
+  "main_pages": 21,
+  "supplement_pages": 18,
+  "report_pages": 3,
+  "formatted_numbers_unchanged": true,
+  "output_comparisons": 37,
+  "citation_entries": 22,
+  "citation_keys_missing": 0,
+  "referenced_files_missing": 0,
+  "journal": "Environmental and Ecological Statistics (provisional; confirmation pending)",
+  "scientific_results_changed": false,
+  "remaining_items": [
+    "Covariance-fitting robustness not evaluated for the earlier simulations",
+    "Final code/data access",
+    "Author declarations and corresponding contact",
+    "Journal format and abstract length",
+    "Removal of internal draft wording"
+  ]
+}

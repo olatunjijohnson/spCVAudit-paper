@@ -33,7 +33,11 @@ def main():
     if args.mode == "compute":
         commands += [["Rscript", "--vanilla", "revision/exploratory/run_nested_k10.R"],
                      ["Rscript", "--vanilla", "revision/R/run_jura_application.R", "--original-fit"]]
-    commands += [[sys.executable, "scripts/fold_count.py"],
+    fold_command = [sys.executable, "scripts/fold_count.py"]
+    if args.no_pdf:
+        fold_command.append("--no-pdf")
+    commands += [fold_command,
+                 ["Rscript", "--vanilla", "revision/R/audit_selection_tolerance.R"],
                  [sys.executable, "scripts/jura_sensitivity.py"],
                  [sys.executable, "scripts/check_jura_fitting.py"],
                  ["Rscript", "--vanilla", "scripts/check_jura_implementation.R"],

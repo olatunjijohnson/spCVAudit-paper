@@ -6,6 +6,7 @@ Research code and manuscript for Olatunji Johnson's paper, current draft dated
 - [Paper](revision/manuscript/main.pdf) and [supplementary material](revision/manuscript/supplement.pdf).
 - [Reproduction instructions](REPRODUCING.md), including dependencies and full recomputation.
 - [Which paper methods are in the spLeakage package?](docs/PACKAGE-COVERAGE.md).
+- [Submission audit and outstanding items](docs/submission-audit.pdf).
 - [Jura data and attribution](revision/data/JURA-SOURCE.txt).
 
 The repository contains the analysis code, seeds, retained results, figure scripts,

@@ -108,6 +108,7 @@ After a primary render, these commands may be run separately:
 
 ```bash
 python3 scripts/fold_count.py
+Rscript --vanilla revision/R/audit_selection_tolerance.R
 python3 scripts/jura_sensitivity.py
 python3 scripts/check_jura_fitting.py
 Rscript --vanilla scripts/check_jura_implementation.R
@@ -120,6 +121,12 @@ cannot replace the primary five-fold results. Jura resampling keeps the model an
 CV scores fixed, reconstructs the original coordinate clusters, and reproduces
 2,000 resamples per fixed target and mean model. These are conditional sensitivity
 summaries, not independent datasets or confidence intervals for population risk.
+
+The fold-count script also regenerates `revision/exploratory/fold-count-report.pdf`
+and `fold-count-comparison.pdf`, both cited in the supplementary material.
+The tie audit writes `revision/audit/selection-tolerance.csv`; its 12 rows cover
+six numerical tolerances for each covariance choice and are checked against the
+retained audit. These outputs are included in the root reproduction command.
 
 The original-fitting Jura CSV is a retained input for rendering only. Full
 `compute` regenerates it with the package fitter before comparing it with the

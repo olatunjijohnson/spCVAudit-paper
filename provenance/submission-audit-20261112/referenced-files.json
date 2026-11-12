@@ -1,0 +1,211 @@
+{
+  "files": {
+    "F1-diagnostic.pdf": [
+      "revision/figures/F1-diagnostic.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/F1-diagnostic.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/F1-diagnostic.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/F1-diagnostic.pdf"
+    ],
+    "F2-reference.pdf": [
+      "revision/figures/F2-reference.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/F2-reference.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/F2-reference.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/F2-reference.pdf"
+    ],
+    "F3-learners.pdf": [
+      "revision/figures/F3-learners.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/F3-learners.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/F3-learners.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/F3-learners.pdf"
+    ],
+    "F4-application.pdf": [
+      "revision/figures/F4-application.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/F4-application.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/F4-application.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/F4-application.pdf"
+    ],
+    "S1-reference-all.pdf": [
+      "revision/figures/S1-reference-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/S1-reference-all.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/S1-reference-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/S1-reference-all.pdf"
+    ],
+    "S2-learners-all.pdf": [
+      "revision/figures/S2-learners-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/S2-learners-all.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/S2-learners-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/S2-learners-all.pdf"
+    ],
+    "S3-covariance-fits.pdf": [
+      "revision/figures/S3-covariance-fits.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/S3-covariance-fits.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/S3-covariance-fits.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/S3-covariance-fits.pdf"
+    ],
+    "S4-nested-all.pdf": [
+      "revision/figures/S4-nested-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/figures/S4-nested-all.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/figures/S4-nested-all.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/figures/S4-nested-all.pdf"
+    ],
+    "S5-jura-targets.pdf": [
+      "revision/figures/S5-jura-targets.pdf"
+    ],
+    "application-jura-candidates.csv": [
+      "revision/results/summaries/application-jura-candidates.csv"
+    ],
+    "application-jura-selection-repetitions.csv": [
+      "revision/results/summaries/application-jura-selection-repetitions.csv"
+    ],
+    "application-jura-selection.csv": [
+      "revision/results/summaries/application-jura-selection.csv"
+    ],
+    "application-jura.rds": [
+      "revision/results/application-jura.rds"
+    ],
+    "check_theory.R": [
+      "revision/R/check_theory.R",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/R/check_theory.R",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/R/check_theory.R",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/R/check_theory.R"
+    ],
+    "covariance-fits.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/covariance-fits.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/covariance-fits.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/covariance-fits.csv",
+      "revision/results/summaries/covariance-fits.csv"
+    ],
+    "fold-count-comparison.pdf": [
+      "revision/exploratory/fold-count-comparison.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/exploratory/fold-count-comparison.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/exploratory/fold-count-comparison.pdf"
+    ],
+    "fold-count-report.pdf": [
+      "revision/exploratory/fold-count-report.pdf",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/exploratory/fold-count-report.pdf",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/exploratory/fold-count-report.pdf"
+    ],
+    "gp-knndm.rds": [
+      "revision/results/gp-knndm.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/gp-knndm.rds",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/gp-knndm.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/gp-knndm.rds"
+    ],
+    "gp-reference.rds": [
+      "revision/results/gp-reference.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/gp-reference.rds",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/gp-reference.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/gp-reference.rds"
+    ],
+    "learners-by-cell.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/learners-by-cell.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/learners-by-cell.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/learners-by-cell.csv",
+      "revision/results/summaries/learners-by-cell.csv"
+    ],
+    "learners-selection.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/learners-selection.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/learners-selection.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/learners-selection.csv",
+      "revision/results/summaries/learners-selection.csv"
+    ],
+    "learners.rds": [
+      "revision/results/learners.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/learners.rds",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/learners.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/learners.rds"
+    ],
+    "make_manuscript_numbers.R": [
+      "revision/R/make_manuscript_numbers.R",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/R/make_manuscript_numbers.R",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/R/make_manuscript_numbers.R",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/R/make_manuscript_numbers.R"
+    ],
+    "nested-by-cell.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-by-cell.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-by-cell.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-by-cell.csv",
+      "revision/results/summaries/nested-by-cell.csv"
+    ],
+    "nested-candidate-scores.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-candidate-scores.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-candidate-scores.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-candidate-scores.csv",
+      "revision/results/summaries/nested-candidate-scores.csv"
+    ],
+    "nested-cell-influence.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-cell-influence.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-cell-influence.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-cell-influence.csv",
+      "revision/results/summaries/nested-cell-influence.csv"
+    ],
+    "nested-choice-frequencies.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-choice-frequencies.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-choice-frequencies.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-choice-frequencies.csv",
+      "revision/results/summaries/nested-choice-frequencies.csv"
+    ],
+    "nested-estimation-rng.rds": [
+      "revision/results/nested-estimation-rng.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/nested-estimation-rng.rds",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/nested-estimation-rng.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/nested-estimation-rng.rds"
+    ],
+    "nested-paired-comparisons.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-paired-comparisons.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-paired-comparisons.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-paired-comparisons.csv",
+      "revision/results/summaries/nested-paired-comparisons.csv"
+    ],
+    "nested-selection.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/nested-selection.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/nested-selection.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/nested-selection.csv",
+      "revision/results/summaries/nested-selection.csv"
+    ],
+    "reference-selection.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/reference-selection.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/reference-selection.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/reference-selection.csv",
+      "revision/results/summaries/reference-selection.csv"
+    ],
+    "reference-sign.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/reference-sign.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/reference-sign.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/reference-sign.csv",
+      "revision/results/summaries/reference-sign.csv"
+    ],
+    "selection-tolerance.csv": [
+      "revision/audit/selection-tolerance.csv",
+      "revision/editorial/submission-audit-20261112/selection-tolerance.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/audit/selection-tolerance.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/audit/selection-tolerance.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/audit/selection-tolerance.csv"
+    ],
+    "sensitivity-by-cell.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/sensitivity-by-cell.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/sensitivity-by-cell.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/sensitivity-by-cell.csv",
+      "revision/results/summaries/sensitivity-by-cell.csv"
+    ],
+    "sensitivity-headlines.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/sensitivity-headlines.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/sensitivity-headlines.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/sensitivity-headlines.csv",
+      "revision/results/summaries/sensitivity-headlines.csv"
+    ],
+    "sensitivity-near-zero.csv": [
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/summaries/sensitivity-near-zero.csv",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/summaries/sensitivity-near-zero.csv",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/summaries/sensitivity-near-zero.csv",
+      "revision/results/summaries/sensitivity-near-zero.csv"
+    ],
+    "sensitivity-rng.rds": [
+      "revision/results/sensitivity-rng.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029-verified/revision/results/sensitivity-rng.rds",
+      "revision/delivery/checkpoints/spLeakage-redevelopment-20261029-final/revision/results/sensitivity-rng.rds",
+      "revision/delivery/spLeakage-redevelopment-20261029/revision/results/sensitivity-rng.rds"
+    ]
+  },
+  "missing": []
+}

@@ -21,6 +21,8 @@ for name in ("numbers.tex", "table-reference.tex", "table-jura.tex"):
 for name in ("target-spatial-blocks.csv", "target-block-sensitivity.csv"):
     checks.append({"file": name, **module.compare_csv(ROOT / "provenance" / name,
                    ROOT / "revision/results/supplementary/jura" / name, 1e-10)})
+checks.append({"file": "selection-tolerance.csv", **module.compare_csv(
+    ROOT / "provenance/selection-tolerance.csv", ROOT / "revision/audit/selection-tolerance.csv", 1e-10)})
 record = {"all_equal": all(x["equal"] for x in checks), "absolute_tolerance": 1e-10, "checks": checks}
 output = ROOT / "revision/audit/current-reproduction-check.json"
 output.write_text(json.dumps(record, indent=2) + "\n")

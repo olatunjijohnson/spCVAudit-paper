@@ -58,10 +58,10 @@ template = r"""\documentclass[11pt,a4paper]{article}
 \hypersetup{pdftitle={spLeakage: ten-fold sensitivity check},pdfauthor={Prepared for Olatunji Johnson},pdfsubject={Paired fold-count comparison; research draft}}
 \title{Ten-fold sensitivity check}
 \author{spLeakage: author review addendum}
-\date{1 November 2026}
+\date{12 November 2026}
 \begin{document}
 \maketitle
-\section*{What changes with ten folds?}
+\section*{Comparison of five and ten folds}
 For prediction using estimated covariance, choosing a CV scheme by fitted $|J_2|$ gave a ten-fold MAE difference of \( @TENDELTA@ \) relative to selection by $W$ (MCSE \( @TENSE@ \)). This corresponds to a @TENPERCENT@\% reduction in MAE. The interval formed as the difference plus or minus 1.96 MCSE is \([@TENLOW@,@TENHIGH@]\), which includes zero. The primary five-fold result is a @FIVEPERCENT@\% reduction. Both comparisons use the same simulated fields.
 
 \begin{center}\small
@@ -95,11 +95,26 @@ The 24-configuration pilot completed 984 covariance fits. The main run completed
 
 \section*{Files and reproduction}
 \begingroup\raggedright
-The protocol is \nolinkurl{revision/audit/fold-count-sensitivity-protocol.json}; the changes needed for the ten-fold run are recorded in \nolinkurl{revision/audit/fold-count-source-changes.patch}. Raw results, fit records, summaries and execution logs are under \nolinkurl{revision/csf/fold-count-23933572/}. That job used the isolated R library rebuilt from saved sources and spLeakage 0.1.0.9004.
+The current paper repository contains the declared protocol in
+\nolinkurl{revision/audit/fold-count-sensitivity-protocol.json} and the ten-fold
+computation in \nolinkurl{revision/exploratory/run_nested_k10.R}. The saved inputs
+are \nolinkurl{revision/results/nested-estimation-rng.rds} (five folds) and
+\nolinkurl{revision/results/nested-estimation-k10.rds} (ten folds), with their
+configuration and error records.
 
-To rerun the analysis, use \nolinkurl{revision/csf/fold-count-sensitivity.slurm} from a research-delivery root with a completed runtime and research archive. It creates a new directory, runs the pilot and main study, and compares them with the saved five-fold results. This report is generated from the comparison CSVs by \nolinkurl{revision/exploratory/make_fold_count_report.py}. Its adjacent JSON records the numerical values and source hashes. A separate plotting entry point regenerates the figure from the saved comparison table.
+From the paper repository root, \texttt{python3 scripts/fold\_count.py} rebuilds
+the paired comparisons, this report and the two-page comparison figure from
+these retained inputs. It writes ten-fold summaries separately, preserving the
+primary five-fold summaries. To regenerate the responses and fits as well, use
+the root \texttt{reproduce.py compute} command with a new output directory,
+as described in \nolinkurl{REPRODUCING.md}.
 
-The original run and checks are documented in \nolinkurl{revision/audit/delivery-fold-count-proof.json}. Later presentation changes are recorded separately and do not alter the scientific results. Independent human scientific review remains outstanding.
+The comparison tables are written to
+\nolinkurl{revision/results/supplementary/fold-count/}. The report generator is
+\nolinkurl{revision/exploratory/make_fold_count_report.py}; the adjacent JSON
+records its numerical values and source hashes. Selected original verification
+records are retained under \nolinkurl{provenance/historical-checks/}.
+The mathematical results and comparisons are unchanged by this packaging update.
 \par\endgroup
 \end{document}
 """

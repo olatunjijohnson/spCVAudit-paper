@@ -48,6 +48,14 @@ Receipts and text copies of the execution logs are in
 These are checks of the assembled repository; historical validation receipts are
 kept separately under `provenance/historical-checks`.
 
+The subsequent submission audit restored the two cited fold-count PDF reports
+and connected the tie-tolerance audit to the root workflow. Regeneration of those
+outputs passed; all **37** output comparisons now pass with zero numerical
+differences. The manuscript clarifies that the anisotropic reference uses the
+most correlated neighbour, and that target response values (rather than target
+locations) are excluded from fitting and diagnostic selection. The numerical
+results and formatted manuscript values are unchanged.
+
 ## Scope
 
 These small computations test the current scripts and dependency integration.
