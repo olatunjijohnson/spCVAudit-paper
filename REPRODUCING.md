@@ -102,6 +102,13 @@ changed. Generated PDFs may differ in metadata across environments; numerical
 comparisons use an absolute tolerance of 1e-10, while formatted TeX tables and
 manuscript values must match exactly.
 
+The manuscript uses the Springer Nature LaTeX template (`sn-jnl.cls`, version 3.1,
+with `sn-basic.bst`), included in `revision/manuscript`. After the PDFs are built,
+`python3 revision/manuscript/make_submission.py` writes the single-file journal
+submission to `revision/submission`: `manuscript.tex` with all inputs, supplement
+cross-references and the bibliography inlined, figures renamed `Fig1`–`Fig4`, and
+Online Resource 1 as `ESM_1.pdf`.
+
 ## Recompute every current study
 
 ```bash

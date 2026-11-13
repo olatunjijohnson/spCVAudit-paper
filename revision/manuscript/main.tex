@@ -1,11 +1,7 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=25mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,caption,array}
-\usepackage[round,authoryear]{natbib}
+\documentclass[pdflatex,sn-basic]{sn-jnl}
+\usepackage{amsmath,amssymb,booktabs,graphicx,array}
 \usepackage{xr}
 \externaldocument[supp-][nocite]{supplement}
-\usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \hypersetup{pdftitle={Nearest-neighbour distances and prediction error in spatial cross-validation},pdfauthor={Olatunji Johnson},pdfsubject={Research article}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Var}{\operatorname{Var}}
@@ -14,46 +10,45 @@
 \newcommand{\R}{\mathbb{R}}
 \graphicspath{{../figures/}}
 \input{numbers.tex}
-\title{Nearest-neighbour distances and prediction error in spatial cross-validation}
-\author{Olatunji Johnson\\Department of Mathematics, University of Manchester}
-\date{}
+\raggedbottom
 \begin{document}
+\title[Nearest-neighbour distances and prediction error]{Nearest-neighbour distances and prediction error in spatial cross-validation}
+\author*[1]{\fnm{Olatunji} \sur{Johnson}}\email{olatunji.johnson@manchester.ac.uk}
+\affil*[1]{\orgdiv{Department of Mathematics}, \orgname{University of Manchester}, \orgaddress{\street{Oxford Road}, \city{Manchester}, \postcode{M13 9PL}, \country{United Kingdom}}}
+\abstract{\input{abstract.tex}}
+\keywords{Gaussian process, kriging, map accuracy, screening effect, spatial autocorrelation, Wasserstein distance}
 \maketitle
-\begin{abstract}
-\input{abstract.tex}
-\end{abstract}
-\noindent\textbf{Keywords:} cross-validation; spatial prediction; prediction target; Gaussian process; nearest-neighbour distance; map validation.
 \input{introduction.tex}
 \input{methods.tex}
 \input{simulation.tex}
-\clearpage
 \input{application.tex}
-\clearpage
 \input{discussion.tex}
-\section*{Code, data and reproducibility}
+\bmhead{Supplementary information}
+Online Resource 1 contains the proofs, complete simulation designs, additional results, the profile-search refits and the reproduction records.
+
+\section*{Statements and Declarations}
 \begingroup\urlstyle{same}\emergencystretch=2em
-The public reproduction repository, \url{https://github.com/olatunjijohnson/spLeakage-paper}, provides the experiment designs, random seeds, analysis code, saved results, figure scripts and archived \texttt{spLeakage} source versions used for the computations and reproduction checks. Manuscript numbers and tables are generated from those results. The Jura data are distributed with \texttt{gstat} and documented by \citet{goovaerts1997geostatistics}; the saved export retains all 359 site measurements and their original training--validation assignments. The application code includes the projection, log transformation, fold assignments, predictions and covariance-fitting checks.
+\bmhead{Funding}
+No funding was received for conducting this study.
 
-The companion R package \texttt{spCVAudit}, available at \url{https://github.com/olatunjijohnson/spCVAudit}, implements the distance and correlation diagnostics, weighted targets, scheme comparisons and Gaussian reference calculations. Documentation and worked tutorials are at \url{https://olatunjijohnson.github.io/spCVAudit/}. The reproduction repository retains the original computational implementation so that subsequent package changes do not alter the reported results.
+\bmhead{Competing interests}
+The author has no relevant financial or non-financial interests to disclose.
 
-The simulation calculations ran on the University of Manchester's Computational Shared Facility (CSF), using R 4.5.0, CAST 1.1.1 and ranger 0.16.0. The supplementary material (Section~\ref*{supp-sec:reproduction}) describes the local environment, checks between environments and reproduction of the simulation studies and Jura application. Source checksums identify the versions used.
+\bmhead{Ethics approval and consent to participate}
+Not applicable. The study uses simulated data and a publicly available soil survey.
+
+\bmhead{Consent for publication}
+Not applicable.
+
+\bmhead{Data availability}
+The Jura soil data are distributed with the R package \texttt{gstat} and documented by \citet{goovaerts1997geostatistics}. The saved export, which retains all 359 site measurements and their original training--validation assignments, the simulation designs, random seeds and all saved results are available in the public reproduction repository, \url{https://github.com/olatunjijohnson/spLeakage-paper}. Manuscript numbers and tables are generated from those results.
+
+\bmhead{Code availability}
+The reproduction repository, \url{https://github.com/olatunjijohnson/spLeakage-paper}, provides the analysis code, figure scripts and archived \texttt{spLeakage} source versions used for the computations, together with the application code for the projection, log transformation, fold assignments, predictions and covariance-fitting checks. It retains the original computational implementation so that later package changes do not alter the reported results. The companion R package \texttt{spCVAudit}, available at \url{https://github.com/olatunjijohnson/spCVAudit} with documentation and tutorials at \url{https://olatunjijohnson.github.io/spCVAudit/}, implements the distance and correlation diagnostics, weighted targets, scheme comparisons and Gaussian reference calculations.
+
+\bmhead{Author contributions}
+Olatunji Johnson is the sole author and was responsible for conceptualisation, methodology, software, analysis, interpretation and writing.
 \endgroup
-\section*{Declarations}
-\paragraph{Funding.} This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.
 
-\paragraph{Competing interests.} The author declares no competing interests.
-
-\paragraph{Data and code availability.} All data, code, saved results and archived software versions are publicly available as described in the Code, data and reproducibility section above.
-
-\paragraph{Author contributions.} Olatunji Johnson is the sole author and was responsible for conceptualisation, methodology, software, analysis, interpretation and writing.
-
-\paragraph{Use of AI-assisted tools.} OpenAI Codex and Anthropic Claude assisted with code development, computation, checking of reproducibility records and language editing, under the author's direction. The author reviewed all outputs and takes full responsibility for the content of the article.
-
-\paragraph{Ethics approval.} Not applicable. The study uses simulated data and a publicly available soil survey.
-\begingroup
-\small
-\setlength{\bibsep}{3pt}
-\bibliographystyle{plainnat}
 \bibliography{references}
-\endgroup
 \end{document}

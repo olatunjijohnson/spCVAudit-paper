@@ -4,7 +4,7 @@
 \usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,longtable}
 \usepackage[round,authoryear]{natbib}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
-\hypersetup{pdftitle={Supplementary material: Nearest-neighbour distances and prediction error in spatial cross-validation},pdfauthor={Olatunji Johnson},pdfsubject={Proofs, experiment details and reproducibility}}
+\hypersetup{pdftitle={Online Resource 1: Nearest-neighbour distances and prediction error in spatial cross-validation},pdfauthor={Olatunji Johnson},pdfsubject={Proofs, experiment details and reproducibility}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Var}{\operatorname{Var}}
 \newcommand{\Cov}{\operatorname{Cov}}
@@ -14,15 +14,15 @@
 \renewcommand{\thefigure}{S\arabic{figure}}
 \graphicspath{{../figures/}}
 \input{numbers.tex}
-\title{Supplementary material: Nearest-neighbour distances and prediction error in spatial cross-validation}
-\author{Olatunji Johnson\\Department of Mathematics, University of Manchester}
-\date{12 November 2026}
+\title{Online Resource 1\\[0.5ex]\large Nearest-neighbour distances and prediction error in spatial cross-validation\\[0.5ex]\normalsize\emph{Environmental and Ecological Statistics}}
+\author{Olatunji Johnson\\Department of Mathematics, University of Manchester,\\Oxford Road, Manchester, M13 9PL, United Kingdom\\Corresponding author: \href{mailto:olatunji.johnson@manchester.ac.uk}{olatunji.johnson@manchester.ac.uk}}
+\date{}
 \begin{document}
 \maketitle
 \tableofcontents
 \section{Notation and the three error comparisons}
 \label{sec:notation}
-This supplementary material provides the proofs and implementation details for the main paper. The reference calculations hold the observation locations $S$, target locations and weights $Q$, and candidate folds fixed. They are chosen independently of the responses. Each observation is tested once and receives weight $1/n$ in the CV score. A fold containing $|H_f|$ test observations therefore receives weight $|H_f|/n$. Giving unequal folds equal weight would estimate a different quantity. The experiments and evaluated package implementation use equally weighted target grids or holdouts; the theory also permits specified unequal target weights.
+This Online Resource provides the proofs and implementation details for the main paper. The reference calculations hold the observation locations $S$, target locations and weights $Q$, and candidate folds fixed. They are chosen independently of the responses. Each observation is tested once and receives weight $1/n$ in the CV score. A fold containing $|H_f|$ test observations therefore receives weight $|H_f|/n$. Giving unequal folds equal weight would estimate a different quantity. The experiments and evaluated package implementation use equally weighted target grids or holdouts; the theory also permits specified unequal target weights.
 
 Mean squared error (MSE) is the expected squared difference between a response and its prediction; we also call this risk. Three ways of averaging error appear in the studies. The reference target MSE $R_Q$ averages over repeated training and target responses under the generating model. The refitting study instead fixes the observed training responses and averages over target responses conditional on them, giving the conditional target MSE of that particular fitted prediction model. The comparison of prediction models calculates squared error against the simulated target surface before observation noise and adds the noise variance $0.1$. This last loss averages over future observation noise only; its difference from the CV score is subsequently averaged across independent fields.
 
