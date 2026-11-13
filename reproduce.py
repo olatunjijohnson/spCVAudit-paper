@@ -36,11 +36,14 @@ def main():
     fold_command = [sys.executable, "scripts/fold_count.py"]
     if args.no_pdf:
         fold_command.append("--no-pdf")
+    implementation_command = ["Rscript", "--vanilla", "scripts/check_jura_implementation.R"]
+    if args.mode == "compute" and args.compare_to is not None:
+        implementation_command.append("--strict-reference")
     commands += [fold_command,
                  ["Rscript", "--vanilla", "revision/R/audit_selection_tolerance.R"],
                  [sys.executable, "scripts/jura_sensitivity.py"],
                  [sys.executable, "scripts/check_jura_fitting.py"],
-                 ["Rscript", "--vanilla", "scripts/check_jura_implementation.R"],
+                 implementation_command,
                  ["Rscript", "--vanilla", "revision/R/application_walkthrough.R"],
                  [sys.executable, "scripts/check_outputs.py"]]
     for command in commands:

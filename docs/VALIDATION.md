@@ -24,8 +24,9 @@ results on Linux. Its live status is available in the repository's Actions tab.
 The hosted run [43332297180](https://github.com/olatunjijohnson/spLeakage-paper/actions/runs/43332297180)
 passed all 37 comparisons. The theory check now enforces its stipulated unit
 variance exactly, and the target-response exclusion check compares two fresh
-runs in the same environment. Agreement with saved Jura results is checked
-separately, so platform roundoff is not confused with target-response use.
+runs in the same environment. Fresh-fit differences from saved Jura results are
+reported separately. They are required to pass in exact compute mode; retained
+result rendering instead requires the fixed-fit and paired invariance checks.
 
 Exact recomputation of nonlinear covariance fits also depends on the numerical
 environment. Three regression configurations reproduce exactly under the

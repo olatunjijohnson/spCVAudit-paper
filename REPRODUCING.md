@@ -59,6 +59,11 @@ runs before the studies. It stops if the reference fits differ by more than
 long run in an environment that cannot reproduce the archived fits. It does not
 exclude configurations or change the fitting algorithm. Rendering retained
 results is independently checked on Ubuntu and remains the recommended first step.
+The render workflow requires the saved-score reconstruction, independent kriging
+predictions and exact paired target-response exclusion checks to pass. It also
+records fresh Jura fit differences in `fit-replay-comparison.csv`; these are
+portability diagnostics, not inputs to the rendered results. Full
+`compute --compare-to` additionally requires those fresh-fit comparisons to pass.
 
 Python 3.12 was used locally. Set up a project environment with:
 
