@@ -1,0 +1,6 @@
+"check","dataset","model","max_error"
+"independent gstat predictions","jura","ordinary",7.34967642301854e-14
+"independent gstat predictions","jura","trend",6.99440505513849e-14
+"profile fitter recomputation","jura","both",1.11022302462516e-16
+"target outcome exclusion","jura","both",0
+"original fitter recomputation","jura","both",4.9960036108132e-16

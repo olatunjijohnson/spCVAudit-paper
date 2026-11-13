@@ -3,7 +3,10 @@
 Public research code and manuscript for Olatunji Johnson's paper. This research
 draft has not been submitted or independently reviewed.
 
-- [Paper](revision/manuscript/main.pdf) and [supplementary material](revision/manuscript/supplement.pdf).
+- [Combined reading PDF](https://github.com/olatunjijohnson/spLeakage-paper/releases/download/paper-2026-11-13/spLeakage-paper-and-supplement-20261113.pdf),
+  with the paper, supplementary material, supplementary figures and fold-count reports.
+- Separate [paper](revision/manuscript/main.pdf) and
+  [supplementary material](revision/manuscript/supplement.pdf).
 - [Reproduction instructions](REPRODUCING.md), including dependencies and full recomputation.
 - [spCVAudit R package](https://github.com/olatunjijohnson/spCVAudit) and
   [website with tutorials](https://olatunjijohnson.github.io/spCVAudit/).

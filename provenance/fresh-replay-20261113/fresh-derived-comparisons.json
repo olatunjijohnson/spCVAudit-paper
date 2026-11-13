@@ -1,0 +1,259 @@
+{
+  "all_equal": true,
+  "absolute_tolerance": 1e-10,
+  "checks": [
+    {
+      "file": "revision/results/summaries/application-jura-candidates.csv",
+      "equal": true,
+      "rows": 24,
+      "maximum_absolute_difference": 1.8041124150158794e-14,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/application-jura-selection-repetitions.csv",
+      "equal": true,
+      "rows": 2400,
+      "maximum_absolute_difference": 9.992007221626409e-16,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/application-jura-selection.csv",
+      "equal": true,
+      "rows": 60,
+      "maximum_absolute_difference": 1.0408340855860843e-16,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/learners-alpha-contrast.csv",
+      "equal": true,
+      "rows": 160,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/learners-by-cell.csv",
+      "equal": true,
+      "rows": 640,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/learners-selection-by-field.csv",
+      "equal": true,
+      "rows": 124800,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/learners-selection.csv",
+      "equal": true,
+      "rows": 2080,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-behaviour-by-cell.csv",
+      "equal": true,
+      "rows": 50,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-behaviour-by-field.csv",
+      "equal": true,
+      "rows": 3840,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-by-cell.csv",
+      "equal": true,
+      "rows": 192,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-candidate-scores.csv",
+      "equal": true,
+      "rows": 192,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-cell-influence.csv",
+      "equal": true,
+      "rows": 24,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-choice-frequencies.csv",
+      "equal": true,
+      "rows": 400,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-completion.csv",
+      "equal": true,
+      "rows": 24,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-known-risk-calibration.csv",
+      "equal": true,
+      "rows": 8,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-paired-comparisons.csv",
+      "equal": true,
+      "rows": 2552,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-selection-by-field.csv",
+      "equal": true,
+      "rows": 49920,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/nested-selection.csv",
+      "equal": true,
+      "rows": 754,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-cancellation.csv",
+      "equal": true,
+      "rows": 78,
+      "maximum_absolute_difference": 1.6930901125533637e-15,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-paired-comparisons.csv",
+      "equal": true,
+      "rows": 2961,
+      "maximum_absolute_difference": 9.992007221626409e-15,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-proxy-error.csv",
+      "equal": true,
+      "rows": 512,
+      "maximum_absolute_difference": 1.609823385706477e-15,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-selection-by-configuration.csv",
+      "equal": true,
+      "rows": 46080,
+      "maximum_absolute_difference": 1.5798473640415978e-13,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-selection.csv",
+      "equal": true,
+      "rows": 153,
+      "maximum_absolute_difference": 9.992007221626409e-16,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/reference-sign.csv",
+      "equal": true,
+      "rows": 6612,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/sensitivity-by-cell.csv",
+      "equal": true,
+      "rows": 384,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/sensitivity-headlines.csv",
+      "equal": true,
+      "rows": 4,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/summaries/sensitivity-near-zero.csv",
+      "equal": true,
+      "rows": 32,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/supplementary/fold-count/fold-count-change-by-field.csv",
+      "equal": true,
+      "rows": 3840,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/supplementary/fold-count/fold-count-change-summary.csv",
+      "equal": true,
+      "rows": 50,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/supplementary/fold-count/fold-count-comparisons.csv",
+      "equal": true,
+      "rows": 1100,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "revision/results/supplementary/fold-count/fold-count-verification.csv",
+      "equal": true,
+      "rows": 8,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "numbers.tex",
+      "equal": true,
+      "comparison": "exact formatted text"
+    },
+    {
+      "file": "table-reference.tex",
+      "equal": true,
+      "comparison": "exact formatted text"
+    },
+    {
+      "file": "table-jura.tex",
+      "equal": true,
+      "comparison": "exact formatted text"
+    },
+    {
+      "file": "target-spatial-blocks.csv",
+      "equal": true,
+      "rows": 200,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "target-block-sensitivity.csv",
+      "equal": true,
+      "rows": 4,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    },
+    {
+      "file": "selection-tolerance.csv",
+      "equal": true,
+      "rows": 12,
+      "maximum_absolute_difference": 0.0,
+      "first_discrepancies": []
+    }
+  ]
+}

@@ -44,8 +44,10 @@ times depend on the platform; failed builds leave logs and can use `--resume`.
 ### Numerical environment for exact replay
 
 The original simulation environment was Rocky Linux 9.7, R 4.5.0, with R's
-bundled BLAS and LAPACK 3.12.1. Matching R and package versions alone is not
-sufficient to reproduce every nonlinear covariance fit. The public-release
+bundled BLAS and LAPACK 3.12.1. The compiler versions, R build flags and
+linked libraries are recorded in
+[`environment/reference-numerical-runtime.txt`](environment/reference-numerical-runtime.txt).
+Matching R and package versions alone is not sufficient to reproduce every nonlinear covariance fit. The public-release
 audit found signal-fraction differences exceeding 0.01 in three of the 1,440
 diagnostic-study configurations on Ubuntu 24.04; the original environment
 reproduced their saved fits. A local
@@ -176,10 +178,12 @@ including kNNDM and ten-fold refitting. It does not replace a full experiment.
 
 `provenance/imported-files.json` records the imported research files before
 repository integration. Original simulation records were validated in earlier
-full reruns described in the supplementary material. Those historical checks
-are not a claim that the newly assembled repository has been rerun in full.
-The dated assembly checks are in `docs/VERIFICATION.md`; subsequent public-release
-checks are reported in `docs/VALIDATION.md`.
+full reruns described in the supplementary material. A separate fresh computation
+from the public repository was carried out on 13 November 2026; its raw-result
+comparisons and environment records are under
+[`provenance/fresh-replay-20261113`](provenance/fresh-replay-20261113/).
+The dated assembly checks are in `docs/VERIFICATION.md`; public-release checks
+are reported in `docs/VALIDATION.md`.
 Selected historical validation receipts are retained under
 `provenance/historical-checks`; their original paths refer to the research archive.
 

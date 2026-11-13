@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Johnson
     given-names: Olatunji
-version: "2026-11-12-draft"
-date-released: "2026-11-12"
+version: "2026-11-13-draft"
+date-released: "2026-11-13"
 repository-code: "https://github.com/olatunjijohnson/spLeakage-paper"
 license: MIT

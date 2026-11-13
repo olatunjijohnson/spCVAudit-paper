@@ -1,0 +1,26 @@
+{
+  "completed_utc": "2026-11-13T02:01:29.778588+00:00",
+  "status": "passed",
+  "fresh_computation_source_commit": "19e3e505f1574eab31ea5f367129f3352c854ce3",
+  "validation_source_commit": "6536e32e44a7106b6fa4ad827ec5f8634cb622e7",
+  "retained_raw_results_reused": false,
+  "primary_studies": 6,
+  "additional_full_computations": [
+    "ten-fold sensitivity",
+    "original-fitting Jura sensitivity"
+  ],
+  "primary_raw_comparisons": 179,
+  "primary_and_ten_fold_comparisons": 211,
+  "original_jura_comparisons": 29,
+  "derived_output_comparisons": 37,
+  "raw_and_derived_absolute_tolerance": 1e-10,
+  "all_fresh_jura_replay_checks_pass": true,
+  "pdf_text_matches_public_release": true,
+  "main_pdf_pages": 21,
+  "supplement_pdf_pages": 18,
+  "transferred_files_hash_verified": 37,
+  "numerical_environment": "Rocky Linux 9.7, R 4.5.0, bundled BLAS and LAPACK 3.12.1; full runtime record is published",
+  "render_environment": "Ubuntu 24.04, R 4.6.1, Python 3.12, TeX Live 2025",
+  "execution_note": "Primary calculations succeeded; cluster plotting lacked NumPy. Supplementary calculations completed in a second successful batch job, and the fresh outputs were rendered and validated locally. Initial rendering and transfer-recovery logs are preserved in the local release workspace.",
+  "portability_note": "An alternate Ubuntu full computation completed but failed 19 fitted-study comparisons. Its comparison record is retained; a preflight now detects the differing numerical environment."
+}

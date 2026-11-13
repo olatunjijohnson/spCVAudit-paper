@@ -1,0 +1,276 @@
+{
+  "all_scientific_inputs_unchanged": true,
+  "compared_files": 54,
+  "checks": [
+    {
+      "file": "package/R/audit-report.R",
+      "same": true,
+      "sha256": "31bfa459b6b98ac59db658b9066dd1b7839cd376991c8e0880e3b8af29d04e40"
+    },
+    {
+      "file": "package/R/cv-schemes.R",
+      "same": true,
+      "sha256": "ddea5ba19b693eb406d3ba9c9263fabeb6778e269a7fbece4e5e8ba145561500"
+    },
+    {
+      "file": "package/R/deleak.R",
+      "same": true,
+      "sha256": "39bf8268358c3e835533b1104238a6508784f67644bb7770c65d8dc125aaf520"
+    },
+    {
+      "file": "package/R/dependence.R",
+      "same": true,
+      "sha256": "e6e29e373d01329f117aed986043cd47344ad1add41fb0fa625db3a7fff2e226"
+    },
+    {
+      "file": "package/R/design-validation.R",
+      "same": true,
+      "sha256": "5bab3d5b02de6f37e142fb9c203cdff943f19eeef7766551df3c848ece168b6b"
+    },
+    {
+      "file": "package/R/detect-leakage.R",
+      "same": true,
+      "sha256": "bf4748cf2b7ae5a192f653434a05f5d2e75a654576664d6a0592c09747fc9acd"
+    },
+    {
+      "file": "package/R/emulator.R",
+      "same": true,
+      "sha256": "3c264f15ab2820e1e361e1874b1ae441f6fe1d8268c6210cf30041a83f537f21"
+    },
+    {
+      "file": "package/R/extraction-leakage.R",
+      "same": true,
+      "sha256": "d886bca54acb8c5544766b7e310d8228a131cb0723c4b5d1bb5bee867c97174e"
+    },
+    {
+      "file": "package/R/feature-leakage.R",
+      "same": true,
+      "sha256": "fb1ddac08bb09cbdbaaa537a51d9c685bbc9e08c7af573f647b4f0a09bcc4849"
+    },
+    {
+      "file": "package/R/geometry.R",
+      "same": true,
+      "sha256": "48ad7a4018f84ce32e54d061fb362877a57edd9d72e2a906fc2eca8957a04374"
+    },
+    {
+      "file": "package/R/group-leakage.R",
+      "same": true,
+      "sha256": "ce5501c37d5602d62ee3ba391c3bda524d18c8c06b36407e12288b36df80e7a2"
+    },
+    {
+      "file": "package/R/methods.R",
+      "same": true,
+      "sha256": "dd12c8488b92d3d88f0eb29d3e6de31cfd1e3b44404c6b7af4a4d71b5beb7e52"
+    },
+    {
+      "file": "package/R/optimism.R",
+      "same": true,
+      "sha256": "0c1acbd3ba662d92ba9e48dbe3020414782d032f799c2c422b69af39d4a2a6c5"
+    },
+    {
+      "file": "package/R/prediction-target.R",
+      "same": true,
+      "sha256": "2121fafad0d580ddfa1e2911f2c3967e02aebda01f40e70f9db5774f49aeae76"
+    },
+    {
+      "file": "package/R/rank-schemes.R",
+      "same": true,
+      "sha256": "66d22ae35e46519f7bae8dd0ec02f3083e70a1615229f16b2b0e45227fb7413b"
+    },
+    {
+      "file": "package/R/recommend.R",
+      "same": true,
+      "sha256": "9a881cdfe106045c619fb311fe55bb1d5bbb7f225d782825d66c7d1182af563e"
+    },
+    {
+      "file": "package/R/spLeakage-package.R",
+      "same": true,
+      "sha256": "ccc603889804306c77e69b7ecd1f6cc9de65ce384ab51663b14185955227c0e6"
+    },
+    {
+      "file": "package/R/st-leakage.R",
+      "same": true,
+      "sha256": "7fc8df6d79ae5bc657f5d2ee25a2ac4601f6d0e8968280f2982919bfbd9e2563"
+    },
+    {
+      "file": "package/R/sysdata.rda",
+      "same": true,
+      "sha256": "9f8d8f51baa7f0974a9877703edd72e8a85046f9d26cf014c0d6f84f9d6b374f"
+    },
+    {
+      "file": "package/R/temporal-leakage.R",
+      "same": true,
+      "sha256": "5190ea0b099abdd6c907124d4aad07068b862c4ce4ca3965186708f5d322b5c6"
+    },
+    {
+      "file": "package/R/trend.R",
+      "same": true,
+      "sha256": "0f1e60247bc65f66ce5b7aecbc6c4c4f72b78a2d09e4e9a68d3bdc10fc9013b2"
+    },
+    {
+      "file": "revision/R/analyse_jura_application.R",
+      "same": true,
+      "sha256": "5e710196f92cec4b08ee6a250f73b1c9acad82b91bbc72d9e32eb80a0e80fea2"
+    },
+    {
+      "file": "revision/R/analyse_learners.R",
+      "same": true,
+      "sha256": "83d6fc9ee2d84f7e2a98f148907370e1a4c2fe6143c9709039cc249bb59abfc7"
+    },
+    {
+      "file": "revision/R/analyse_nested_estimation.R",
+      "same": true,
+      "sha256": "6e9cee7388560d925aec1aa937926d7c5c11c057e1cab7eaa5bfdec752b945c8"
+    },
+    {
+      "file": "revision/R/analyse_reference.R",
+      "same": true,
+      "sha256": "1c3fd8ed4bb0d3cb6a6aaa61d4c294929e88c6fb02d03ff8b2ad12eed39d1eae"
+    },
+    {
+      "file": "revision/R/analyse_selection_behaviour.R",
+      "same": true,
+      "sha256": "fcf89b3ef3be7b38470d46e84b61d0826563d43688c7a94c7a7fa3f1ead2a021"
+    },
+    {
+      "file": "revision/R/analyse_sensitivity.R",
+      "same": true,
+      "sha256": "24c05cdbcf2d71ea96c838aa5100f27bae1ee22f3a926b1dc191734f1e846bd6"
+    },
+    {
+      "file": "revision/R/application_walkthrough.R",
+      "same": true,
+      "sha256": "ae24f5fde7e2d9de471484509ec59f3702ddb37a7e7857f911ff5b64e0471707"
+    },
+    {
+      "file": "revision/R/audit_numeric_geometry.R",
+      "same": true,
+      "sha256": "60ac23eca97223f0bed19be54b760ccbc312ae03f4592ef95446818927ffc370"
+    },
+    {
+      "file": "revision/R/audit_random_streams.R",
+      "same": true,
+      "sha256": "2fa3f788115ce314fa6de04283f92fd03f81225da75049766afedd45cc26292d"
+    },
+    {
+      "file": "revision/R/audit_selection_tolerance.R",
+      "same": true,
+      "sha256": "b40e48d4d5a2761c2997ae4a584fdf25edfe8ea57eed74c02f44001e64251be9"
+    },
+    {
+      "file": "revision/R/check_additional_theory.R",
+      "same": true,
+      "sha256": "9c7d5ba2889ea6211a64d4c0d889c54e09d48d3f502dac82abc9dd4e8244e734"
+    },
+    {
+      "file": "revision/R/check_environment.R",
+      "same": true,
+      "sha256": "c02084ee11c660d8e83134f2a74f2081b548dcacad3f4249660a5ba8d6b8037a"
+    },
+    {
+      "file": "revision/R/check_theory.R",
+      "same": true,
+      "sha256": "006be34f35479ee2453fd46d9fd67a92bdd82a9cde969e7b31e4448183eac839"
+    },
+    {
+      "file": "revision/R/common.R",
+      "same": true,
+      "sha256": "99d744095739ec6889785a32c9e1e48f26a3db8295220f554408499e5f27de92"
+    },
+    {
+      "file": "revision/R/compare_reproduction.R",
+      "same": true,
+      "sha256": "be086d9003c2a67aab110c80463ba571a9f6eb0f387ca9ce6656efa7abdf7d76"
+    },
+    {
+      "file": "revision/R/jura_common.R",
+      "same": true,
+      "sha256": "cc01e215292bba086d093edc8ea29d1550bfb16c64f3fe65bc342289d31ccc72"
+    },
+    {
+      "file": "revision/R/jura_profile_estimator.R",
+      "same": true,
+      "sha256": "dc68623807fa7576f46f0f8a8c83a6442351d8af333a70b07fe2244e370de9d8"
+    },
+    {
+      "file": "revision/R/jura_profile_fit.R",
+      "same": true,
+      "sha256": "ad62e0d2520a481b5e442430bc6122ae6a8b8d6a08c486a3c3c6fdfa2dc375d0"
+    },
+    {
+      "file": "revision/R/local_libraries.R",
+      "same": true,
+      "sha256": "760c2cf02a1230b1782418cae2cd3fb029726d39c782e0076c536617f3bd7d75"
+    },
+    {
+      "file": "revision/R/make_figures.R",
+      "same": true,
+      "sha256": "7f6a90fbb6dff4124b3171572894a071c1edb67e0d5df192d579d9c2cc98b001"
+    },
+    {
+      "file": "revision/R/make_jura_figures.py",
+      "same": true,
+      "sha256": "16e7f8bd9b2ea75d6f5f97970078c84587482625b2ddb69549f2e371078d038c"
+    },
+    {
+      "file": "revision/R/make_manuscript_numbers.R",
+      "same": true,
+      "sha256": "b620eafee0a8802df49015306ea009b74cf11b6cf126c018b5eeb2c2b17aeb2f"
+    },
+    {
+      "file": "revision/R/make_supplement_figures.R",
+      "same": true,
+      "sha256": "8b0e5dfcf194b26ea214b3f3774e319aa6d4b31ed4eb3a3c752b34c2f4366b04"
+    },
+    {
+      "file": "revision/R/prepare_jura_data.R",
+      "same": true,
+      "sha256": "9d4c886d1a335528b04b7c8ff841e47fd04f4cc22362d5205460bfcb236b08a5"
+    },
+    {
+      "file": "revision/R/run_gp_knndm.R",
+      "same": true,
+      "sha256": "3b3a8f4a8f4e2937b277052db328f1353cc133ffea6c935d3effb4a58bc06071"
+    },
+    {
+      "file": "revision/R/run_gp_reference.R",
+      "same": true,
+      "sha256": "5e128644c4d3035dbbbb4403c38e49bad73e1207de2dcd01c66ca366725de02b"
+    },
+    {
+      "file": "revision/R/run_jura_application.R",
+      "same": true,
+      "sha256": "e17dbba64c1b67a1d6089a531d4ffbb0e1e85f472e60ced59584f9d0985d1d94"
+    },
+    {
+      "file": "revision/R/run_learner_experiment.R",
+      "same": true,
+      "sha256": "4e273e133b6e35c513e4b8db6c1846a4c0f35a06138dd1e194b73a5e2e8fa7fc"
+    },
+    {
+      "file": "revision/R/run_nested_estimation.R",
+      "same": true,
+      "sha256": "3268074aee8d3affba0127237d52a794e6324089e5fb6d389e44a8a8ced245d1"
+    },
+    {
+      "file": "revision/R/run_sensitivity.R",
+      "same": true,
+      "sha256": "ab6d35950486f7e0a485b24e6313ae936a46531e74a28aa2ddb14ac817eb0b59"
+    },
+    {
+      "file": "revision/data/JURA-SOURCE.txt",
+      "same": true,
+      "sha256": "074e08d1deaaf06ea184c92dfc8aeffbbe69c5736211a545b2ec008dc0fdef0e"
+    },
+    {
+      "file": "revision/data/jura-data.rds",
+      "same": true,
+      "sha256": "d8ccbd001c4e8d5a4e7f8e72616701d7618f8af7e295e507ed41e077bac74cd8"
+    },
+    {
+      "file": "revision/data/jura-sites.csv",
+      "same": true,
+      "sha256": "d87a3f458eddf2618bae3d07bc2db68f2a5bf3460148e0095e213a8abaeeb3d4"
+    }
+  ]
+}

@@ -65,7 +65,7 @@ reference_checks <- do.call(rbind,reference_checks)
 write.csv(reference_checks,'revision/results/supplementary/jura/fit-replay-comparison.csv',row.names=FALSE)
 print(reference_checks)
 if (any(!reference_checks$agrees)) {
-  message('Fresh covariance fits differ from the saved fits in this numerical environment. ',
+  message('Fresh Jura calculations differ from the saved results in this numerical environment. ',
           'See fit-replay-comparison.csv and REPRODUCING.md. ',
           'Fixed-fit prediction and paired target-response checks have passed.')
   if (strict_reference) stop('Exact fit replay was requested but the reference comparison failed.',call.=FALSE)
