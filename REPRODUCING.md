@@ -132,6 +132,32 @@ The Jura application uses the profile-search refinement implemented in
 `jura_profile_estimator.R`. The earlier simulations use the original package
 covariance fitter. That distinction is intentional and is discussed in the paper;
 updating the simulations to a different fitter would be a new experiment.
+That experiment is reported separately as the profile-search refits below.
+
+## Profile-search refits of the estimated-covariance studies
+
+Supplementary Section S5.4.2 (Table S1) repeats the three estimated-covariance
+studies with every variogram fit replaced by the Jura profile search. The
+protocol is `revision/audit/profile-refit-protocol.json`. The original runners
+are executed unchanged; a wrapper substitutes only the fitter call and writes
+outputs with the suffix `-profile`:
+
+```bash
+Rscript --vanilla revision/R/check_reference_fitter.R .   # stops on an incompatible numerical environment
+Rscript --vanilla revision/exploratory/run_profile_refits.R sensitivity
+Rscript --vanilla revision/exploratory/run_profile_refits.R nested
+Rscript --vanilla revision/exploratory/run_profile_refits.R nested-k10
+Rscript --vanilla revision/exploratory/compare_profile_refits.R
+Rscript --vanilla revision/exploratory/make_profile_refit_table.R
+```
+
+The retained outputs were produced on CSF with R 4.5.0
+(`revision/exploratory/profile-refits.slurm`; job log
+`revision/audit/profile-refits-csf-24668368.txt`). The comparison writes
+`revision/results/profile-refit/` and restores the retained summaries afterwards.
+The protocol's `declared_utc` field holds a placeholder date; the file was
+created at 2026-11-13 10:11 UTC, before the pilots, and is left byte-identical
+because the outputs record its checksum.
 
 ## Individual checks and supplementary calculations
 

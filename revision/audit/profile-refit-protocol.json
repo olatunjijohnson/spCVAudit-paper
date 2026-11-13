@@ -1,0 +1,23 @@
+{
+  "declared_utc": "2026-11-13T00:00:00+00:00",
+  "status": "Protocol fixed before pilot or main outputs; post-hoc fitting sensitivity",
+  "motivation": "The Jura application checks the variogram fitting objective with a profile search over the exponential range (revision/R/jura_profile_estimator.R). The manuscript Discussion states that the estimated-covariance simulations have not been rerun with that search, so the sensitivity of their reported gains to the fitting procedure is unresolved.",
+  "question": "Do the estimated-covariance results (fitted-|J2| versus W selection, five and ten folds, and the estimated-isotropic sensitivity diagnostics) change when every variogram fit uses the Jura profile search?",
+  "studies": {
+    "sensitivity-rng-profile": "revision/R/run_sensitivity.R, 1440 configurations, one fit per configuration",
+    "nested-estimation-rng-profile": "revision/R/run_nested_estimation.R, 1920 configurations, five folds",
+    "nested-estimation-k10-profile": "revision/exploratory/run_nested_k10.R, 1920 configurations, ten folds"
+  },
+  "fixed_implementation": "Each original runner is executed unmodified on disk. revision/exploratory/run_profile_refits.R replaces only the call spLeakage::estimate_dependence( with profile_dependence( from revision/R/jura_profile_estimator.R and renames the output stem; the expected number of replacements is asserted. Geometry seeds, response seeds, candidate schemes, kNNDM, target grids, risk formulas and analysis scripts are unchanged.",
+  "fitter": "profile_dependence starts from the package fit and replaces it only when the profile search lowers the weighted variogram objective by more than 1e-12; otherwise the package fit is kept exactly.",
+  "environment": "Run on CSF with R 4.5.0 and the original dependency library, as the retained fitted studies were. The retained outputs are never overwritten; new stems carry the suffix -profile.",
+  "pilot": "Existing pilot seed rules (one configuration per cell, n = 80). Used only to check execution; no changes to grid or scoring based on pilot results.",
+  "outcomes": [
+    "Fraction of variogram fits changed by the profile search and the distribution of fitted range and signal changes",
+    "NestedReduction, the paired MAE difference (J2_fitted vs W, estimated learner) with MCSE and 95% interval, overall and by cell",
+    "The strongest-cell difference and the mean difference over the remaining 23 cells",
+    "The ten-fold reduction and its interval",
+    "Sensitivity-study estimated-isotropic headlines"
+  ],
+  "reporting": "Report all outcomes for both fitters side by side whatever their direction. If the gains change materially, the manuscript numbers are rebuilt from the profile outputs or the change is reported as a limitation; the retained results remain available."
+}

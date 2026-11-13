@@ -1,0 +1,260 @@
+7c2a1358cd503d07e796f3b7bf941dc028cee4ca
+?? revision/audit/profile-refit-protocol.json
+?? revision/exploratory/compare_profile_refits.R
+?? revision/exploratory/run_profile_refits.R
+    id parameter   expected     actual absolute_difference
+1    1     range 0.07197284 0.07197284                   0
+2    1    signal 0.27334138 0.27334138                   0
+3    1  variance 0.99277879 0.99277879                   0
+4 1077     range 0.01691055 0.01691055                   0
+5 1077    signal 1.00000000 1.00000000                   0
+6 1077  variance 0.66723243 0.66723243                   0
+7 1428     range 0.01629232 0.01629232                   0
+8 1428    signal 1.00000000 1.00000000                   0
+9 1428  variance 0.68384599 0.68384599                   0
+Reference fitting checks passed; full computation can proceed.
+== sensitivity 2026-11-13T10:32:32Z
+Completed batch 1 of 30 at 2026-11-13 10:32:59 
+Completed batch 2 of 30 at 2026-11-13 10:33:06 
+Completed batch 3 of 30 at 2026-11-13 10:33:14 
+Completed batch 4 of 30 at 2026-11-13 10:33:21 
+Completed batch 5 of 30 at 2026-11-13 10:33:29 
+Completed batch 6 of 30 at 2026-11-13 10:33:37 
+Completed batch 7 of 30 at 2026-11-13 10:33:44 
+Completed batch 8 of 30 at 2026-11-13 10:33:52 
+Completed batch 9 of 30 at 2026-11-13 10:34:00 
+Completed batch 10 of 30 at 2026-11-13 10:34:08 
+Completed batch 11 of 30 at 2026-11-13 10:34:15 
+Completed batch 12 of 30 at 2026-11-13 10:34:23 
+Completed batch 13 of 30 at 2026-11-13 10:34:30 
+Completed batch 14 of 30 at 2026-11-13 10:34:39 
+Completed batch 15 of 30 at 2026-11-13 10:34:46 
+Completed batch 16 of 30 at 2026-11-13 10:34:54 
+Completed batch 17 of 30 at 2026-11-13 10:35:01 
+Completed batch 18 of 30 at 2026-11-13 10:35:09 
+Completed batch 19 of 30 at 2026-11-13 10:35:17 
+Completed batch 20 of 30 at 2026-11-13 10:35:25 
+Completed batch 21 of 30 at 2026-11-13 10:35:32 
+Completed batch 22 of 30 at 2026-11-13 10:35:40 
+Completed batch 23 of 30 at 2026-11-13 10:35:48 
+Completed batch 24 of 30 at 2026-11-13 10:35:55 
+Completed batch 25 of 30 at 2026-11-13 10:36:03 
+Completed batch 26 of 30 at 2026-11-13 10:36:10 
+Completed batch 27 of 30 at 2026-11-13 10:36:18 
+Completed batch 28 of 30 at 2026-11-13 10:36:25 
+Completed batch 29 of 30 at 2026-11-13 10:36:33 
+Completed batch 30 of 30 at 2026-11-13 10:36:41 
+Completed 11520 rows with 0 failed configurations in 237.399 seconds.
+Profile refit sensitivity saved to revision/results/sensitivity-rng-profile.rds 
+== nested 2026-11-13T10:36:46Z
+Completed batch 1 of 80 at 2026-11-13 10:36:55 
+Completed batch 2 of 80 at 2026-11-13 10:37:01 
+Completed batch 3 of 80 at 2026-11-13 10:37:06 
+Completed batch 4 of 80 at 2026-11-13 10:37:12 
+Completed batch 5 of 80 at 2026-11-13 10:37:17 
+Completed batch 6 of 80 at 2026-11-13 10:37:23 
+Completed batch 7 of 80 at 2026-11-13 10:37:28 
+Completed batch 8 of 80 at 2026-11-13 10:37:33 
+Completed batch 9 of 80 at 2026-11-13 10:37:39 
+Completed batch 10 of 80 at 2026-11-13 10:37:44 
+Completed batch 11 of 80 at 2026-11-13 10:37:49 
+Completed batch 12 of 80 at 2026-11-13 10:37:54 
+Completed batch 13 of 80 at 2026-11-13 10:38:00 
+Completed batch 14 of 80 at 2026-11-13 10:38:06 
+Completed batch 15 of 80 at 2026-11-13 10:38:11 
+Completed batch 16 of 80 at 2026-11-13 10:38:16 
+Completed batch 17 of 80 at 2026-11-13 10:38:21 
+Completed batch 18 of 80 at 2026-11-13 10:38:26 
+Completed batch 19 of 80 at 2026-11-13 10:38:32 
+Completed batch 20 of 80 at 2026-11-13 10:38:37 
+Completed batch 21 of 80 at 2026-11-13 10:38:42 
+Completed batch 22 of 80 at 2026-11-13 10:38:47 
+Completed batch 23 of 80 at 2026-11-13 10:38:53 
+Completed batch 24 of 80 at 2026-11-13 10:38:58 
+Completed batch 25 of 80 at 2026-11-13 10:39:04 
+Completed batch 26 of 80 at 2026-11-13 10:39:09 
+Completed batch 27 of 80 at 2026-11-13 10:39:14 
+Completed batch 28 of 80 at 2026-11-13 10:39:20 
+Completed batch 29 of 80 at 2026-11-13 10:39:25 
+Completed batch 30 of 80 at 2026-11-13 10:39:32 
+Completed batch 31 of 80 at 2026-11-13 10:39:37 
+Completed batch 32 of 80 at 2026-11-13 10:39:42 
+Completed batch 33 of 80 at 2026-11-13 10:39:47 
+Completed batch 34 of 80 at 2026-11-13 10:39:53 
+Completed batch 35 of 80 at 2026-11-13 10:39:58 
+Completed batch 36 of 80 at 2026-11-13 10:40:03 
+Completed batch 37 of 80 at 2026-11-13 10:40:08 
+Completed batch 38 of 80 at 2026-11-13 10:40:14 
+Completed batch 39 of 80 at 2026-11-13 10:40:20 
+Completed batch 40 of 80 at 2026-11-13 10:40:25 
+Completed batch 41 of 80 at 2026-11-13 10:40:30 
+Completed batch 42 of 80 at 2026-11-13 10:40:35 
+Completed batch 43 of 80 at 2026-11-13 10:40:40 
+Completed batch 44 of 80 at 2026-11-13 10:40:46 
+Completed batch 45 of 80 at 2026-11-13 10:40:51 
+Completed batch 46 of 80 at 2026-11-13 10:40:56 
+Completed batch 47 of 80 at 2026-11-13 10:41:02 
+Completed batch 48 of 80 at 2026-11-13 10:41:07 
+Completed batch 49 of 80 at 2026-11-13 10:41:12 
+Completed batch 50 of 80 at 2026-11-13 10:41:17 
+Completed batch 51 of 80 at 2026-11-13 10:41:23 
+Completed batch 52 of 80 at 2026-11-13 10:41:28 
+Completed batch 53 of 80 at 2026-11-13 10:41:33 
+Completed batch 54 of 80 at 2026-11-13 10:41:38 
+Completed batch 55 of 80 at 2026-11-13 10:41:44 
+Completed batch 56 of 80 at 2026-11-13 10:41:49 
+Completed batch 57 of 80 at 2026-11-13 10:41:55 
+Completed batch 58 of 80 at 2026-11-13 10:42:00 
+Completed batch 59 of 80 at 2026-11-13 10:42:05 
+Completed batch 60 of 80 at 2026-11-13 10:42:11 
+Completed batch 61 of 80 at 2026-11-13 10:42:16 
+Completed batch 62 of 80 at 2026-11-13 10:42:21 
+Completed batch 63 of 80 at 2026-11-13 10:42:26 
+Completed batch 64 of 80 at 2026-11-13 10:42:32 
+Completed batch 65 of 80 at 2026-11-13 10:42:37 
+Completed batch 66 of 80 at 2026-11-13 10:42:42 
+Completed batch 67 of 80 at 2026-11-13 10:42:48 
+Completed batch 68 of 80 at 2026-11-13 10:42:53 
+Completed batch 69 of 80 at 2026-11-13 10:42:58 
+Completed batch 70 of 80 at 2026-11-13 10:43:04 
+Completed batch 71 of 80 at 2026-11-13 10:43:09 
+Completed batch 72 of 80 at 2026-11-13 10:43:16 
+Completed batch 73 of 80 at 2026-11-13 10:43:22 
+Completed batch 74 of 80 at 2026-11-13 10:43:27 
+Completed batch 75 of 80 at 2026-11-13 10:43:32 
+Completed batch 76 of 80 at 2026-11-13 10:43:38 
+Completed batch 77 of 80 at 2026-11-13 10:43:43 
+Completed batch 78 of 80 at 2026-11-13 10:43:48 
+Completed batch 79 of 80 at 2026-11-13 10:43:54 
+Completed batch 80 of 80 at 2026-11-13 10:43:59 
+Completed 15360 evaluations from 1920 configurations; 0 failed configurations; 40320 fits; elapsed seconds 435.033 
+Profile refit nested saved to revision/results/nested-estimation-rng-profile.rds 
+== nested-k10 2026-11-13T10:44:07Z
+Completed batch 1 of 80 at 2026-11-13 10:44:18 
+Completed batch 2 of 80 at 2026-11-13 10:44:27 
+Completed batch 3 of 80 at 2026-11-13 10:44:35 
+Completed batch 4 of 80 at 2026-11-13 10:44:43 
+Completed batch 5 of 80 at 2026-11-13 10:44:51 
+Completed batch 6 of 80 at 2026-11-13 10:45:00 
+Completed batch 7 of 80 at 2026-11-13 10:45:08 
+Completed batch 8 of 80 at 2026-11-13 10:45:17 
+Completed batch 9 of 80 at 2026-11-13 10:45:25 
+Completed batch 10 of 80 at 2026-11-13 10:45:33 
+Completed batch 11 of 80 at 2026-11-13 10:45:42 
+Completed batch 12 of 80 at 2026-11-13 10:45:51 
+Completed batch 13 of 80 at 2026-11-13 10:45:59 
+Completed batch 14 of 80 at 2026-11-13 10:46:07 
+Completed batch 15 of 80 at 2026-11-13 10:46:15 
+Completed batch 16 of 80 at 2026-11-13 10:46:23 
+Completed batch 17 of 80 at 2026-11-13 10:46:32 
+Completed batch 18 of 80 at 2026-11-13 10:46:40 
+Completed batch 19 of 80 at 2026-11-13 10:46:49 
+Completed batch 20 of 80 at 2026-11-13 10:46:57 
+Completed batch 21 of 80 at 2026-11-13 10:47:06 
+Completed batch 22 of 80 at 2026-11-13 10:47:15 
+Completed batch 23 of 80 at 2026-11-13 10:47:23 
+Completed batch 24 of 80 at 2026-11-13 10:47:32 
+Completed batch 25 of 80 at 2026-11-13 10:47:41 
+Completed batch 26 of 80 at 2026-11-13 10:47:51 
+Completed batch 27 of 80 at 2026-11-13 10:48:00 
+Completed batch 28 of 80 at 2026-11-13 10:48:11 
+Completed batch 29 of 80 at 2026-11-13 10:48:21 
+Completed batch 30 of 80 at 2026-11-13 10:48:31 
+Completed batch 31 of 80 at 2026-11-13 10:48:41 
+Completed batch 32 of 80 at 2026-11-13 10:48:51 
+Completed batch 33 of 80 at 2026-11-13 10:49:00 
+Completed batch 34 of 80 at 2026-11-13 10:49:11 
+Completed batch 35 of 80 at 2026-11-13 10:49:21 
+Completed batch 36 of 80 at 2026-11-13 10:49:31 
+Completed batch 37 of 80 at 2026-11-13 10:49:41 
+Completed batch 38 of 80 at 2026-11-13 10:49:51 
+Completed batch 39 of 80 at 2026-11-13 10:50:01 
+Completed batch 40 of 80 at 2026-11-13 10:50:10 
+Completed batch 41 of 80 at 2026-11-13 10:50:21 
+Completed batch 42 of 80 at 2026-11-13 10:50:31 
+Completed batch 43 of 80 at 2026-11-13 10:50:41 
+Completed batch 44 of 80 at 2026-11-13 10:50:50 
+Completed batch 45 of 80 at 2026-11-13 10:51:00 
+Completed batch 46 of 80 at 2026-11-13 10:51:09 
+Completed batch 47 of 80 at 2026-11-13 10:51:19 
+Completed batch 48 of 80 at 2026-11-13 10:51:29 
+Completed batch 49 of 80 at 2026-11-13 10:51:38 
+Completed batch 50 of 80 at 2026-11-13 10:51:47 
+Completed batch 51 of 80 at 2026-11-13 10:51:56 
+Completed batch 52 of 80 at 2026-11-13 10:52:05 
+Completed batch 53 of 80 at 2026-11-13 10:52:14 
+Completed batch 54 of 80 at 2026-11-13 10:52:23 
+Completed batch 55 of 80 at 2026-11-13 10:52:32 
+Completed batch 56 of 80 at 2026-11-13 10:52:42 
+Completed batch 57 of 80 at 2026-11-13 10:52:51 
+Completed batch 58 of 80 at 2026-11-13 10:52:59 
+Completed batch 59 of 80 at 2026-11-13 10:53:07 
+Completed batch 60 of 80 at 2026-11-13 10:53:15 
+Completed batch 61 of 80 at 2026-11-13 10:53:23 
+Completed batch 62 of 80 at 2026-11-13 10:53:32 
+Completed batch 63 of 80 at 2026-11-13 10:53:40 
+Completed batch 64 of 80 at 2026-11-13 10:53:49 
+Completed batch 65 of 80 at 2026-11-13 10:53:57 
+Completed batch 66 of 80 at 2026-11-13 10:54:05 
+Completed batch 67 of 80 at 2026-11-13 10:54:14 
+Completed batch 68 of 80 at 2026-11-13 10:54:22 
+Completed batch 69 of 80 at 2026-11-13 10:54:31 
+Completed batch 70 of 80 at 2026-11-13 10:54:40 
+Completed batch 71 of 80 at 2026-11-13 10:54:49 
+Completed batch 72 of 80 at 2026-11-13 10:54:57 
+Completed batch 73 of 80 at 2026-11-13 10:55:06 
+Completed batch 74 of 80 at 2026-11-13 10:55:14 
+Completed batch 75 of 80 at 2026-11-13 10:55:23 
+Completed batch 76 of 80 at 2026-11-13 10:55:31 
+Completed batch 77 of 80 at 2026-11-13 10:55:40 
+Completed batch 78 of 80 at 2026-11-13 10:55:49 
+Completed batch 79 of 80 at 2026-11-13 10:55:58 
+Completed batch 80 of 80 at 2026-11-13 10:56:06 
+Completed 15360 evaluations from 1920 configurations; 0 failed configurations; 78720 fits; elapsed seconds 724.031 
+Profile refit nested-k10 saved to revision/results/nested-estimation-k10-profile.rds 
+== compare 2026-11-13T10:56:17Z
+
+Variogram fits changed by the profile search:
+           study  fits changed changed_fraction median_abs_log_range_change
+      nested-rng 40320    7475        0.1853919                5.349745e-05
+      nested-k10 78720   13838        0.1757876                4.448358e-05
+ sensitivity-rng  1440     311        0.2159722                1.783603e-04
+ max_abs_signal_change
+                     1
+                     1
+                     1
+
+Fitted |J2| versus W, estimated covariance:
+              study  mae_W mae_J2     delta     mcse     lower      upper
+         nested-rng 0.1525 0.1490 -0.003490 0.001518 -0.006466 -0.0005139
+ nested-rng-profile 0.1515 0.1479 -0.003595 0.001517 -0.006569 -0.0006219
+         nested-k10 0.1390 0.1366 -0.002414 0.001348 -0.005056  0.0002271
+ nested-k10-profile 0.1384 0.1363 -0.002071 0.001354 -0.004726  0.0005830
+ reduction_percent strong_cell_delta other_cells_delta
+             2.288          -0.07951        -1.844e-04
+             2.372          -0.07778        -3.697e-04
+             1.737          -0.04863        -4.050e-04
+             1.497          -0.04808        -7.107e-05
+
+Sensitivity headlines:
+                   study axis_ratio    diagnostic_model    n eligible
+         sensitivity-rng       0.25 estimated_isotropic 2880     2306
+         sensitivity-rng       1.00 estimated_isotropic 2880     2580
+ sensitivity-rng-profile       0.25 estimated_isotropic 2880     2306
+ sensitivity-rng-profile       1.00 estimated_isotropic 2880     2580
+ sign_accuracy sign_mcse true_J2_sign_accuracy true_J2_sign_mcse
+        0.9059  0.008578                0.9987         0.0009701
+        0.9298  0.006944                0.9926         0.0020134
+        0.9094  0.008178                0.9987         0.0009701
+        0.9267  0.007270                0.9926         0.0020134
+ mean_abs_proxy_error certificate_coverage mean_abs_training_effect
+              0.05751               0.4521                  0.01629
+              0.08011               0.2976                  0.02235
+              0.05535               0.4521                  0.01629
+              0.07947               0.2976                  0.02235
+ certificate_mcse fit_success_fraction
+         0.005907                    1
+         0.005172                    1
+         0.005907                    1
+         0.005172                    1
+== done 2026-11-13T10:57:18Z
