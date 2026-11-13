@@ -1,0 +1,13 @@
+{
+  "check": "Preflight rejects the demonstrated incompatible environment before scientific computation",
+  "passed": true,
+  "stages": [
+    "environment",
+    "dependencies",
+    "install",
+    "reference-environment"
+  ],
+  "study_output_files": 0,
+  "reference_probe": "reference-environment-probe.csv",
+  "local_probe": "ubuntu-environment-probe.csv"
+}

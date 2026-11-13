@@ -162,6 +162,8 @@ def main():
         item.update(finished_utc=utc(), exit_code=result.returncode, log_sha256=checksum(log))
         save_record()
         if result.returncode:
+            print("\n".join(log.read_text(errors="replace").splitlines()[-20:]),
+                  file=sys.stderr, flush=True)
             raise RuntimeError(f"{name} failed; inspect {log}")
 
     try:
@@ -172,6 +174,9 @@ def main():
               'for(p in c("sf","ggplot2","patchwork","digest","gstat","pkgload","jsonlite")) stopifnot(requireNamespace(p,quietly=TRUE))'])
         stage("install", ["R", "CMD", "INSTALL", "--library=revision/csf/library", "package"])
         if args.mode == "compute":
+            if args.compare_to is not None:
+                stage("reference-environment", ["Rscript", "--vanilla",
+                      "revision/R/check_reference_fitter.R", str(args.compare_to.expanduser().resolve())])
             for script, stem, suffix in STUDIES:
                 stage(stem, ["Rscript", "--vanilla", "revision/R/" + script],
                       extra_env={"REVISION_RUN_SUFFIX": suffix})

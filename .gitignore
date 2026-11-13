@@ -16,6 +16,7 @@ revision/results/summaries/
 revision/results/supplementary/
 revision/results/*-analysis.rds
 revision/audit/reproduction-*.json
+revision/audit/reference-environment-probe.csv
 *.aux
 *.bbl
 *.blg

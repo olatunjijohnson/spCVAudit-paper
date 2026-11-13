@@ -41,6 +41,25 @@ stack used by `sf` and `terra`). The library lock is not an operating-system ima
 An existing source cache can be supplied with `--cache-only`. Download and install
 times depend on the platform; failed builds leave logs and can use `--resume`.
 
+### Numerical environment for exact replay
+
+The original simulation environment was Rocky Linux 9.7, R 4.5.0, with R's
+bundled BLAS and LAPACK 3.12.1. Matching R and package versions alone is not
+sufficient to reproduce every nonlinear covariance fit. The public-release
+audit found signal-fraction differences exceeding 0.01 in three of the 1,440
+diagnostic-study configurations on Ubuntu 24.04; the original environment
+reproduced their saved fits. A local
+R 4.5.0 source build with bundled numerical libraries also differed. Tiny changes
+in the simulated inputs and in optimisation arithmetic can affect this fitter.
+The new spCVAudit fitter is a separate implementation and is not substituted here.
+
+With `compute --compare-to`, a quick check of configurations 1, 1077 and 1428 now
+runs before the studies. It stops if the reference fits differ by more than
+1e-10 and saves `revision/audit/reference-environment-probe.csv`. This avoids a
+long run in an environment that cannot reproduce the archived fits. It does not
+exclude configurations or change the fitting algorithm. Rendering retained
+results is independently checked on Ubuntu and remains the recommended first step.
+
 Python 3.12 was used locally. Set up a project environment with:
 
 ```bash
@@ -154,7 +173,8 @@ including kNNDM and ten-fold refitting. It does not replace a full experiment.
 repository integration. Original simulation records were validated in earlier
 full reruns described in the supplementary material. Those historical checks
 are not a claim that the newly assembled repository has been rerun in full.
-The new repository's actual checks are reported in `docs/VERIFICATION.md`.
+The dated assembly checks are in `docs/VERIFICATION.md`; subsequent public-release
+checks are reported in `docs/VALIDATION.md`.
 Selected historical validation receipts are retained under
 `provenance/historical-checks`; their original paths refer to the research archive.
 

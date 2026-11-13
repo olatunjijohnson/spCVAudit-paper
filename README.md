@@ -12,12 +12,14 @@ draft has not been submitted or independently reviewed.
 - [Verification of the public repository](docs/VALIDATION.md).
 
 The repository contains the analysis code, seeds, retained results, figure scripts,
-LaTeX source and the exact `spLeakage` working-tree snapshot used for this paper.
+LaTeX source and the fixed `spLeakage` source used by the reproduction scripts.
 The package source is included because development versions can change.
 The new **spCVAudit** package provides a focused public interface for the paper's
 diagnostics and Gaussian calculations. The fixed source under `package/` remains
-**spLeakage 0.1.0.9004**, which was used to generate the retained results. Use this
-snapshot to reproduce the paper; use spCVAudit for a new analysis.
+**spLeakage 0.1.0.9004**. The original simulation runs recorded version 0.1.0.9003;
+that [source archive](provenance/original-package/) is also preserved, and its
+variogram fitting function is identical. Use the pinned reproduction environment
+for the paper; use spCVAudit for a new analysis.
 
 After installing the dependencies described in [REPRODUCING.md](REPRODUCING.md), run:
 
