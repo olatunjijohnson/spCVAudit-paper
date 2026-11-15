@@ -5,7 +5,8 @@ type: software
 authors:
   - family-names: Johnson
     given-names: Olatunji
+    orcid: "https://orcid.org/0000-0002-4080-0999"
 version: "2026-11-13-draft"
 date-released: "2026-11-13"
-repository-code: "https://github.com/olatunjijohnson/spLeakage-paper"
+repository-code: "https://github.com/olatunjijohnson/spCVAudit-paper"
 license: MIT

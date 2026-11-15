@@ -35,7 +35,7 @@ Earlier machine-readable checks are under `provenance/public-release-20261112/`.
 The GitHub Actions workflow independently regenerates and verifies the retained
 results on Linux. Its live status is available in the repository's Actions tab.
 
-The hosted run [43342785310](https://github.com/olatunjijohnson/spLeakage-paper/actions/runs/43342785310)
+The hosted run [43342785310](https://github.com/olatunjijohnson/spCVAudit-paper/actions/runs/43342785310)
 passed all 37 comparisons. The theory check now enforces its stipulated unit
 variance exactly, and the target-response exclusion check compares two fresh
 runs in the same environment. Fresh-fit differences from saved Jura results are

@@ -3,7 +3,7 @@
 Public research code and manuscript for Olatunji Johnson's paper. This research
 draft has not been submitted or independently reviewed.
 
-- [Combined reading PDF](https://github.com/olatunjijohnson/spLeakage-paper/releases/download/paper-2026-11-13/spLeakage-paper-and-supplement-20261113.pdf),
+- [Combined reading PDF](https://github.com/olatunjijohnson/spCVAudit-paper/releases/download/paper-2026-11-13/spLeakage-paper-and-supplement-20261113.pdf),
   with the paper, supplementary material, supplementary figures and fold-count reports.
 - Separate [paper](revision/manuscript/main.pdf) and
   [supplementary material](revision/manuscript/supplement.pdf).
@@ -17,6 +17,9 @@ draft has not been submitted or independently reviewed.
 The repository contains the analysis code, seeds, retained results, figure scripts,
 LaTeX source and the fixed `spLeakage` source used by the reproduction scripts.
 The package source is included because development versions can change.
+`spLeakage` was the project's working name; the repository was renamed to match
+the companion package, but the archived source keeps its original name because the
+recorded checksums and package metadata depend on it.
 The new **spCVAudit** package provides a focused public interface for the paper's
 diagnostics and Gaussian calculations. The fixed source under `package/` remains
 **spLeakage 0.1.0.9004**. The original simulation runs recorded version 0.1.0.9003;
@@ -39,7 +42,7 @@ Regenerated numerical outputs are compared with the retained paper results.
 To rerun all current studies and supplementary analyses in a new directory:
 
 ```bash
-python3 reproduce.py compute --output ../spLeakage-paper-rerun --workers 8 --compare-to .
+python3 reproduce.py compute --output ../spCVAudit-paper-rerun --workers 8 --compare-to .
 ```
 
 Full computation is substantially slower than rendering; the simulation studies

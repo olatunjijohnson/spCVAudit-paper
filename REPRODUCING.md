@@ -112,7 +112,7 @@ Online Resource 1 as `ESM_1.pdf`.
 ## Recompute every current study
 
 ```bash
-python3 reproduce.py compute --output ../spLeakage-paper-rerun --workers 8 --compare-to .
+python3 reproduce.py compute --output ../spCVAudit-paper-rerun --workers 8 --compare-to .
 ```
 
 The output directory must not exist. The runner copies the code and Jura data,

@@ -93,7 +93,7 @@ def build(output, date_label="13 November 2026"):
     note = ("Page ranges refer to this combined PDF. Each document retains its original "
             "page numbers. The paper is a research draft.\n\n"
             "Code, data sources and reproduction instructions:\n"
-            "github.com/olatunjijohnson/spLeakage-paper\n\n"
+            "github.com/olatunjijohnson/spCVAudit-paper\n\n"
             "The spCVAudit package and tutorials:\n"
             "olatunjijohnson.github.io/spCVAudit")
     assert cover.insert_textbox(fitz.Rect(54, 620, 540, 765), note, fontsize=10, lineheight=1.4) >= 0
