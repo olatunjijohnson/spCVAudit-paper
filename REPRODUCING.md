@@ -2,7 +2,7 @@
 
 Run commands from the repository root. Linux is the tested platform; parallel
 computation uses R's `mclapply`. Use one worker on platforms without fork support.
-No script downloads data or changes the installed user-wide `spLeakage` package.
+No script downloads data or changes any user-wide installed R package.
 
 ## Environment
 

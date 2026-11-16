@@ -12,14 +12,11 @@ table and reported number from the saved results.
 - [Verification of the public repository](docs/VALIDATION.md).
 
 The repository contains the analysis code, seeds, retained results, figure scripts
-and the fixed `spLeakage` source used by the reproduction scripts.
-The package source is included because development versions can change.
-`spLeakage` was the project's working name; the repository was renamed to match
-the companion package, but the archived source keeps its original name because the
-recorded checksums and package metadata depend on it.
-The new **spCVAudit** package provides a focused public interface for the paper's
-diagnostics and Gaussian calculations. The fixed source under `package/` remains
-**spLeakage 0.1.0.9004**. The original simulation runs recorded version 0.1.0.9003;
+and the frozen research package in `package/` used by the reproduction scripts.
+Its source is included unchanged so that the reported results do not depend on
+later software versions. The **spCVAudit** package provides the maintained public
+interface for the paper's diagnostics and Gaussian calculations. The frozen source
+under `package/` is version 0.1.0.9004. The original simulation runs recorded version 0.1.0.9003;
 that [source archive](provenance/original-package/) is also preserved, and its
 variogram fitting function is identical. Use the pinned reproduction environment
 for the paper; use spCVAudit for a new analysis.
@@ -72,7 +69,7 @@ The imported-file manifest records the original workspace bytes. Subsequent
 integration edits are identified by Git history. RDS metadata also records the
 original executed source checksums, package version, seeds and session information.
 
-Project code follows the MIT licence used by `spLeakage`; third-party dependencies
+Project code is released under the MIT licence; third-party dependencies
 and the Jura data retain their upstream terms and attribution. See
 [DATA-SOURCES.md](DATA-SOURCES.md). This repository is public. Cite a release or
 commit when reproducing the results.
