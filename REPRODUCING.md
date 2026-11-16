@@ -206,7 +206,7 @@ including kNNDM and ten-fold refitting. It does not replace a full experiment.
 
 `provenance/imported-files.json` records the imported research files before
 repository integration. Original simulation records were validated in earlier
-full reruns described in the supplementary material. A separate fresh computation
+full reruns, summarised in the verification history below. A separate fresh computation
 from the public repository was carried out on 13 November 2026; its raw-result
 comparisons and environment records are under
 [`provenance/fresh-replay-20261113`](provenance/fresh-replay-20261113/).
@@ -219,3 +219,48 @@ Old analyses are preserved only in Git history and the
 `before-public-cleanup-20261112` tag; they are not dependencies. `revision/EXPERIMENTS.md`
 preserves the historical study protocol, including superseded plans; the current
 paper and the table above define the active analyses.
+
+## Verification history
+
+These records were previously reported in the supplementary material.
+
+- **Package checks.** The corrected research package passed its local test suite,
+  including tests that use the optional forest and emulator dependencies. It also
+  passed a CSF source build and `R CMD check --no-manual`, including examples and
+  rebuilt vignettes; tests needing optional dependencies absent from CSF were
+  skipped explicitly. Regression tests cover independent-noise measurements at the
+  same location, covariance constraints, coordinate-unit changes, invalid fold
+  overlap, response seed handling, geographic nearest neighbours and incompatible
+  coordinate reference systems.
+- **Cross-environment agreement.** Shared pilot calculations agreed between local
+  R 4.6.1 and CSF R 4.5.0 to about 4e-14, with identical fold fingerprints.
+  Complete reruns in fresh directories reproduced the six studies in the original
+  research archive under both package versions 0.1.0.9003 and 0.1.0.9004. Each
+  compared 174 scientific columns or records, including all 40,320 refitting-study
+  fit records and every saved split fingerprint. The local Gaussian calculation
+  differed by at most 1.7e-13; the other studies matched exactly. Both reruns
+  passed the corrected response-seed and numerical-geometry checks and reproduced
+  the corrected `-rng` studies.
+- **Pinned library rebuild.** A rerun with a separately built library of 129
+  non-base R packages with fixed versions and source hashes passed all 174
+  scientific comparisons. Regenerating plots and summaries exposed a PNG device that
+  implicitly required X11 and rank correlations sensitive to last-bit differences at
+  exact ties; explicit Cairo export and the stated rank tolerance resolved them. All
+  30 derived summary, provenance and manuscript outputs then agreed within 1.6e-13,
+  with identical formatted numbers.
+- **Operating-system sensitivity.** These replays used the recorded CSF numerical
+  environment. A later Ubuntu replay produced different nonlinear covariance fits
+  with the same fitting function, so the repository checks three diagnostic-study
+  configurations before an exact replay and records the operating system, R version
+  and numerical libraries.
+- **Second library build.** A library rebuilt from the saved source cache passed
+  the package check and vignettes, and a fresh run completed all 23 stages without
+  intervention. Both library builds used the CSF R module and native libraries, so
+  they are not independent operating-system installations.
+- **Package repairs in 0.1.0.9004.** Metre–degree consistency was repaired in
+  geographic buffer limits and default inverse-distance prediction. Coordinate
+  k-means remains planar and needs an appropriate projection for metric blocks.
+  Variogram subsampling selects pair ranks before allocating indices; tests cover
+  date-line and high-latitude distances and selecting 500 pairs from more than five
+  billion. These changes did not alter the executed variogram-fitting objective or
+  the retained scientific results.

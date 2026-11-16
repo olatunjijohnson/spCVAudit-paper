@@ -150,7 +150,9 @@ stopifnot(status == 0L)
 pdf("revision/figures/S2-learners-all.pdf", width = 7.2, height = 8, family = "sans", useDingbats = FALSE)
 for (r in c(.05, .2)) for (design in c("random", "clustered")) for (target in c("domain", "shifted")) {
   d <- learn[learn$range == r & learn$design == design & learn$target == target, ]
-  print(learner_plot(d) + labs(title = paste("Scale", r, "|", design, "sampling |", target, "target")))
+  design_label <- if (design == "random") "Uniform" else "Clustered"
+  target_label <- if (target == "domain") "in-domain" else "shifted"
+  print(learner_plot(d) + labs(title = paste0("Scale ", r, " | ", design_label, " sampling | ", target_label, " target")))
 }
 dev.off()
 cat("Generated four main figures and full-factor learner supplement.\n")
