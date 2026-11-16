@@ -1,0 +1,17 @@
+{
+  "title": "Reproduction code and results for \"Nearest-neighbour distances and prediction error in spatial cross-validation\"",
+  "upload_type": "software",
+  "description": "Code, data and saved results that reproduce every figure, table and reported number in the paper \"Nearest-neighbour distances and prediction error in spatial cross-validation\" by Olatunji Johnson. Run python3 reproduce.py render to regenerate the outputs from the saved results, or python3 reproduce.py compute to rerun all studies. See README.md and REPRODUCING.md.",
+  "creators": [
+    {
+      "name": "Johnson, Olatunji",
+      "affiliation": "Department of Mathematics, University of Manchester",
+      "orcid": "0000-0002-4080-0999"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["spatial cross-validation", "kriging", "Gaussian process", "map accuracy", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/olatunjijohnson/spCVAudit", "relation": "isSupplementedBy", "resource_type": "software"}
+  ]
+}
