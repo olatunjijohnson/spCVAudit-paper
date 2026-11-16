@@ -48,5 +48,5 @@ for(target in c('published','uniform','north')) for(model in c('ordinary','trend
     c(published='Original split',uniform='Random',north='Northern')[[target]],
     c(ordinary='Constant',trend='Linear trend')[[model]],values[1],values[2],values[3],values[4],values[5]))
 }
-writeLines(c(lines,'\\bottomrule','\\end{tabular}'),'revision/manuscript/table-jura.tex')
+writeLines(c(lines,'\\bottomrule','\\end{tabular}'),'revision/paper-outputs/table-jura.tex')
 cat('Generated Jura candidates, selection comparisons, geometry and supplementary table.\n')

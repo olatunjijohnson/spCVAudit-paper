@@ -77,8 +77,8 @@ python -m pip install -r environment/requirements.txt
 
 These versions record the working Python environment. The pipeline uses NumPy,
 pandas, SciPy, Matplotlib and scikit-learn. Matplotlib uses a writable project
-cache and a noninteractive backend. PDF compilation additionally requires
-`latexmk`, pdfLaTeX, BibTeX and the TeX packages declared in the manuscript.
+cache and a noninteractive backend. The exploratory fold-count report PDF
+additionally requires `latexmk` and pdfLaTeX; pass `--no-pdf` to skip it.
 
 ## Rebuild from retained results
 
@@ -94,20 +94,15 @@ the public package API. The target-response exclusion check recomputes one full
 Jura configuration with changed target responses, which must not affect fitting,
 CV scores or scheme choices.
 
-Outputs are `revision/manuscript/main.pdf`, `supplement.pdf`, the files in
-`revision/figures`, and tables under `revision/results/summaries` and
-`revision/results/supplementary`. Logs and machine-readable check records are
+Outputs are the files in `revision/figures`, the formatted numbers and tables
+cited in the paper in `revision/paper-outputs` (`numbers.tex`, `table-*.tex`),
+and machine-readable tables under `revision/results/summaries` and
+`revision/results/supplementary`. The manuscript text is not part of this
+repository. Logs and machine-readable check records are
 under `revision/logs` and `revision/audit`. Saved scientific RDS inputs are not
 changed. Generated PDFs may differ in metadata across environments; numerical
 comparisons use an absolute tolerance of 1e-10, while formatted TeX tables and
 manuscript values must match exactly.
-
-The manuscript uses the Springer Nature LaTeX template (`sn-jnl.cls`, version 3.1,
-with `sn-basic.bst`), included in `revision/manuscript`. After the PDFs are built,
-`python3 revision/manuscript/make_submission.py` writes the single-file journal
-submission to `revision/submission`: `manuscript.tex` with all inputs, supplement
-cross-references and the bibliography inlined, figures renamed `Fig1`–`Fig4`, and
-Online Resource 1 as `ESM_1.pdf`.
 
 ## Recompute every current study
 

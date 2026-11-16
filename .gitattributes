@@ -5,7 +5,7 @@ revision/results/** -text linguist-generated=true
 revision/data/** -text
 environment/runtime-*.csv -text linguist-generated=true
 revision/figures/** -text linguist-generated=true
-revision/manuscript/*.pdf -text linguist-generated=true
+
 *.rds binary
 *.rda binary
 *.pdf binary

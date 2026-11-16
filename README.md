@@ -1,12 +1,9 @@
 # Nearest-neighbour distances and prediction error in spatial cross-validation
 
-Public research code and manuscript for Olatunji Johnson's paper. This research
-draft has not been submitted or independently reviewed.
+Code, data and saved results needed to reproduce Olatunji Johnson's paper. The
+manuscript itself is not included; this repository regenerates every figure,
+table and reported number from the saved results.
 
-- [Combined reading PDF](https://github.com/olatunjijohnson/spCVAudit-paper/releases/download/paper-2026-11-13/spLeakage-paper-and-supplement-20261113.pdf),
-  with the paper, supplementary material, supplementary figures and fold-count reports.
-- Separate [paper](revision/manuscript/main.pdf) and
-  [supplementary material](revision/manuscript/supplement.pdf).
 - [Reproduction instructions](REPRODUCING.md), including dependencies and full recomputation.
 - [spCVAudit R package](https://github.com/olatunjijohnson/spCVAudit) and
   [website with tutorials](https://olatunjijohnson.github.io/spCVAudit/).
@@ -14,8 +11,8 @@ draft has not been submitted or independently reviewed.
 - [Jura data and attribution](revision/data/JURA-SOURCE.txt).
 - [Verification of the public repository](docs/VALIDATION.md).
 
-The repository contains the analysis code, seeds, retained results, figure scripts,
-LaTeX source and the fixed `spLeakage` source used by the reproduction scripts.
+The repository contains the analysis code, seeds, retained results, figure scripts
+and the fixed `spLeakage` source used by the reproduction scripts.
 The package source is included because development versions can change.
 `spLeakage` was the project's working name; the repository was renamed to match
 the companion package, but the archived source keeps its original name because the
@@ -33,8 +30,9 @@ After installing the dependencies described in [REPRODUCING.md](REPRODUCING.md),
 python3 reproduce.py render
 ```
 
-This rebuilds all main and supplementary figures, generated manuscript numbers,
-tables and PDFs from retained results. It also verifies the theory, package/API
+This rebuilds all main and supplementary figures, the formatted numbers and tables
+cited in the paper (`revision/paper-outputs/`) and the machine-readable summary
+tables (`revision/results/summaries/`) from retained results. It also verifies the theory, package/API
 agreement, Jura predictions and target-response exclusion, target-cluster
 resampling, covariance-fitting sensitivity and the paired fold-count comparison.
 Regenerated numerical outputs are compared with the retained paper results.
@@ -48,7 +46,8 @@ python3 reproduce.py compute --output ../spCVAudit-paper-rerun --workers 8 --com
 Full computation is substantially slower than rendering; the simulation studies
 were originally run on the University of Manchester's CSF. The `compute` command
 requires a new output directory and does not reuse saved simulation checkpoints.
-Use `--no-pdf` if LaTeX is unavailable; figures and numerical checks still run.
+Use `--no-pdf` if LaTeX is unavailable; it skips only the exploratory fold-count
+report PDF.
 
 ## Contents
 
@@ -58,7 +57,7 @@ Use `--no-pdf` if LaTeX is unavailable; figures and numerical checks still run.
 | `revision/exploratory/` | Ten-fold sensitivity study and paired comparison |
 | `revision/data/` | Jura measurements, original split and source attribution |
 | `revision/results/` | Scientific result bundles, configurations and failure records |
-| `revision/manuscript/` | Current paper and supplementary material |
+| `revision/paper-outputs/` | Generated numbers and tables cited in the paper, checked byte for byte |
 | `revision/figures/` | Figures 1–4 and supplementary Figures S1–S5 |
 | `package/` | Fixed package source, version 0.1.0.9004 |
 | `environment/` | R version lock, source hashes, builder and Python dependencies |
@@ -76,4 +75,4 @@ original executed source checksums, package version, seeds and session informati
 Project code follows the MIT licence used by `spLeakage`; third-party dependencies
 and the Jura data retain their upstream terms and attribution. See
 [DATA-SOURCES.md](DATA-SOURCES.md). This repository is public. Cite a release or
-commit when reproducing the draft; a publication DOI has not yet been assigned.
+commit when reproducing the results.

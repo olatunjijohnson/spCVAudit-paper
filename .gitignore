@@ -25,3 +25,7 @@ revision/audit/reference-environment-probe.csv
 *.log
 *.out
 *.toc
+
+# Manuscript sources are kept outside this repository.
+revision/manuscript/
+revision/submission/

@@ -62,7 +62,7 @@ def main():
         relative = source.relative_to(reference)
         result = compare_csv(source, actual / relative, args.tolerance)
         rows.append({"file": str(relative), **result})
-    for relative in ("revision/manuscript/numbers.tex", "revision/manuscript/table-reference.tex"):
+    for relative in ("revision/paper-outputs/numbers.tex", "revision/paper-outputs/table-reference.tex"):
         rows.append({"file": relative, "equal": (reference / relative).read_bytes() == (actual / relative).read_bytes(),
                      "comparison": "exact bytes of formatted manuscript output"})
     record = {"comparison": "Finite numeric CSV values within absolute tolerance; other fields and TeX exact",

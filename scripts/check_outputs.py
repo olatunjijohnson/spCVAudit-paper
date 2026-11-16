@@ -17,7 +17,7 @@ for reference, actual in [
         checks.append({"file": str(target.relative_to(ROOT)), **result})
 for name in ("numbers.tex", "table-reference.tex", "table-jura.tex"):
     checks.append({"file": name, "equal": (ROOT / "provenance" / name).read_bytes() ==
-                   (ROOT / "revision/manuscript" / name).read_bytes(), "comparison": "exact formatted text"})
+                   (ROOT / "revision/paper-outputs" / name).read_bytes(), "comparison": "exact formatted text"})
 for name in ("target-spatial-blocks.csv", "target-block-sensitivity.csv"):
     checks.append({"file": name, **module.compare_csv(ROOT / "provenance" / name,
                    ROOT / "revision/results/supplementary/jura" / name, 1e-10)})

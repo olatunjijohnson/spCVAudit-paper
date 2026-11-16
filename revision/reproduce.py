@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Rebuild the research outputs, or compute all studies in a new directory.
 
+The formatted values and tables cited in the paper are written to
+revision/paper-outputs; the manuscript text is not part of this repository.
+
 Run from any directory. No dependencies are downloaded. Computation requires
 the installed R dependencies described in REPRODUCING.md. Existing batch files
 are never copied into a compute run.
@@ -55,8 +58,6 @@ def source_files(root):
         files.extend((root / folder).rglob("*"))
     for name in ("DESCRIPTION", "NAMESPACE", "LICENSE", "NEWS.md"):
         files.append(root / "package" / name)
-    files.extend((root / "revision/manuscript").glob("*.tex"))
-    files.extend((root / "revision/manuscript").glob("*.bib"))
     return files
 
 
@@ -65,7 +66,6 @@ def main():
     parser.add_argument("mode", choices=("render", "compute"))
     parser.add_argument("--output", type=Path, help="Required new directory for compute")
     parser.add_argument("--workers", type=int, default=int(os.environ.get("SLURM_NTASKS", "1")))
-    parser.add_argument("--no-pdf", action="store_true", help="Generate figures and TeX, omit LaTeX compilation")
     parser.add_argument("--compare-to", type=Path, help="Compare regenerated scientific results with this project root")
     args = parser.parse_args()
     if args.workers < 1:
@@ -76,8 +76,6 @@ def main():
         parser.error("--output and --compare-to apply only to compute")
     if not shutil.which("Rscript") or not shutil.which("R"):
         parser.error("R and Rscript must be on PATH")
-    if not args.no_pdf and not shutil.which("latexmk"):
-        parser.error("latexmk is unavailable; install LaTeX or pass --no-pdf")
 
     source = Path(__file__).resolve().parents[1]
     root = source
@@ -109,11 +107,6 @@ def main():
         (root / "revision/audit").mkdir(parents=True)
         shutil.copy2(source / "revision/audit/fold-count-sensitivity-protocol.json",
                      root / "revision/audit/fold-count-sensitivity-protocol.json")
-        manuscript = root / "revision/manuscript"
-        manuscript.mkdir()
-        for pattern in ("*.tex", "*.bib"):
-            for path in (source / "revision/manuscript").glob(pattern):
-                shutil.copy2(path, manuscript / path.name)
         for name in ("reproduce.py", "EXPERIMENTS.md", "REPRODUCING.md"):
             shutil.copy2(source / "revision" / name, root / "revision" / name)
         library = root / "revision/csf/library"
@@ -187,10 +180,6 @@ def main():
                       str(args.compare_to.expanduser().resolve()), str(root)] + [s[1] for s in STUDIES])
         for script in ANALYSES:
             stage(script.removesuffix(".R"), ["Rscript", "--vanilla", "revision/R/" + script])
-        if not args.no_pdf:
-            for document in ("supplement", "main"):
-                stage(document, ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error",
-                      document + ".tex"], cwd=root / "revision/manuscript")
         outputs = []
         for _, stem, _ in STUDIES:
             outputs.extend((root / "revision/results").glob(stem + ".*"))
@@ -206,9 +195,7 @@ def main():
                 outputs.extend((root / "revision/results").glob(pattern))
         outputs.extend((root / "revision/results/summaries").glob("*.*"))
         outputs.extend((root / "revision/figures").glob("*.*"))
-        outputs.extend((root / "revision/manuscript").glob("*.tex"))
-        if not args.no_pdf:
-            outputs.extend((root / "revision/manuscript").glob("*.pdf"))
+        outputs.extend((root / "revision/paper-outputs").glob("*.tex"))
         record.update(finished_utc=utc(), status="complete", outputs=inventory(root, outputs))
     except Exception as error:
         record.update(finished_utc=utc(), status="failed", error=str(error))

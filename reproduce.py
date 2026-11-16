@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the current paper, including its supplementary analyses."""
+"""Reproduce the paper's results, including its supplementary analyses."""
 import argparse
 import os
 from pathlib import Path
@@ -12,7 +12,7 @@ def main():
     parser.add_argument("mode", choices=("render", "compute"))
     parser.add_argument("--output", type=Path)
     parser.add_argument("--workers", type=int, default=1)
-    parser.add_argument("--no-pdf", action="store_true")
+    parser.add_argument("--no-pdf", action="store_true", help="Skip the exploratory fold-count report PDF")
     parser.add_argument("--compare-to", type=Path)
     args = parser.parse_args()
     source = Path(__file__).resolve().parent
@@ -25,8 +25,6 @@ def main():
         primary_args += ["--output", str(args.output.expanduser().resolve())]
     if args.compare_to:
         primary_args += ["--compare-to", str(args.compare_to.expanduser().resolve())]
-    if args.no_pdf:
-        primary_args += ["--no-pdf"]
     subprocess.run([sys.executable, str(source / "revision/reproduce.py"), *primary_args],
                    cwd=source, env=env, check=True)
     commands = []
